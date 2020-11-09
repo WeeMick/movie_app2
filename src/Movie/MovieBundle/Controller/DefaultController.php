@@ -6,8 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+    public function indexAction($name)
     {
-        return $this->render('MovieMovieBundle:Default:index.html.twig');
+        return $this->render('@MovieMovie/Default/index.html.twig',
+            array('name' => $name));
     }
 }
