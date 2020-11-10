@@ -1,3 +1,9 @@
-movie_movie_homepage:
-    path:     /movie/{name}
-    defaults: { _controller: MovieMovieBundle:Default:index }
+movie_index:
+    path:     /
+    defaults: { _controller: MovieMovieBundle:Page:index }
+
+movie_about:
+    path: /about
+    defaults: { _controller: MovieMovieBundle:Page:about }
+    requirements:
+        _method: GET
