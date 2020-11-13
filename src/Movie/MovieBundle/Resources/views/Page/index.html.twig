@@ -1,4 +1,30 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
 {% block body %}
-    Movie Rater homepage
+    <p>Movie Rater homepage</p>
+    <hr>
+    {% if details %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                Name
+            </tr>
+            <tr>
+                Email
+            </tr>
+        </thead>
+        <tbody>
+            {%  for detail in details %}
+                <tr>
+                    <td>{{ detail.name }}
+                    </td>
+                    <td>
+                        <button class="btn btn-dark">{{ detail.email }}</button>
+                    </td>
+                </tr>
+            {%  endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No names</p>
+    {% endif %}
 {% endblock %}

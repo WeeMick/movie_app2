@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="" />
+    <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="585bcefd-9f59-49f6-974e-bec048d256e2" />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -74,7 +81,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symblog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -86,7 +93,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604962297573</updated>
-      <workItem from="1604962298719" duration="7437000" />
+      <workItem from="1604962298719" duration="7562000" />
+      <workItem from="1605291527583" duration="3287000" />
     </task>
     <servers />
   </component>
