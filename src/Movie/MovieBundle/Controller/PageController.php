@@ -8,19 +8,21 @@ class PageController extends Controller
 {
     public function indexAction()
     {
-        $details = array(
+        $movies = array(
             array(
-                'name' => 'mary',
-                'email' => 'mary123@hotmail.com'
+                'name' => 'Jaws',
+                'review' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolores iure labore obcaecati repudiandae. Tempora?',
+                'rating' => 3
             ),
             array(
-                'name' => 'tim',
-                'email' => 'tim@gmail.com'
+                'name' => 'The Nightmare Before Christmas',
+                'review' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolores iure labore obcaecati repudiandae. Tempora?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolores iure labore obcaecati repudiandae. Tempora?',
+                'rating' => 4
             )
         );
 
         return $this->render('@MovieMovie/Page/index.html.twig', array(
-            'details' => $details
+            'movies' => $movies
         ));
     }
 

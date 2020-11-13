@@ -2,24 +2,27 @@
 {% block body %}
     <p>Movie Rater homepage</p>
     <hr>
-    {% if details %}
+    {% if movies %}
     <table class="table table-striped">
         <thead>
             <tr>
-                Name
-            </tr>
-            <tr>
-                Email
+                <th>Movie</th>
+                <th>Review</th>
+                <th>Rating</th>
             </tr>
         </thead>
         <tbody>
-            {%  for detail in details %}
+            {%  for movie in movies %}
                 <tr>
-                    <td>{{ detail.name }}
+                    <td>{{ movie.name }}
                     </td>
                     <td>
-                        <button class="btn btn-dark">{{ detail.email }}</button>
+                        {{ movie.review }}
                     </td>
+                    <td>
+                        {{ movie.rating }}
+                    </td>
+
                 </tr>
             {%  endfor %}
         </tbody>
