@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/public/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" afterDir="false" />
@@ -118,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604962297573</updated>
       <workItem from="1604962298719" duration="7562000" />
-      <workItem from="1605291527583" duration="8148000" />
+      <workItem from="1605291527583" duration="8856000" />
     </task>
     <servers />
   </component>
