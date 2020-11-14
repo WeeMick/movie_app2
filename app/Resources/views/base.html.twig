@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Ratesey{% endblock %} - Movie Rater</title>
+    <title>{% block title %}Mickey's Movie Rater{% endblock %}</title>
     {% block stylesheets %}
         {% stylesheets
-            'https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'
+            '../app/Resources/public/css/bootstrap.min.css'
             '../app/Resources/public/css/screen.css' %}
             <link href="{{ asset_url }}" type="text/css" rel="stylesheet"/>
         {% endstylesheets %}
@@ -33,7 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Symblog</a>
+            <a class="navbar-brand" href="#">Mickey's Movie Rater</a>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ path('movie_index') }}">Home</a></li>

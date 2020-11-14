@@ -1,6 +1,7 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
 {% block body %}
-    <p>Movie Rater homepage</p>
+    <h1>Mickey's Movie Rater Homepage</h1>
+    <button class="btn btn-success float-right">Add new movie</button>
     <hr>
     {% if movies %}
     <table class="table table-striped">
@@ -22,6 +23,12 @@
                     <td>
                         {{ movie.rating }}
                     </td>
+                    <td>
+                        <button class="btb btn-dark">Edit</button>
+                    </td>
+                    <td>
+                        <button class="btb btn-danger">Delete</button>
+                    </td>
 
                 </tr>
             {%  endfor %}
@@ -30,4 +37,22 @@
     {% else %}
     <p>No names</p>
     {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+    <h2>New Releases</h2>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum magni nemo nisi quae reiciendis, veniam. Ad
+        animi cupiditate excepturi illum, in iure magnam molestias velit! Corporis est harum numquam quia?
+    </div>
+    <div>Accusamus ad at excepturi illo ipsam laboriosam nemo neque nobis, obcaecati odio quas, quidem quo velit
+        voluptas voluptate? Doloremque, esse nemo non odio officiis perferendis quisquam suscipit totam vel voluptas.
+    </div>
+    <div>Ad aliquam, consequuntur deserunt exercitationem molestias odio optio provident reiciendis veniam voluptatum.
+        Aperiam dicta dignissimos eius, enim error eveniet, exercitationem facilis, harum inventore ipsum iure libero
+        quisquam repellendus suscipit voluptatum.
+    </div>
+    <div>Animi culpa error molestiae perferendis quae ratione rerum tempora vitae? Assumenda blanditiis eum excepturi,
+        expedita explicabo, harum illum incidunt numquam placeat rerum saepe sint vero vitae voluptas voluptate.
+        Officiis, provident!
+    </div>
 {% endblock %}
