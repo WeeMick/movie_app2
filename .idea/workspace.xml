@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Movie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Movie.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +118,7 @@
       <workItem from="1604962298719" duration="7562000" />
       <workItem from="1605291527583" duration="9455000" />
       <workItem from="1605518749721" duration="810000" />
-      <workItem from="1605728300508" duration="4730000" />
+      <workItem from="1605728300508" duration="5467000" />
     </task>
     <servers />
   </component>
@@ -138,6 +138,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser" timestamp="1605743462806">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605743462806" />
     <state x="736" y="-678" width="447" height="265" key="ComposerInitDialogKey" timestamp="1604962403867">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
