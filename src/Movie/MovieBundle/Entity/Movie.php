@@ -88,7 +88,7 @@ class Movie
     }
 
     /**
-     * @ORM\Column(type="decimal", scale=1, precision=2)
+     * @ORM\Column(type="decimal", scale=1, precision=3)
      */
     protected $rating;
 }
