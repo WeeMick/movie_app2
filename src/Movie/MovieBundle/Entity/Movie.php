@@ -35,9 +35,24 @@ class Movie
     protected $title;
 
     /**
+     * @ORM\Column(type="string", length=200)
+     */
+    protected $summary;
+
+    /**
      * @ORM\Column(type="string", length=500)
      */
-    protected $description;
+    protected $detailed_description;
+
+    /**
+     * @ORM\Column(type="datetime", options={"default" : NULL})
+     */
+    protected $date_added;
+
+    /**
+     * @ORM\Column(type="decimal", scale=1, precision=3)
+     */
+    protected $rating;
 
     /**
      * @return mixed
@@ -58,17 +73,49 @@ class Movie
     /**
      * @return mixed
      */
-    public function getDescription()
+    public function getSummary()
     {
-        return $this->description;
+        return $this->summary;
     }
 
     /**
-     * @param mixed $description
+     * @param mixed $summary
      */
-    public function setDescription($description)
+    public function setSummary($summary)
     {
-        $this->description = $description;
+        $this->summary = $summary;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDetailedDescription()
+    {
+        return $this->detailed_description;
+    }
+
+    /**
+     * @param mixed $detailed_description
+     */
+    public function setDetailedDescription($detailed_description)
+    {
+        $this->detailed_description = $detailed_description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDateAdded()
+    {
+        return $this->date_added;
+    }
+
+    /**
+     * @param mixed $date_added
+     */
+    public function setDateAdded($date_added)
+    {
+        $this->date_added = $date_added;
     }
 
     /**
@@ -87,8 +134,6 @@ class Movie
         $this->rating = $rating;
     }
 
-    /**
-     * @ORM\Column(type="decimal", scale=1, precision=3)
-     */
-    protected $rating;
+
+
 }
