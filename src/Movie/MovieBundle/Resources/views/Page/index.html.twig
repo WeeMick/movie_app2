@@ -1,7 +1,7 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
 {% block body %}
     <h1>Mickey's Movie Rater Homepage</h1>
-    <button class="btn btn-success pull-right">Add new movie</button>
+    <button class="btn btn-success pull-right"><a href="{{ path('movie_new') }}">Add new movie</a></button>
     <hr>
     {% if movies %}
     <table class="table table-striped table-bordered">

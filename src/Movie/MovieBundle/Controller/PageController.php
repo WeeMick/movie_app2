@@ -7,6 +7,8 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
+use Movie\MovieBundle\Entity\Movie;
 
 class PageController extends Controller
 {
@@ -38,26 +40,38 @@ class PageController extends Controller
         return $this->render('@MovieMovie/Page/about.html.twig');
     }
 
-    public function newAction(Request $request) {
+    /**
+     * @Route("/new")
+     */
+    public function newAction() {
         // creates a movie record and adds it to the database
+        $em = $this->getDoctrine()->getManager();
         $movie = new Movie();
-        $movie->setTask('Write a blog post');
-        $movie->setAddedDate(new \DateTime('today'));
+        $movie->setTitle('Look, a new Movie');
+        $movie->setSummary('Summary of a new Movie');
+        $movie->setDetailedDescription('Blah blah blah');
+        $movie->setDateAdded(new \DateTime('now'));
+        $movie->setRating(2.1);
 
-        $form = $this->createFormBuilder($movie)
-            ->add('title', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('body', TextType::class, array(
-                'required' => false,
-                'attr' => array('class' => 'form-control')))
-            ->add('save', SubmitType::class, array(
-                'label' => 'Create',
-                'attr' => array('class' => 'btn btn-primary mt-2')))
-            ->getForm();
+        $em->persist($movie);
+        $em->flush();
 
-        return $this->render('@MovieMovie/Page/new.html.twig', [
-            'form' => $form->createView(),
-        ]);
+        return $this->redirectToRoute('movie_index');
+
+//        $form = $this->createFormBuilder($movie)
+//            ->add('title', TextType::class, array('attr' =>
+//                array('class' => 'form-control')))
+//            ->add('body', TextType::class, array(
+//                'required' => false,
+//                'attr' => array('class' => 'form-control')))
+//            ->add('save', SubmitType::class, array(
+//                'label' => 'Create',
+//                'attr' => array('class' => 'btn btn-primary mt-2')))
+//            ->getForm();
+//
+//        return $this->render('@MovieMovie/Page/new.html.twig', [
+//            'form' => $form->createView(),
+//        ]);
     }
 
 

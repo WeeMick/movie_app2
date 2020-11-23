@@ -7,3 +7,9 @@ movie_about:
     defaults: { _controller: MovieMovieBundle:Page:about }
     requirements:
         _method: GET
+
+movie_new:
+    path: /new
+    defaults: { _controller: MovieMovieBundle:Page:new }
+    requirements:
+        _method: GET, POST
