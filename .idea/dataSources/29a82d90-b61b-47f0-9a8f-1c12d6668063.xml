@@ -848,7 +848,7 @@ ALL PRIVILEGES|sgb334:null!
     </column>
     <column id="253" parent="230" name="summary">
       <Position>4</Position>
-      <DataType>varchar(200)|0s</DataType>
+      <DataType>varchar(400)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="254" parent="230" name="director">

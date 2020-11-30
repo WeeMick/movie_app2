@@ -40,7 +40,7 @@ class Movie
     protected $director;
 
     /**
-     * @ORM\Column(type="string", length=200)
+     * @ORM\Column(type="string", length=400)
      */
     protected $summary;
 

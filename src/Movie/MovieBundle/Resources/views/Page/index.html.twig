@@ -8,9 +8,11 @@
         <thead>
             <tr>
                 <th>Movie</th>
-                <th>Review</th>
+                <th>Director</th>
+                <th>Synopsis</th>
+                <th>Running Time (in minutes)</th>
                 <th>Rating</th>
-                <th>Date Added</th>
+                <th>Reviews</th>
                 <th colspan="2">Actions</th>
             </tr>
         </thead>
@@ -20,15 +22,24 @@
                     <td>
                         {{ movie.title }}
                     </td>
+
+                    <td>
+                        {{ movie.director }}
+                    </td>
                     <td>
                         {{ movie.summary }}
+                    </td>
+
+                    <td>
+                        {{ movie.runningTime}}
                     </td>
                     <td>
                         {{ movie.rating }}
                     </td>
                     <td>
-                        {{ movie.dateAdded|date("d/m/Y") }}
+                        {{ movie.reviews }}
                     </td>
+
                     <td>
                         <button class="btb btn-dark">Edit</button>
                     </td>
