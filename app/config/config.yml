@@ -78,3 +78,11 @@ assetic:
         css:
             inputs:
                 - '../app/Resources/public/css/*'
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: Movie\MovieBundle\Entity\User
+    from_email:
+        address: "m.blair2@edu.salford.ac.uk"
+        sender_name: "Mickey Mail Server"
