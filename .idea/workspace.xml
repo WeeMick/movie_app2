@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/63acb2b4-8f94-41a1-bbb9-af4ca985e2cb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/63acb2b4-8f94-41a1-bbb9-af4ca985e2cb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DatabaseBackup/backup (1).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DatabaseBackup/dates added.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/movie (7).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Movie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/new.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,9 +96,13 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/assetic-bundle" />
       <path value="$PROJECT_DIR$/vendor/kriswallsmith/assetic" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
     </include_path>
   </component>
   <component name="ProjectId" id="1k4aQ0FVatmVX5PYJ8bySUqxQHl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -123,8 +132,7 @@
       <workItem from="1605291527583" duration="9455000" />
       <workItem from="1605518749721" duration="810000" />
       <workItem from="1605728300508" duration="6077000" />
-      <workItem from="1605802343945" duration="4782000" />
-      <workItem from="1606122738965" duration="15813000" />
+      <workItem from="1605802343945" duration="3389000" />
     </task>
     <servers />
   </component>
@@ -144,15 +152,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="756" y="-946" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606129005964">
+    <state x="552" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606757101614">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="756" y="-946" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606129005964" />
-    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser" timestamp="1606144878607">
+    <state x="552" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606757101614" />
+    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser" timestamp="1606757872446">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-781.1920.1040/-1680.-776.1680.1010/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606144878607" />
-    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606124633634" />
+    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606757872446" />
+    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605743462806" />
     <state x="736" y="-678" width="447" height="265" key="ComposerInitDialogKey" timestamp="1604962403867">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -163,9 +171,5 @@
     <state x="741" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605738391195" />
     <state x="-1032" y="-509" key="FileChooserDialogImpl/0.0.1536.824/1920.-781.1920.1040/0.-1080.1920.1040/-1680.-776.1680.1010@-1680.-776.1680.1010" timestamp="1605518960817" />
     <state x="740" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-781.1920.1040/0.-1080.1920.1040/-1680.-776.1680.1010@0.-1080.1920.1040" timestamp="1604970115623" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1606129026584">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606129026584" />
   </component>
 </project>

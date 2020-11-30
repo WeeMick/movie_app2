@@ -35,24 +35,78 @@ class Movie
     protected $title;
 
     /**
+     * @ORM\Column(type="string", length=50)
+     */
+    protected $director;
+
+    /**
      * @ORM\Column(type="string", length=200)
      */
     protected $summary;
 
     /**
-     * @ORM\Column(type="string", length=500)
+     * @return mixed
      */
-    protected $detailed_description;
+    public function getDirector()
+    {
+        return $this->director;
+    }
 
     /**
-     * @ORM\Column(type="datetime", options={"default" : NULL})
+     * @param mixed $director
      */
-    protected $date_added;
+    public function setDirector($director)
+    {
+        $this->director = $director;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRunningTime()
+    {
+        return $this->running_time;
+    }
+
+    /**
+     * @param mixed $running_time
+     */
+    public function setRunningTime($running_time)
+    {
+        $this->running_time = $running_time;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getReviews()
+    {
+        return $this->reviews;
+    }
+
+    /**
+     * @param mixed $reviews
+     */
+    public function setReviews($reviews)
+    {
+        $this->reviews = $reviews;
+    }
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $running_time;
+
 
     /**
      * @ORM\Column(type="decimal", scale=1, precision=3)
      */
     protected $rating;
+
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    protected $reviews;
 
     /**
      * @return mixed
@@ -86,37 +140,6 @@ class Movie
         $this->summary = $summary;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDetailedDescription()
-    {
-        return $this->detailed_description;
-    }
-
-    /**
-     * @param mixed $detailed_description
-     */
-    public function setDetailedDescription($detailed_description)
-    {
-        $this->detailed_description = $detailed_description;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDateAdded()
-    {
-        return $this->date_added;
-    }
-
-    /**
-     * @param mixed $date_added
-     */
-    public function setDateAdded($date_added)
-    {
-        $this->date_added = $date_added;
-    }
 
     /**
      * @return mixed

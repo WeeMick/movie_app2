@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="AWD" uuid="63acb2b4-8f94-41a1-bbb9-af4ca985e2cb">
+    <data-source source="LOCAL" name="poseidon" uuid="29a82d90-b61b-47f0-9a8f-1c12d6668063">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://poseidon.salford.ac.uk:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://poseidon.salford.ac.uk:3306/sgb334_awd</jdbc-url>
     </data-source>
   </component>
 </project>

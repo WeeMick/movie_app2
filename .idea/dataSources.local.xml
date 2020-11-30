@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="AWD" uuid="63acb2b4-8f94-41a1-bbb9-af4ca985e2cb">
+    <data-source name="poseidon" uuid="29a82d90-b61b-47f0-9a8f-1c12d6668063">
       <database-info product="MySQL" version="5.7.32-0ubuntu0.18.04.1" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.32" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -11,7 +11,7 @@
       <user-name>sgb334</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="sgb334_awd" />
+          <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
     </data-source>
