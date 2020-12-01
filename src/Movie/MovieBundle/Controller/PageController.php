@@ -40,6 +40,16 @@ class PageController extends Controller
         return $this->render('@MovieMovie/Page/about.html.twig');
     }
 
+    public function loginAction()
+    {
+        return $this->render('@MovieMovie/Page/login_content.html.twig');
+    }
+
+    public function registerAction()
+    {
+        return $this->render('@MovieMovie/Page/register.html.twig');
+    }
+
     /**
      * @Route("/new")
      */

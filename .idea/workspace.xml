@@ -23,8 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/FOSUserBundle/views/layout.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +123,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\FOSUserBundle\views" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
@@ -175,10 +184,10 @@
     <state x="741" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605738391195" />
     <state x="-1032" y="-509" key="FileChooserDialogImpl/0.0.1536.824/1920.-781.1920.1040/0.-1080.1920.1040/-1680.-776.1680.1010@-1680.-776.1680.1010" timestamp="1605518960817" />
     <state x="740" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-781.1920.1040/0.-1080.1920.1040/-1680.-776.1680.1010@0.-1080.1920.1040" timestamp="1604970115623" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1606822154398">
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1606825822542">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606764217680" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.-776.1920.1040/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606822154398" />
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.-776.1920.1040/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606825822542" />
   </component>
 </project>

@@ -33,11 +33,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Mickey's Movie Rater</a>
+            <a class="navbar-brand" href="{{ path('movie_index') }}">Mickey's Movie Rater</a>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ path('movie_index') }}">Home</a></li>
                     <li><a href="{{ path('movie_about') }}">About</a></li>
+                    <li><a href="{{ path('movie_login') }}">Login</a></li>
+                    <li><a href="{{ path('movie_register') }}">Register</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
@@ -51,7 +53,7 @@
             {% block sidebar %}{% endblock %}
         </section>
     </div>
-    <div class="footer">
+    <div class="footer mt-3">
         {% block footer %}
             <p>Movie Rater Project</p>
         {% endblock %}

@@ -8,6 +8,18 @@ movie_about:
     requirements:
         _method: GET
 
+movie_login:
+    path: /login
+    defaults: { _controller: MovieMovieBundle:Page:login }
+    requirements:
+        _method: GET
+
+movie_register:
+    path: /register
+    defaults: { _controller: MovieMovieBundle:Page:register }
+    requirements:
+        _method: GET
+
 movie_new:
     path: /new
     defaults: { _controller: MovieMovieBundle:Page:new }
