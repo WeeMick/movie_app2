@@ -23,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/Images/animals.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/Images/image_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +40,13 @@
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="585bcefd-9f59-49f6-974e-bec048d256e2" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -114,19 +123,23 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/FOSUserBundle/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/Images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\Images" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\Images" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\FOSUserBundle\views" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -149,7 +162,7 @@
       <workItem from="1605802343945" duration="3389000" />
       <workItem from="1607006082550" duration="451000" />
       <workItem from="1607006765477" duration="333000" />
-      <workItem from="1607007188482" duration="10698000" />
+      <workItem from="1607007188482" duration="15398000" />
     </task>
     <servers />
   </component>
@@ -258,11 +271,11 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="461" y="-915" key="SettingsEditor/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607006896329" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1607015041931">
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup" timestamp="1607022938782">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606764217680" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.-776.1920.1040/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606825822542" />
-    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607015041931" />
+    <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607022938782" />
   </component>
 </project>

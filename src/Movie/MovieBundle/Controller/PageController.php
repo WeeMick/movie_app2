@@ -35,6 +35,7 @@ class PageController extends Controller
 
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
+        // Need to add all reviews by finding all reviews with a movie id of this movie
         return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie));
 
     }

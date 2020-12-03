@@ -1,9 +1,14 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
-{% block title %}{{ movie.title }}{% endblock%}
+{% block title %}{{ movie.title }} {% endblock%}
 {% block body %}
-    <h2>{{ movie.id }}</h2>
-    <h1> {{ movie.title }}</h1>
+    <h1> {{ movie.title }} {{ movie.rating }}</h1>
     <p>{{ movie.summary }}</p>
     <hr>
+
+    {% image '@MovieMovieBundle/Resources/Images/image_2.jpg' %}
+        <img src="{{ asset_url }}" alt="Example" />
+    {% endimage %}
+
     <a href="/">Go back</a>
+
 {% endblock %}
