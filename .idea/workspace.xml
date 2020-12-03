@@ -23,11 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/Images/animals.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/Images/image_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +160,7 @@
       <workItem from="1605802343945" duration="3389000" />
       <workItem from="1607006082550" duration="451000" />
       <workItem from="1607006765477" duration="333000" />
-      <workItem from="1607007188482" duration="15398000" />
+      <workItem from="1607007188482" duration="19093000" />
     </task>
     <servers />
   </component>
@@ -187,11 +185,11 @@
     </state>
     <state x="552" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606757101614" />
     <state x="552" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607007873740" />
-    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser" timestamp="1606762406609">
+    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser" timestamp="1607027763865">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606762406609" />
-    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605743462806" />
+    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607027763865" />
     <state x="736" y="-678" width="447" height="265" key="ComposerInitDialogKey" timestamp="1604962403867">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>

@@ -99,4 +99,25 @@ class Review
      * @ORM\Column(type="string", length=700)
      */
     protected $review;
+
+    /**
+     * @ORM\Column(type="decimal", scale=1, precision=3)
+     */
+    protected $rating;
+
+    /**
+     * @return mixed
+     */
+    public function getRating()
+    {
+        return $this->rating;
+    }
+
+    /**
+     * @param mixed $rating
+     */
+    public function setRating($rating)
+    {
+        $this->rating = $rating;
+    }
 }
