@@ -2,6 +2,13 @@ movie_index:
     path:     /
     defaults: { _controller: MovieMovieBundle:Page:index }
 
+movie_show:
+    path: /show/{$id}
+    defaults: { _controller: MovieMovieBundle:Page:show, id: 1 }
+    requirements:
+        _method: GET, POST
+        id: '\d+'
+
 movie_about:
     path: /about
     defaults: { _controller: MovieMovieBundle:Page:about }
@@ -25,3 +32,5 @@ movie_new:
     defaults: { _controller: MovieMovieBundle:Page:new }
     requirements:
         _method: GET, POST
+
+

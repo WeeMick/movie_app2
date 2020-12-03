@@ -20,7 +20,7 @@
             {%  for movie in movies %}
                 <tr>
                     <td>
-                        {{ movie.title }}
+                        <a href="{{ path('movie_show', {'id': movie.id}) }}">{{ movie.title }}</a>
                     </td>
 
                     <td>
@@ -58,9 +58,7 @@
 
 {% block sidebar %}
     <h2>New Releases</h2>
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum magni nemo nisi quae reiciendis, veniam. Ad
-        animi cupiditate excepturi illum, in iure magnam molestias velit! Corporis est harum numquam quia?
-    </div>
+    <div>Check out the movies below which have recently been added to our database!</div>
     <div>Accusamus ad at excepturi illo ipsam laboriosam nemo neque nobis, obcaecati odio quas, quidem quo velit
         voluptas voluptate? Doloremque, esse nemo non odio officiis perferendis quisquam suscipit totam vel voluptas.
     </div>

@@ -4,6 +4,7 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
+<div class="text-center">
 <form action="{{ path("fos_user_security_check") }}" method="post">
     {% if csrf_token %}
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
@@ -21,7 +22,7 @@
     <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
 </form>
 
-<div class="text-center">
+
 <h3>If you do not have an account, register here to start reviewing movies today</h3>
 <button class="btn btn-success btn-lg"><a href="{{ path('movie_register') }}">Register</a></button>
 </div>

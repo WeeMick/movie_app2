@@ -7,6 +7,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Movie\MovieBundle\Entity\Movie;
 
@@ -20,12 +21,6 @@ class PageController extends Controller
 //                'review' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolores iure labore obcaecati repudiandae. Tempora?',
 //                'rating' => 3
 //            ),
-//            array(
-//                'name' => 'The Nightmare Before Christmas',
-//                'review' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolores iure labore obcaecati repudiandae. Tempora?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolores iure labore obcaecati repudiandae. Tempora?',
-//                'rating' => 4
-//            )
-//        );
 
         $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
         return $this->render('@MovieMovie/Page/index.html.twig', array(
@@ -33,6 +28,16 @@ class PageController extends Controller
         ));
 
 
+    }
+
+
+    public function showAction($id) {
+
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+
+
+
+        return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie));
     }
 
     public function aboutAction()
