@@ -35,9 +35,8 @@ class PageController extends Controller
 
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
-
-
         return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie));
+
     }
 
     public function aboutAction()

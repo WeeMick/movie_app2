@@ -3,11 +3,11 @@ movie_index:
     defaults: { _controller: MovieMovieBundle:Page:index }
 
 movie_show:
-    path: /show/{$id}
-    defaults: { _controller: MovieMovieBundle:Page:show, id: 1 }
+    path: /show/{id}
+    defaults: { _controller: MovieMovieBundle:Page:show, id: id }
     requirements:
         _method: GET, POST
-        id: '\d+'
+#        id: '\d+'
 
 movie_about:
     path: /about
