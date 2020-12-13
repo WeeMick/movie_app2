@@ -31,7 +31,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {%  for review in reviews %}
+                {%  for review in review %}
                     <tr>
                         <td>
                             {{ review.reviewerId }}
@@ -44,6 +44,7 @@
                             {{ review.rating }}
                         </td>
                         <td>
+{#                            if current user is the owner of this record, they can edit the review #}
                             <button class="btb btn-dark">Edit</button>
                         </td>
                     </tr>

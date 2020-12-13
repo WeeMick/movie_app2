@@ -31,35 +31,11 @@ class PageController extends Controller
     }
 
 
-    public function showAction($id) {
-
-        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
-
-//need to get movie id of movie passed in and then search Review db for records with movie_id
-        $review = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($movie);
-        return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie,'review' => $review));
-
-    }
-
-    public function aboutAction()
-    {
-        return $this->render('@MovieMovie/Page/about.html.twig');
-    }
-
-    public function loginAction()
-    {
-        return $this->render('@MovieMovie/Page/login_content.html.twig');
-    }
-
-    public function registerAction()
-    {
-        return $this->render('@MovieMovie/Page/register.html.twig');
-    }
-
     /**
      * @Route("/new")
      */
-    public function newAction() {
+    public function newAction()
+    {
         // creates a movie record and adds it to the database
         $em = $this->getDoctrine()->getManager();
         $movie = new Movie();
@@ -90,6 +66,53 @@ class PageController extends Controller
 //        ]);
     }
 
+    public function showAction($id)
+    {
+
+        $repository = $this->getDoctrine()
+            ->getRepository('MovieMovieBundle:Review');
+
+        // createQueryBuilder() automatically selects FROM AppBundle:Movie
+        // and aliases it to "m"
+//        $query = $repository->createQueryBuilder('m')
+//            ->where('m.movie_id = movie')
+//            ->orderBy('m.rating', 'ASC')
+//            ->getQuery();
+
+//        $products = $query->getResult();
+// to get just one result:
+// $product = $query->setMaxResults(1)->getOneOrNullResult();
+
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+
+//need to get movie id of movie passed in and then search Review db for records with movie_id
+        $review = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($movie);
+        return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie, 'review' => $review));
+
+    }
+
+    public function aboutAction()
+    {
+        return $this->render('@MovieMovie/Page/about.html.twig');
+    }
+
+    public function loginAction()
+    {
+        return $this->render('@MovieMovie/Page/login_content.html.twig');
+    }
+
+    public function registerAction()
+    {
+        return $this->render('@MovieMovie/Page/register.html.twig');
+    }
+
+    /**
+     * @Route("/edit/{id}")
+     */
+    public function editAction()
+    {
+        return $this->render('@MovieMovie/Page/edit.html.twig');
+    }
 
 
 }

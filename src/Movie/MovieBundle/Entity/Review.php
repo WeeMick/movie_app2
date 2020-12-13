@@ -17,17 +17,17 @@ class Review
     /**
      * @return mixed
      */
-    public function getReviewId()
+    public function getId()
     {
-        return $this->review_id;
+        return $this->id;
     }
 
     /**
-     * @param mixed $review_id
+     * @param mixed $id
      */
-    public function setReviewId($review_id)
+    public function setReviewId($id)
     {
-        $this->review_id = $review_id;
+        $this->id = $id;
     }
 
     /**
@@ -82,18 +82,19 @@ class Review
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
-    protected $review_id;
+    protected $id;
 
     /**
      * @ORM\ManyToOne( targetEntity="Movie\MovieBundle\Entity\Movie")
      * @ORM\JoinColumn (referencedColumnName="id")
      */
-    protected $movie_id;
+    protected $movie;
 
     /**
-     * @ORM\Column(type="integer")
+    * @ORM\ManyToOne( targetEntity="Movie\MovieBundle\Entity\User")
+     * @ORM\JoinColumn (referencedColumnName="id")
      */
-    protected $reviewer_id;
+    protected $reviewer;
 
     /**
      * @ORM\Column(type="string", length=700)
