@@ -23,10 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/movie_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movie_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +105,8 @@
       <path value="$PROJECT_DIR$/vendor/kriswallsmith/assetic" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1k4aQ0FVatmVX5PYJ8bySUqxQHl" />
@@ -127,17 +132,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\AppBundle" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\Images" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\Images" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\FOSUserBundle\views" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public\css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -163,6 +170,8 @@
       <workItem from="1607007188482" duration="20203000" />
       <workItem from="1607440826399" duration="3066000" />
       <workItem from="1607553423151" duration="3604000" />
+      <workItem from="1607902675146" duration="712000" />
+      <workItem from="1607996060318" duration="2711000" />
     </task>
     <servers />
   </component>
@@ -271,9 +280,10 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="461" y="-915" key="SettingsEditor/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607006896329" />
-    <state x="-865" y="435" width="672" height="601" key="search.everywhere.popup" timestamp="1607556020154">
-      <screen x="-1280" y="236" width="1280" height="920" />
+    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup" timestamp="1607996246553">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
+    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1920.98.1920.1040/-1922.1178.1536.824/0.0.1920.1160/1920.122.1920.1040@0.0.1920.1160" timestamp="1607996246553" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606764217680" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.-776.1920.1040/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606825822542" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607022938782" />
