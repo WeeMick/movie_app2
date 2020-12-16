@@ -1,8 +1,8 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
-{% block title %}Add Movie{% endblock%}
+{% block title %}Add review {% endblock%}
 {% block body %}
     <header>
-        <h1>Add Movie To Database</h1>
+        <h1>Add review for ADD SELECTED MOVIE HERE</h1>
     </header>
     <form action="" method="get">
         {{ form_start(form) }}
@@ -10,5 +10,5 @@
         {{ form_end(form) }}
     </form>
 
-    <button class="btn btn-danger"><a href="{{ path('movie_index') }}">Cancel Adding Movie</a></button>
+    <button class="btn btn-danger"><a href="{{ path('movie_index') }}">Cancel Adding Review</a></button>
 {% endblock %}

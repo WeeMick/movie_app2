@@ -23,9 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/newreview.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,25 +126,25 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/Images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\views\Page" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\Images" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\Images" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\FOSUserBundle\views" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\AppBundle" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\Images" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\Images" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\FOSUserBundle\views" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -279,10 +283,10 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="461" y="-915" key="SettingsEditor/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607006896329" />
-    <state x="-1297" y="359" width="1008" height="680" key="search.everywhere.popup" timestamp="1608083042201">
+    <state x="-1297" y="359" width="1008" height="680" key="search.everywhere.popup" timestamp="1608089310478">
       <screen x="-1920" y="134" width="1920" height="1040" />
     </state>
-    <state x="-1297" y="359" width="1008" height="680" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@-1920.134.1920.1040" timestamp="1608083042201" />
+    <state x="-1297" y="359" width="1008" height="680" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@-1920.134.1920.1040" timestamp="1608089310478" />
     <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1608043925960" />
     <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1920.98.1920.1040/-1922.1178.1536.824/0.0.1920.1160/1920.122.1920.1040@0.0.1920.1160" timestamp="1607996246553" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606764217680" />

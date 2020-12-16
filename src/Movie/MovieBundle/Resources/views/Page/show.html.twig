@@ -18,7 +18,7 @@
     <hr>
     <div>
         <h1>Reviews</h1>
-        <button class="btn btn-primary">Add review</button>
+        <button class="btn btn-primary"><a href="{{ path('movie_newreview') }}">Add review</a></button>
         <h3>Table showing all reviews</h3>
         {% if review %}
             <table class="table table-striped table-bordered">

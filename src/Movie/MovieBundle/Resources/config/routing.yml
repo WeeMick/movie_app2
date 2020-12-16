@@ -33,4 +33,10 @@ movie_new:
     requirements:
         _method: GET, POST
 
+movie_newreview:
+    path: /movie/new
+    defaults: { _controller: MovieMovieBundle:Page:newReview }
+    requirements:
+        _method: GET, POST
+
 

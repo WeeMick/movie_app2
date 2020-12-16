@@ -2,6 +2,7 @@
 
 namespace Movie\MovieBundle\Controller;
 
+use Movie\MovieBundle\Entity\Review;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -74,6 +75,36 @@ class PageController extends Controller
         ]);
 
 //        return $this->render('@MovieMovie/Page/new');
+
+    }
+
+    /**
+     * @Route("/movie/new")
+     */
+    public function newReviewAction()
+    {
+        $review = new Review();
+
+        $form = $this->createFormBuilder($review)
+            ->add('movie', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
+//            ->add('director', TextType::class, array('attr' =>
+//                array('class' => 'form-control')))
+//            ->add('summary', TextType::class, array(
+//                'required' => false,
+//                'attr' => array('class' => 'form-control')))
+            ->add('review', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
+            ->add('rating', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
+            ->add('save', SubmitType::class, array(
+                'label' => 'Save Review',
+                'attr' => array('class' => 'btn btn-primary mt-2')))
+            ->getForm();
+
+        return $this->render('@MovieMovie/Page/newreview.html.twig', [
+            'form' => $form->createView(),
+        ]);
 
     }
 

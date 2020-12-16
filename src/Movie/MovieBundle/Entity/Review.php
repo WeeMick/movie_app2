@@ -33,17 +33,17 @@ class Review
     /**
      * @return mixed
      */
-    public function getMovieId()
+    public function getMovie()
     {
-        return $this->movie_id;
+        return $this->movie;
     }
 
     /**
-     * @param mixed $movie_id
+     * @param mixed $movie
      */
-    public function setMovieId($movie_id)
+    public function setMovie($movie)
     {
-        $this->movie_id = $movie_id;
+        $this->movie = $movie;
     }
 
     /**
