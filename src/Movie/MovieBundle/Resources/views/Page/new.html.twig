@@ -4,10 +4,9 @@
     <header>
         <h1>Add Movie To Database</h1>
     </header>
-    <article>
-        <p>Add new movie below</p>
-    </article>
     <form action="" method="get">
-        <input type="text" />
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
     </form>
 {% endblock %}

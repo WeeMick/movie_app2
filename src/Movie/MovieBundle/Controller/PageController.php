@@ -57,9 +57,13 @@ class PageController extends Controller
         $form = $this->createFormBuilder($movie)
             ->add('title', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
+            ->add('director', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
             ->add('summary', TextType::class, array(
                 'required' => false,
                 'attr' => array('class' => 'form-control')))
+            ->add('running_time', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
             ->add('save', SubmitType::class, array(
                 'label' => 'Create',
                 'attr' => array('class' => 'btn btn-primary mt-2')))
