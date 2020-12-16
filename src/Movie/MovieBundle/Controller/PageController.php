@@ -9,10 +9,14 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration;
 use Movie\MovieBundle\Entity\Movie;
 
 class PageController extends Controller
 {
+    /**
+     * @Route("/")
+     */
     public function indexAction()
     {
 //        $movies = array(
@@ -37,33 +41,36 @@ class PageController extends Controller
     public function newAction()
     {
         // creates a movie record and adds it to the database
-        $em = $this->getDoctrine()->getManager();
-        $movie = new Movie();
-        $movie->setTitle('Look, a new Movie');
-        $movie->setSummary('Summary of a new Movie');
-        $movie->setDetailedDescription('Blah blah blah');
-        $movie->setDateAdded(new \DateTime('now'));
-        $movie->setRating(2.1);
-
-        $em->persist($movie);
-        $em->flush();
-
-        return $this->redirectToRoute('movie_index');
-
-//        $form = $this->createFormBuilder($movie)
-//            ->add('title', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('body', TextType::class, array(
-//                'required' => false,
-//                'attr' => array('class' => 'form-control')))
-//            ->add('save', SubmitType::class, array(
-//                'label' => 'Create',
-//                'attr' => array('class' => 'btn btn-primary mt-2')))
-//            ->getForm();
+//        $em = $this->getDoctrine()->getManager();
+          $movie = new Movie();
+//        $movie->setTitle('Look, a new Movie');
+//        $movie->setSummary('Summary of a new Movie');
+//        $movie->setDetailedDescription('Blah blah blah');
+//        $movie->setDateAdded(new \DateTime('now'));
+//        $movie->setRating(2.1);
 //
-//        return $this->render('@MovieMovie/Page/new.html.twig', [
-//            'form' => $form->createView(),
-//        ]);
+//        $em->persist($movie);
+//        $em->flush();
+//
+//        return $this->redirectToRoute('movie_index');
+
+        $form = $this->createFormBuilder($movie)
+            ->add('title', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
+            ->add('summary', TextType::class, array(
+                'required' => false,
+                'attr' => array('class' => 'form-control')))
+            ->add('save', SubmitType::class, array(
+                'label' => 'Create',
+                'attr' => array('class' => 'btn btn-primary mt-2')))
+            ->getForm();
+
+        return $this->render('@MovieMovie/Page/new.html.twig', [
+            'form' => $form->createView(),
+        ]);
+
+//        return $this->render('@MovieMovie/Page/new');
+
     }
 
     public function showAction($id)
