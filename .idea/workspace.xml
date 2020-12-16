@@ -23,13 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/movie_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movie_app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Security/login_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +171,9 @@
       <workItem from="1607440826399" duration="3066000" />
       <workItem from="1607553423151" duration="3604000" />
       <workItem from="1607902675146" duration="712000" />
-      <workItem from="1607996060318" duration="2711000" />
+      <workItem from="1607996060318" duration="2903000" />
+      <workItem from="1608040009528" duration="6275000" />
+      <workItem from="1608076101387" duration="3798000" />
     </task>
     <servers />
   </component>
@@ -196,9 +198,10 @@
     </state>
     <state x="552" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606757101614" />
     <state x="552" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607007873740" />
-    <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser" timestamp="1607027763865">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="753" y="255" key="#com.intellij.ide.util.MemberChooser" timestamp="1608045112600">
+      <screen x="0" y="0" width="1920" height="1160" />
     </state>
+    <state x="753" y="255" key="#com.intellij.ide.util.MemberChooser/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1608045112600" />
     <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606762406609" />
     <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607027763865" />
     <state x="736" y="-678" width="447" height="265" key="ComposerInitDialogKey" timestamp="1604962403867">
@@ -280,9 +283,11 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="461" y="-915" key="SettingsEditor/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607006896329" />
-    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup" timestamp="1607996246553">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="-1297" y="359" width="1008" height="680" key="search.everywhere.popup" timestamp="1608079204911">
+      <screen x="-1920" y="134" width="1920" height="1040" />
     </state>
+    <state x="-1297" y="359" width="1008" height="680" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@-1920.134.1920.1040" timestamp="1608079204911" />
+    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1608043925960" />
     <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1920.98.1920.1040/-1922.1178.1536.824/0.0.1920.1160/1920.122.1920.1040@0.0.1920.1160" timestamp="1607996246553" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606764217680" />
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.-776.1920.1040/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606825822542" />
