@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -35,9 +36,9 @@ class PageController extends Controller
 
     }
 
-
     /**
-     * @Route("/new")
+     * @param Request $request
+     * @return RedirectResponse|Response|null
      */
     public function newAction(Request $request)
     {
@@ -56,12 +57,14 @@ class PageController extends Controller
 //        return $this->redirectToRoute('movie_index');
 
         $form = $this->createFormBuilder($movie)
+            ->setMethod('POST')
             ->add('title', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('director', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('summary', TextType::class, array(
-                'required' => false,
+                'attr' => array('class' => 'form-control')))
+            ->add('actors', TextType::class, array(
                 'attr' => array('class' => 'form-control')))
             ->add('running_time', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
@@ -70,8 +73,20 @@ class PageController extends Controller
                 'attr' => array('class' => 'btn btn-primary mt-2')))
             ->getForm();
 
+        $form->handleRequest($request);
+
         if($form->isSubmitted() && $form->isValid()) {
-            $movie = $form->getData();
+            $title = $form['title']->getData();
+            $director = $form['director']->getData();
+            $summary = $form['summary']->getData();
+            $actors = $form['actors']->getData();
+            $running_time = $form['running_time']->getData();
+
+            $movie->setTitle($title);
+            $movie->setDirector($director);
+            $movie->setSummary($summary);
+            $movie->setActors($actors);
+            $movie->setRunningTime($running_time);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($movie);

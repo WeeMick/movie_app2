@@ -26,6 +26,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Movie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Movie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/new.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +172,7 @@
       <workItem from="1607996060318" duration="2903000" />
       <workItem from="1608040009528" duration="6275000" />
       <workItem from="1608076101387" duration="6416000" />
-      <workItem from="1608389255955" duration="1593000" />
+      <workItem from="1608389255955" duration="11020000" />
     </task>
     <servers />
   </component>
@@ -195,10 +197,11 @@
     </state>
     <state x="552" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606757101614" />
     <state x="552" y="-902" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607007873740" />
-    <state x="753" y="255" key="#com.intellij.ide.util.MemberChooser" timestamp="1608045112600">
+    <state x="753" y="255" key="#com.intellij.ide.util.MemberChooser" timestamp="1608391992463">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="753" y="255" key="#com.intellij.ide.util.MemberChooser/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1608045112600" />
+    <state x="753" y="255" key="#com.intellij.ide.util.MemberChooser/-1922.1178.1536.832/-1920.98.1920.1040/1920.122.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1608391992463" />
     <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606762406609" />
     <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607027763865" />
     <state x="736" y="-678" width="447" height="265" key="ComposerInitDialogKey" timestamp="1604962403867">

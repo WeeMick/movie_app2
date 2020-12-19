@@ -75,7 +75,27 @@ class Movie
     {
         $this->running_time = $running_time;
     }
-    
+
+    /**
+     * @return mixed
+     */
+    public function getActors()
+    {
+        return $this->actors;
+    }
+
+    /**
+     * @param mixed $actors
+     */
+    public function setActors($actors)
+    {
+        $this->actors = $actors;
+    }
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $actors;
 
     /**
      * @ORM\Column(type="integer")
@@ -84,7 +104,7 @@ class Movie
 
 
     /**
-     * @ORM\Column(type="decimal", scale=1, precision=3)
+     * @ORM\Column(type="decimal", nullable=TRUE, scale=1, precision=3)
      */
     protected $rating;
 
