@@ -39,7 +39,7 @@ class PageController extends Controller
     /**
      * @Route("/new")
      */
-    public function newAction()
+    public function newAction(Request $request)
     {
         // creates a movie record and adds it to the database
 //        $em = $this->getDoctrine()->getManager();
@@ -70,11 +70,19 @@ class PageController extends Controller
                 'attr' => array('class' => 'btn btn-primary mt-2')))
             ->getForm();
 
+        if($form->isSubmitted() && $form->isValid()) {
+            $movie = $form->getData();
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($movie);
+            $em->flush();
+
+            return $this->redirectToRoute('movie_index');
+        }
+
         return $this->render('@MovieMovie/Page/new.html.twig', [
             'form' => $form->createView(),
         ]);
-
-//        return $this->render('@MovieMovie/Page/new');
 
     }
 

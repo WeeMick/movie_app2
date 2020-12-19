@@ -75,22 +75,7 @@ class Movie
     {
         $this->running_time = $running_time;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getReviews()
-    {
-        return $this->reviews;
-    }
-
-    /**
-     * @param mixed $reviews
-     */
-    public function setReviews($reviews)
-    {
-        $this->reviews = $reviews;
-    }
+    
 
     /**
      * @ORM\Column(type="integer")
@@ -103,10 +88,6 @@ class Movie
      */
     protected $rating;
 
-    /**
-     * @ORM\Column(type="string", length=20)
-     */
-    protected $reviews;
 
     /**
      * @return mixed
