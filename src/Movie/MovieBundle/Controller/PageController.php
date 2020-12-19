@@ -156,6 +156,14 @@ class PageController extends Controller
 
     }
 
+    public function userPageAction($id)
+    {
+        $user = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($id);
+        $reviews = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
+
+        return $this->render('@MovieMovie/Page/userpage.html.twig', array('user' => $user,'reviews' => $reviews));
+    }
+
     public function aboutAction()
     {
         return $this->render('@MovieMovie/Page/about.html.twig');

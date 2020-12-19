@@ -39,4 +39,10 @@ movie_newreview:
     requirements:
         _method: GET, POST
 
+movie_user:
+    path: /user-page/{id}
+    defaults: { _controller: MovieMovieBundle:Page:userPage }
+    requirements:
+        _method: GET, POST
+
 
