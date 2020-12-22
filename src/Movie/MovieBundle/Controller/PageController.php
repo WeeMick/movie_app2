@@ -156,6 +156,20 @@ class PageController extends Controller
 
     }
 
+    public function deleteAction($id)
+    {
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($movie);
+        $em->
+        $em->flush();
+
+        // Deleting movie will need to delete all reviews for that movie too
+        return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie));
+
+    }
+
     public function userPageAction($id)
     {
         $user = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($id);

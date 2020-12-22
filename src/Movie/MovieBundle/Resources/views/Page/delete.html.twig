@@ -1,0 +1,11 @@
+{% extends 'MovieMovieBundle::layout.html.twig' %}
+{% block title %}Delete Movie{% endblock%}
+{% block body %}
+    <header>
+        <h1>Delete Movie From Database</h1>
+    </header>
+
+
+
+    <button class="btn btn-danger"><a href="{{ path('movie_index') }}">Cancel Adding Movie</a></button>
+{% endblock %}
