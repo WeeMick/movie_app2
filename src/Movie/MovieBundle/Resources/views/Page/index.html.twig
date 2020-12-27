@@ -48,7 +48,8 @@
                         {{ movie.rating }}
                     </td>
                     <td>
-                        <button class="btb btn-dark">Edit</button>
+{#                        <button class="btb btn-dark">Edit</button>#}
+                        <a href="{{ path('movie_edit', {'id': movie.id}) }}" class="btn btn-outline-primary" data-id="{{ movie.id }}">Edit</a>
                     </td>
                     <td>
 {#                        <button class="btb btn-danger">Delete</button>#}
@@ -81,7 +82,6 @@
 {% endblock %}
 
 {% block javascripts %}
-    {#    Come back and sort out this path name#}
     {% javascripts '@MovieMovieBundle/Resources/js/main.js' %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}

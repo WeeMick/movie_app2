@@ -21,19 +21,10 @@ class PageController extends Controller
      */
     public function indexAction()
     {
-//        $movies = array(
-//            array(
-//                'name' => 'Jaws',
-//                'review' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolores iure labore obcaecati repudiandae. Tempora?',
-//                'rating' => 3
-//            ),
-
         $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
         return $this->render('@MovieMovie/Page/index.html.twig', array(
             'movies' => $movies
         ));
-
-
     }
 
     /**
@@ -42,19 +33,7 @@ class PageController extends Controller
      */
     public function newAction(Request $request)
     {
-        // creates a movie record and adds it to the database
-//        $em = $this->getDoctrine()->getManager();
-          $movie = new Movie();
-//        $movie->setTitle('Look, a new Movie');
-//        $movie->setSummary('Summary of a new Movie');
-//        $movie->setDetailedDescription('Blah blah blah');
-//        $movie->setDateAdded(new \DateTime('now'));
-//        $movie->setRating(2.1);
-//
-//        $em->persist($movie);
-//        $em->flush();
-//
-//        return $this->redirectToRoute('movie_index');
+        $movie = new Movie();
 
         $form = $this->createFormBuilder($movie)
             ->setMethod('POST')
@@ -131,6 +110,60 @@ class PageController extends Controller
 
     }
 
+    /**
+     * @param Request $request
+     * @param $id
+     * @return RedirectResponse|Response|null
+     */
+    public function editMovieAction(Request $request, $id)
+    {
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+
+        $form = $this->createFormBuilder($movie)
+            ->setMethod('POST')
+            ->add('title', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
+            ->add('director', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
+            ->add('summary', TextType::class, array(
+                'attr' => array('class' => 'form-control')))
+            ->add('actors', TextType::class, array(
+                'attr' => array('class' => 'form-control')))
+            ->add('running_time', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
+            ->add('save', SubmitType::class, array(
+                'label' => 'Save',
+                'attr' => array('class' => 'btn btn-primary mt-2')))
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+            $title = $form['title']->getData();
+            $director = $form['director']->getData();
+            $summary = $form['summary']->getData();
+            $actors = $form['actors']->getData();
+            $running_time = $form['running_time']->getData();
+
+            $movie->setTitle($title);
+            $movie->setDirector($director);
+            $movie->setSummary($summary);
+            $movie->setActors($actors);
+            $movie->setRunningTime($running_time);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($movie);
+            $em->flush();
+
+            return $this->redirectToRoute('movie_index');
+        }
+
+        return $this->render('@MovieMovie/Page/editMovie.html.twig', [
+            'form' => $form->createView(), 'movie' => $movie
+        ]);
+
+    }
+
     public function showAction($id)
     {
 
@@ -191,14 +224,6 @@ class PageController extends Controller
     public function registerAction()
     {
         return $this->render('@MovieMovie/Page/register.html.twig');
-    }
-
-    /**
-     * @Route("/edit/{id}")
-     */
-    public function editAction()
-    {
-        return $this->render('@MovieMovie/Page/edit.html.twig');
     }
 
 

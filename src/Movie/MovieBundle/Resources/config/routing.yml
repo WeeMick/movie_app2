@@ -9,9 +9,13 @@ movie_show:
         _method: GET, POST
 #        id: '\d+'
 
-movie_show:
+movie_delete:
     path: /delete/{id}
     defaults: { _controller: MovieMovieBundle:Page:delete, id: id }
+
+movie_edit:
+        path: /edit/{id}
+        defaults: { _controller: MovieMovieBundle:Page:editMovie, id: id }
 
 movie_about:
     path: /about
