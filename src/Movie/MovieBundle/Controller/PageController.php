@@ -26,6 +26,9 @@ class PageController extends Controller
             'movies' => $movies
         ));
     }
+    /*
+     * End of indexAction
+     */
 
     /**
      * @param Request $request
@@ -79,9 +82,12 @@ class PageController extends Controller
         ]);
 
     }
+    /*
+    * End of newAction
+    */
 
     /**
-     * @Route("/movie/review/new")
+     * @Route("/movie/review/new/{id}")
      * @param $id
      * @return Response|null
      */
@@ -89,12 +95,9 @@ class PageController extends Controller
     {
         $newreview = new Review();
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
-//        $newreview = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($movie);
 
         $form = $this->createFormBuilder($newreview)
             ->setMethod('POST')
-//            ->add('movie', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
             ->add('review', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('rating', TextType::class, array('attr' =>
@@ -107,11 +110,9 @@ class PageController extends Controller
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
-//            $movie = $form['movie']->getData();
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
 
-            $newreview->setMovie($movie);
             $newreview->setReview($review);
             $newreview->setRating($rating);
 
@@ -119,11 +120,9 @@ class PageController extends Controller
             $em->persist($newreview);
             $em->flush();
 
-//            return $this->render('@MovieMovie/Page/show.html.twig', array(
-//                'movie' => $movie,
-//                'review' =>$newreview
-//            ));
-            return $this->redirectToRoute('movie_show', ['id' => $id] );
+
+            $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
+            return $this->render('@MovieMovie/Page/index.html.twig', array('movies' => $movies));
         }
 
         return $this->render('@MovieMovie/Page/newreview.html.twig', [
@@ -132,8 +131,10 @@ class PageController extends Controller
             'movie' => $movie
 
         ]);
-
     }
+    /*
+    * End of newReviewAction
+    */
 
     /**
      * @param Request $request
@@ -184,10 +185,14 @@ class PageController extends Controller
         }
 
         return $this->render('@MovieMovie/Page/editMovie.html.twig', [
-            'form' => $form->createView(), 'movie' => $movie
+            'form' => $form->createView(),
+            'movie' => $movie
         ]);
 
     }
+    /*
+    * End of editMovieAction
+    */
 
     public function showAction($id)
     {
@@ -209,15 +214,12 @@ class PageController extends Controller
 // to get just one result:
 // $product = $query->setMaxResults(1)->getOneOrNullResult();
 
-
-
-
-
-//need to get movie id of movie passed in and then search Review db for records with movie_id
-//        $reviews = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->findBy(['movie' = $movieId]);
         return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie, 'reviews' => $reviews));
 
     }
+    /*
+    * End of showAction
+    */
 
     public function deleteAction($id)
     {
@@ -232,6 +234,9 @@ class PageController extends Controller
         return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie));
 
     }
+    /*
+    * End of deleteAction
+    */
 
     public function userPageAction($id)
     {
@@ -240,21 +245,33 @@ class PageController extends Controller
 
         return $this->render('@MovieMovie/Page/userpage.html.twig', array('user' => $user,'reviews' => $reviews));
     }
+    /*
+    * End of userPageAction
+    */
 
     public function aboutAction()
     {
         return $this->render('@MovieMovie/Page/about.html.twig');
     }
+    /*
+    * End of aboutAction
+    */
 
     public function loginAction()
     {
         return $this->render('@MovieMovie/Page/login_content.html.twig');
     }
+    /*
+    * End of loginAction
+    */
 
     public function registerAction()
     {
         return $this->render('@MovieMovie/Page/register.html.twig');
     }
+    /*
+    * End of registerActionAction
+    */
 
 
 }
