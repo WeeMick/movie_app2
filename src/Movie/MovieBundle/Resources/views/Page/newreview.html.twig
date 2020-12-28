@@ -2,13 +2,13 @@
 {% block title %}Add review {% endblock%}
 {% block body %}
     <header>
-        <h1>Add review for ADD SELECTED MOVIE HERE</h1>
+        <h1>Add review for {{ review.movie }}</h1>
     </header>
-    <form action="" method="get">
+    <form action="" method="post">
         {{ form_start(form) }}
         {{ form_widget(form) }}
         {{ form_end(form) }}
     </form>
 
-    <button class="btn btn-danger"><a href="{{ path('movie_index') }}">Cancel Adding Review</a></button>
+    <button class="btn btn-danger"><a href="{{ path('movie_show', {'id': movie.id}) }}">Cancel Adding Review</a></button>
 {% endblock %}

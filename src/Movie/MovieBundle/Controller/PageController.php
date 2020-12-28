@@ -81,20 +81,20 @@ class PageController extends Controller
     }
 
     /**
-     * @Route("/movie/new")
+     * @Route("/movie/review/new")
+     * @param $id
+     * @return Response|null
      */
-    public function newReviewAction()
+    public function newReviewAction(Request $request, $id)
     {
-        $review = new Review();
+        $newreview = new Review();
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+//        $newreview = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($movie);
 
-        $form = $this->createFormBuilder($review)
-            ->add('movie', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-//            ->add('director', TextType::class, array('attr' =>
+        $form = $this->createFormBuilder($newreview)
+            ->setMethod('POST')
+//            ->add('movie', TextType::class, array('attr' =>
 //                array('class' => 'form-control')))
-//            ->add('summary', TextType::class, array(
-//                'required' => false,
-//                'attr' => array('class' => 'form-control')))
             ->add('review', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('rating', TextType::class, array('attr' =>
@@ -104,8 +104,33 @@ class PageController extends Controller
                 'attr' => array('class' => 'btn btn-primary mt-2')))
             ->getForm();
 
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+//            $movie = $form['movie']->getData();
+            $review = $form['review']->getData();
+            $rating = $form['rating']->getData();
+
+            $newreview->setMovie($movie);
+            $newreview->setReview($review);
+            $newreview->setRating($rating);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($newreview);
+            $em->flush();
+
+//            return $this->render('@MovieMovie/Page/show.html.twig', array(
+//                'movie' => $movie,
+//                'review' =>$newreview
+//            ));
+            return $this->redirectToRoute('movie_show', ['id' => $id] );
+        }
+
         return $this->render('@MovieMovie/Page/newreview.html.twig', [
             'form' => $form->createView(),
+            'review' => $newreview,
+            'movie' => $movie
+
         ]);
 
     }
@@ -166,26 +191,31 @@ class PageController extends Controller
 
     public function showAction($id)
     {
-
         $repository = $this->getDoctrine()
             ->getRepository('MovieMovieBundle:Review');
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+        $movieId = $movie->getId();
 
-        // createQueryBuilder() automatically selects FROM AppBundle:Movie
-        // and aliases it to "m"
-//        $query = $repository->createQueryBuilder('m')
-//            ->where('m.movie_id = movie')
-//            ->orderBy('m.rating', 'ASC')
-//            ->getQuery();
+//         createQueryBuilder() automatically selects FROM AppBundle:Movie
+//         and aliases it to "m"
+        $query = $repository->createQueryBuilder('r')
+            ->setParameters(array(
+                'movieId' => $movieId))
+            ->where('r.movie = :movieId')
+            ->orderBy('r.id', 'ASC')
+            ->getQuery();
 
-//        $products = $query->getResult();
+        $reviews = $query->getResult();
 // to get just one result:
 // $product = $query->setMaxResults(1)->getOneOrNullResult();
 
-        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+
+
+
 
 //need to get movie id of movie passed in and then search Review db for records with movie_id
-        $review = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($movie);
-        return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie, 'review' => $review));
+//        $reviews = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->findBy(['movie' = $movieId]);
+        return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie, 'reviews' => $reviews));
 
     }
 

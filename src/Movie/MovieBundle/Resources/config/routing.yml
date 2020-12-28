@@ -35,15 +35,15 @@ movie_register:
     requirements:
         _method: GET
 
-movie_new:
-    path: /new
-    defaults: { _controller: MovieMovieBundle:Page:new }
+movie_newreview:
+    path: /movie/review/new/{$id}
+    defaults: { _controller: MovieMovieBundle:Page:newReview, id: id }
     requirements:
         _method: GET, POST
 
-movie_newreview:
+movie_new:
     path: /movie/new
-    defaults: { _controller: MovieMovieBundle:Page:newReview }
+    defaults: { _controller: MovieMovieBundle:Page:new }
     requirements:
         _method: GET, POST
 
