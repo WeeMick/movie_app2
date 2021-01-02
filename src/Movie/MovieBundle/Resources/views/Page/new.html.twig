@@ -4,11 +4,12 @@
     <header>
         <h1>Add Movie To Database</h1>
     </header>
+{#   TODO add in image upload #}
     <form action="" method="post">
         {{ form_start(form) }}
         {{ form_widget(form) }}
         {{ form_end(form) }}
     </form>
-    {#    add in a confirm #}
+    {#    TODO add in a confirm #}
     <button class="btn btn-danger"><a href="{{ path('movie_index') }}">Cancel Adding Movie</a></button>
 {% endblock %}

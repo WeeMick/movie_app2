@@ -14,6 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 class Review
 {
+
     /**
      * @return mixed
      */
@@ -41,7 +42,7 @@ class Review
     /**
      * @param mixed $movie
      */
-    public function setMovie($movie)
+    public function setMovieId($movie)
     {
         $this->movie = $movie;
     }
@@ -49,17 +50,17 @@ class Review
     /**
      * @return mixed
      */
-    public function getReviewerId()
+    public function getReviewer()
     {
-        return $this->reviewer_id;
+        return $this->reviewer;
     }
 
     /**
-     * @param mixed $reviewer_id
+     * @param mixed $reviewer
      */
-    public function setReviewerId($reviewer_id)
+    public function setReviewer($reviewer)
     {
-        $this->reviewer_id = $reviewer_id;
+        $this->reviewer = $reviewer;
     }
 
     /**
@@ -86,13 +87,13 @@ class Review
 
     /**
      * @ORM\ManyToOne( targetEntity="Movie\MovieBundle\Entity\Movie")
-     * @ORM\JoinColumn (referencedColumnName="id")
+     * @ORM\JoinColumn (name="movie_id", referencedColumnName="id")
      */
     protected $movie;
 
     /**
     * @ORM\ManyToOne( targetEntity="Movie\MovieBundle\Entity\User")
-     * @ORM\JoinColumn (referencedColumnName="id")
+     * @ORM\JoinColumn (name="reviewer_id", referencedColumnName="id")
      */
     protected $reviewer;
 

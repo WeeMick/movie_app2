@@ -112,9 +112,11 @@ class PageController extends Controller
         if($form->isSubmitted() && $form->isValid()) {
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
+            $userid = $this->getUser()->getId();
 
             $newreview->setReview($review);
             $newreview->setRating($rating);
+//            $newreview->setReviewerId($userid);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($newreview);
@@ -122,8 +124,10 @@ class PageController extends Controller
 
 
             $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
-            return $this->render('@MovieMovie/Page/index.html.twig', array('movies' => $movies));
+//            return $this->render('@MovieMovie/Page/index.html.twig', array('movies' => $movies));
+            return $this->redirectToRoute('movie_index');
         }
+
 
         return $this->render('@MovieMovie/Page/newreview.html.twig', [
             'form' => $form->createView(),
@@ -205,8 +209,8 @@ class PageController extends Controller
 //         and aliases it to "m"
         $query = $repository->createQueryBuilder('r')
             ->setParameters(array(
-                'movieId' => $movieId))
-            ->where('r.movie = :movieId')
+                'movie' => $movieId))
+            ->where('r.movie = :movie')
             ->orderBy('r.id', 'ASC')
             ->getQuery();
 

@@ -2,6 +2,7 @@
 
 namespace Movie\MovieBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -156,6 +157,32 @@ class Movie
     public function setRating($rating)
     {
         $this->rating = $rating;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="Review", mappedBy="movie")
+     */
+    private $reviews;
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getReviews()
+    {
+        return $this->reviews;
+    }
+
+    /**
+     * @param ArrayCollection $reviews
+     */
+    public function setReviews($reviews)
+    {
+        $this->reviews = $reviews;
+    }
+
+    public function __construct()
+    {
+        $this->reviews = new ArrayCollection();
     }
 
 
