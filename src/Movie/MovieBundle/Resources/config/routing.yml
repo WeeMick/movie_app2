@@ -6,7 +6,6 @@ movie_show:
     path: /show/{id}
     defaults: { _controller: MovieMovieBundle:Page:show, id: id }
     requirements:
-        _method: GET, POST
 #        id: '\d+'
 
 movie_delete:
@@ -14,43 +13,37 @@ movie_delete:
     defaults: { _controller: MovieMovieBundle:Page:delete, id: id }
 
 movie_edit:
-        path: /edit/{id}
-        defaults: { _controller: MovieMovieBundle:Page:editMovie, id: id }
+    path: /edit/{id}
+    defaults: { _controller: MovieMovieBundle:Page:editMovie, id: id }
 
 movie_about:
     path: /about
     defaults: { _controller: MovieMovieBundle:Page:about }
     requirements:
-        _method: GET
 
 movie_login:
     path: /login
     defaults: { _controller: MovieMovieBundle:Page:login }
     requirements:
-        _method: GET
 
 movie_register:
     path: /register
     defaults: { _controller: MovieMovieBundle:Page:register }
     requirements:
-        _method: GET
 
-movie_newreview:
+movie_newReview:
     path: /movie/review/new/{$id}
     defaults: { _controller: MovieMovieBundle:Page:newReview, id: id }
     requirements:
-        _method: GET, POST
 
 movie_new:
     path: /movie/new
     defaults: { _controller: MovieMovieBundle:Page:new }
     requirements:
-        _method: GET, POST
 
 movie_user:
     path: /user-page/{id}
     defaults: { _controller: MovieMovieBundle:Page:userPage }
     requirements:
-        _method: GET, POST
 
 

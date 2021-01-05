@@ -88,13 +88,15 @@ class PageController extends Controller
 
     /**
      * @Route("/movie/review/new/{id}")
+     * @param Request $request
      * @param $id
      * @return Response|null
      */
     public function newReviewAction(Request $request, $id)
     {
         $newreview = new Review();
-        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find(1);
+        $movieId = $movie->getId();
 
         $form = $this->createFormBuilder($newreview)
             ->setMethod('POST')
@@ -112,11 +114,16 @@ class PageController extends Controller
         if($form->isSubmitted() && $form->isValid()) {
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
-            $userid = $this->getUser()->getId();
+//            $userid = $this->getUser()->getId();
+
 
             $newreview->setReview($review);
             $newreview->setRating($rating);
+            $newreview->setMovie($movie);
 //            $newreview->setReviewerId($userid);
+
+//            $newreview->setMovie($movie);
+
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($newreview);
@@ -129,7 +136,7 @@ class PageController extends Controller
         }
 
 
-        return $this->render('@MovieMovie/Page/newreview.html.twig', [
+        return $this->render('@MovieMovie/Page/newReview.html.twig', [
             'form' => $form->createView(),
             'review' => $newreview,
             'movie' => $movie
@@ -140,11 +147,7 @@ class PageController extends Controller
     * End of newReviewAction
     */
 
-    /**
-     * @param Request $request
-     * @param $id
-     * @return RedirectResponse|Response|null
-     */
+
     public function editMovieAction(Request $request, $id)
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
@@ -206,7 +209,7 @@ class PageController extends Controller
         $movieId = $movie->getId();
 
 //         createQueryBuilder() automatically selects FROM AppBundle:Movie
-//         and aliases it to "m"
+//         and aliases it to "r"
         $query = $repository->createQueryBuilder('r')
             ->setParameters(array(
                 'movie' => $movieId))

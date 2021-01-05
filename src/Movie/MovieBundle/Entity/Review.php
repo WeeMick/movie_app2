@@ -42,8 +42,9 @@ class Review
     /**
      * @param mixed $movie
      */
-    public function setMovieId($movie)
+    public function setMovie(Movie $movie)
     {
+        $movie->addReview($this);
         $this->movie = $movie;
     }
 
@@ -86,8 +87,8 @@ class Review
     protected $id;
 
     /**
-     * @ORM\ManyToOne( targetEntity="Movie\MovieBundle\Entity\Movie")
-     * @ORM\JoinColumn (name="movie_id", referencedColumnName="id")
+     * @ORM\ManyToOne( targetEntity="Movie\MovieBundle\Entity\Movie", inversedBy="reviews")
+     * @ORM\JoinColumn (name="movie_id", referencedColumnName="id", nullable=false)
      */
     protected $movie;
 

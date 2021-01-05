@@ -185,6 +185,10 @@ class Movie
         $this->reviews = new ArrayCollection();
     }
 
+    public function addReview(Review $review)
+    {
+        $this->reviews[] = $review;
+    }
 
 
 }
