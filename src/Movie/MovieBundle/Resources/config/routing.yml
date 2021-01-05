@@ -6,7 +6,7 @@ movie_show:
     path: /show/{id}
     defaults: { _controller: MovieMovieBundle:Page:show, id: id }
     requirements:
-#        id: '\d+'
+        id: '\d+'
 
 movie_delete:
     path: /delete/{id}
@@ -32,7 +32,7 @@ movie_register:
     requirements:
 
 movie_newReview:
-    path: /movie/review/new/{$id}
+    path: /review/new/{$id}
     defaults: { _controller: MovieMovieBundle:Page:newReview, id: id }
     requirements:
 

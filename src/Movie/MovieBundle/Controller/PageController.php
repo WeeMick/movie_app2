@@ -87,16 +87,15 @@ class PageController extends Controller
     */
 
     /**
-     * @Route("/movie/review/new/{id}")
+     * @Route("/review/new/{id}")
      * @param Request $request
      * @param $id
-     * @return Response|null
+     * @return RedirectResponse|Response|null
      */
     public function newReviewAction(Request $request, $id)
     {
         $newreview = new Review();
-        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find(1);
-        $movieId = $movie->getId();
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
         $form = $this->createFormBuilder($newreview)
             ->setMethod('POST')
@@ -120,9 +119,7 @@ class PageController extends Controller
             $newreview->setReview($review);
             $newreview->setRating($rating);
             $newreview->setMovie($movie);
-//            $newreview->setReviewerId($userid);
-
-//            $newreview->setMovie($movie);
+            // Should I add movie to review or add review to movie?
 
 
             $em = $this->getDoctrine()->getManager();
@@ -148,6 +145,11 @@ class PageController extends Controller
     */
 
 
+    /**
+     * @param Request $request
+     * @param $id
+     * @return RedirectResponse|Response|null
+     */
     public function editMovieAction(Request $request, $id)
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
@@ -201,6 +203,10 @@ class PageController extends Controller
     * End of editMovieAction
     */
 
+    /**
+     * @param $id
+     * @return Response|null
+     */
     public function showAction($id)
     {
         $repository = $this->getDoctrine()
@@ -228,6 +234,10 @@ class PageController extends Controller
     * End of showAction
     */
 
+    /**
+     * @param $id
+     * @return Response|null
+     */
     public function deleteAction($id)
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
@@ -245,6 +255,10 @@ class PageController extends Controller
     * End of deleteAction
     */
 
+    /**
+     * @param $id
+     * @return Response|null
+     */
     public function userPageAction($id)
     {
         $user = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($id);
@@ -256,6 +270,9 @@ class PageController extends Controller
     * End of userPageAction
     */
 
+    /**
+     * @return Response|null
+     */
     public function aboutAction()
     {
         return $this->render('@MovieMovie/Page/about.html.twig');
@@ -264,6 +281,9 @@ class PageController extends Controller
     * End of aboutAction
     */
 
+    /**
+     * @return Response|null
+     */
     public function loginAction()
     {
         return $this->render('@MovieMovie/Page/login_content.html.twig');
@@ -272,6 +292,9 @@ class PageController extends Controller
     * End of loginAction
     */
 
+    /**
+     * @return Response|null
+     */
     public function registerAction()
     {
         return $this->render('@MovieMovie/Page/register.html.twig');
