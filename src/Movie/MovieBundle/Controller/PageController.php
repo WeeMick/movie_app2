@@ -89,13 +89,10 @@ class PageController extends Controller
     /**
      * @param Request $request
      * @param $id
-     * @return RedirectResponse|Response|null
+     * @return Response|null
      */
     public function newReviewAction(Request $request, $id)
     {
-        echo "id: " . $id . "<br>";
-        $repository = $this->getDoctrine()
-            ->getRepository('MovieMovieBundle:Review');
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
         $newreview = new Review();
@@ -114,7 +111,6 @@ class PageController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            echo "Form submitted";
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
 //            $userid = $this->getUser()->getId();
@@ -129,17 +125,15 @@ class PageController extends Controller
             $em->persist($newreview);
             $em->flush();
 
-//            $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
-//            return $this->render('@MovieMovie/Page/index.html.twig', array('movies' => $movies));
-            return $this->redirectToRoute('movie_index');
+            return $this->redirectToRoute('movie_show', array(
+                'id' => $movie->getId()
+            ));
         }
 
 
-        echo "not Submitted";
         return $this->render('@MovieMovie/Page/newReview.html.twig', array(
                 'movie' => $movie,
-                'form' => $form->createView(),
-                'review' => $newreview)
+                'form' => $form->createView())
         );
     }
     /*
@@ -153,8 +147,6 @@ class PageController extends Controller
      */
     public function reviewAction(Request $request, $id)
     {
-//        $repository = $this->getDoctrine()
-//            ->getRepository('MovieMovieBundle:Review');
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
         $newreview = new Review();
@@ -173,7 +165,6 @@ class PageController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            echo "Form submitted";
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
 //            $userid = $this->getUser()->getId();

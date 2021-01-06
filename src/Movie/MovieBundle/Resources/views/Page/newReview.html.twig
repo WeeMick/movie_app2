@@ -1,8 +1,8 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
 {% block title %}Add review {% endblock%}
 {% block body %}
-    <h1>ID: </h1>
-    <h1>Title: </h1>
+    <h1>ID: {{ movie.id }}</h1>
+    <h1>Title: {{ movie.title }}</h1>
     <form action="" method="post">
         {{ form_start(form) }}
         {{ form_widget(form) }}
