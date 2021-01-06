@@ -57,7 +57,7 @@ class PageController extends Controller
 
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $title = $form['title']->getData();
             $director = $form['director']->getData();
             $summary = $form['summary']->getData();
@@ -93,7 +93,7 @@ class PageController extends Controller
      */
     public function newReviewAction(Request $request, $id)
     {
-        echo "id: " . $id. "<br>";
+        echo "id: " . $id . "<br>";
         $repository = $this->getDoctrine()
             ->getRepository('MovieMovieBundle:Review');
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
@@ -113,7 +113,7 @@ class PageController extends Controller
 
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             echo "Form submitted";
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
@@ -137,9 +137,9 @@ class PageController extends Controller
 
         echo "not Submitted";
         return $this->render('@MovieMovie/Page/newReview.html.twig', array(
-            'movie' => $movie,
-            'form' => $form->createView(),
-            'review' => $newreview)
+                'movie' => $movie,
+                'form' => $form->createView(),
+                'review' => $newreview)
         );
     }
     /*
@@ -153,8 +153,8 @@ class PageController extends Controller
      */
     public function reviewAction(Request $request, $id)
     {
-        $repository = $this->getDoctrine()
-            ->getRepository('MovieMovieBundle:Review');
+//        $repository = $this->getDoctrine()
+//            ->getRepository('MovieMovieBundle:Review');
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
         $newreview = new Review();
@@ -172,7 +172,7 @@ class PageController extends Controller
 
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             echo "Form submitted";
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
@@ -190,10 +190,15 @@ class PageController extends Controller
 
 //            $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
 //            return $this->render('@MovieMovie/Page/index.html.twig', array('movies' => $movies));
-            return $this->redirectToRoute('movie_index');
+            return $this->redirectToRoute('movie_show', array(
+                'id' => $movie->getId()
+            ));
         }
 
-        return $this->render('@MovieMovie/Page/review.html.twig', array('movie' => $movie));
+        return $this->render('@MovieMovie/Page/review.html.twig', array(
+            'form' => $form->createView(),
+            'movie' => $movie
+        ));
 
     }
     /*
@@ -228,7 +233,7 @@ class PageController extends Controller
 
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $title = $form['title']->getData();
             $director = $form['director']->getData();
             $summary = $form['summary']->getData();
@@ -319,7 +324,7 @@ class PageController extends Controller
         $user = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($id);
         $reviews = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
 
-        return $this->render('@MovieMovie/Page/userpage.html.twig', array('user' => $user,'reviews' => $reviews));
+        return $this->render('@MovieMovie/Page/userpage.html.twig', array('user' => $user, 'reviews' => $reviews));
     }
     /*
     * End of userPageAction
