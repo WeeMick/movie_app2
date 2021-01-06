@@ -8,6 +8,12 @@ movie_show:
     requirements:
         id: '\d+'
 
+movie_review:
+    path: /review/{id}
+    defaults: { _controller: MovieMovieBundle:Page:review, id: id }
+    requirements:
+        id: '\d+'
+
 movie_delete:
     path: /delete/{id}
     defaults: { _controller: MovieMovieBundle:Page:delete, id: id }

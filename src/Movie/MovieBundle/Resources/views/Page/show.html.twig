@@ -6,7 +6,9 @@
     <h2>Running Time {{  movie.runningTime }}</h2>
 {%  endblock %}
 {% block body %}
-    <h1> {{ movie.title }} {{ movie.rating }}</h1>
+    <h1>ID: {{ movie.id }}</h1>
+    <h1>Title: {{ movie.title }}</h1>
+    <h1>Rating: {{ movie.rating }}</h1>
     <h2>Storyline</h2>
     <p>{{ movie.summary }}</p>
     <hr>
@@ -18,7 +20,7 @@
     <hr>
     <div>
         <h1>Reviews</h1>
-        <button class="btn btn-success"><a href="{{ path('movie_newReview',{'id': movie.id} ) }}">Add review</a></button>
+        <button class="btn btn-success"><a href="{{ path('movie_review',{'id': movie.id} ) }}">Add review</a></button>
         <h3>Table showing all reviews</h3>
         {% if reviews %}
             <table class="table table-striped table-bordered">
@@ -36,7 +38,7 @@
                 {% for review in reviews %}
                     <tr>
                         <td>
-                            MovieID
+                            {{ movie.id }}
                         </td>
                         <td>
                             {{ review.id }}

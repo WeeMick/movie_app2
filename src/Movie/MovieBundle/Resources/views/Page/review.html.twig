@@ -1,0 +1,10 @@
+{% extends 'MovieMovieBundle::layout.html.twig' %}
+{% block title %}Review{% endblock%}
+{% block body %}
+    <header>
+        <h1>Review</h1>
+        <h2>Movie ID: {{ movie.id }}</h2>
+    </header>
+<p>Reviews for {{ movie.title }}</p>
+    <button class="btn btn-danger"><a href="{{ path('movie_show', {'id': movie.id}) }}">Cancel Reviewing Movie</a></button>
+{% endblock %}

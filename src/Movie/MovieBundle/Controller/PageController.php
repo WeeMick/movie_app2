@@ -87,15 +87,18 @@ class PageController extends Controller
     */
 
     /**
-     * @Route("/review/new/{id}")
      * @param Request $request
      * @param $id
      * @return RedirectResponse|Response|null
      */
     public function newReviewAction(Request $request, $id)
     {
-        $newreview = new Review();
+        echo "id: " . $id. "<br>";
+        $repository = $this->getDoctrine()
+            ->getRepository('MovieMovieBundle:Review');
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+
+        $newreview = new Review();
 
         $form = $this->createFormBuilder($newreview)
             ->setMethod('POST')
@@ -111,10 +114,10 @@ class PageController extends Controller
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()) {
+            echo "Form submitted";
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
 //            $userid = $this->getUser()->getId();
-
 
             $newreview->setReview($review);
             $newreview->setRating($rating);
@@ -126,22 +129,75 @@ class PageController extends Controller
             $em->persist($newreview);
             $em->flush();
 
-
-            $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
+//            $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
 //            return $this->render('@MovieMovie/Page/index.html.twig', array('movies' => $movies));
             return $this->redirectToRoute('movie_index');
         }
 
 
-        return $this->render('@MovieMovie/Page/newReview.html.twig', [
+        echo "not Submitted";
+        return $this->render('@MovieMovie/Page/newReview.html.twig', array(
+            'movie' => $movie,
             'form' => $form->createView(),
-            'review' => $newreview,
-            'movie' => $movie
-
-        ]);
+            'review' => $newreview)
+        );
     }
     /*
     * End of newReviewAction
+    */
+
+    /**
+     * @param Request $request
+     * @param $id
+     * @return Response|null
+     */
+    public function reviewAction(Request $request, $id)
+    {
+        $repository = $this->getDoctrine()
+            ->getRepository('MovieMovieBundle:Review');
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+
+        $newreview = new Review();
+
+        $form = $this->createFormBuilder($newreview)
+            ->setMethod('POST')
+            ->add('review', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
+            ->add('rating', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
+            ->add('save', SubmitType::class, array(
+                'label' => 'Save Review',
+                'attr' => array('class' => 'btn btn-primary mt-2')))
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+            echo "Form submitted";
+            $review = $form['review']->getData();
+            $rating = $form['rating']->getData();
+//            $userid = $this->getUser()->getId();
+
+            $newreview->setReview($review);
+            $newreview->setRating($rating);
+            $newreview->setMovie($movie);
+            // Should I add movie to review or add review to movie?
+
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($newreview);
+            $em->flush();
+
+//            $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
+//            return $this->render('@MovieMovie/Page/index.html.twig', array('movies' => $movies));
+            return $this->redirectToRoute('movie_index');
+        }
+
+        return $this->render('@MovieMovie/Page/review.html.twig', array('movie' => $movie));
+
+    }
+    /*
+    * End of showAction
     */
 
 
@@ -155,7 +211,6 @@ class PageController extends Controller
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
         $form = $this->createFormBuilder($movie)
-            ->setMethod('POST')
             ->add('title', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('director', TextType::class, array('attr' =>
