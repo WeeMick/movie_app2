@@ -26,7 +26,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/newReview.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/newReview.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/newReview.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +177,7 @@
       <workItem from="1609109350717" duration="7575000" />
       <workItem from="1609163223407" duration="10548000" />
       <workItem from="1609552610365" duration="3540000" />
-      <workItem from="1609783171888" duration="26771000" />
+      <workItem from="1609783171888" duration="27151000" />
     </task>
     <servers />
   </component>
@@ -209,6 +209,10 @@
     <state x="753" y="255" key="#com.intellij.ide.util.MemberChooser/-1922.1178.1536.832/-1920.98.1920.1040/1920.122.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1608391992463" />
     <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606762406609" />
     <state x="753" y="-851" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607027763865" />
+    <state x="690" y="327" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609894439642">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="690" y="327" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.134.1920.1040/-1570.1214.1536.824/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1609894439642" />
     <state x="736" y="-678" width="447" height="265" key="ComposerInitDialogKey" timestamp="1604962403867">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>

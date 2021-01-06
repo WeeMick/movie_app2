@@ -37,11 +37,6 @@ movie_register:
     defaults: { _controller: MovieMovieBundle:Page:register }
     requirements:
 
-movie_newReview:
-    path: /reviewsy/{$id}
-    defaults: { _controller: MovieMovieBundle:Page:newReview, id: id }
-    requirements:
-
 movie_new:
     path: /movie/new
     defaults: { _controller: MovieMovieBundle:Page:new }

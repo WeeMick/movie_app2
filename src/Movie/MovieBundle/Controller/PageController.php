@@ -91,60 +91,6 @@ class PageController extends Controller
      * @param $id
      * @return Response|null
      */
-    public function newReviewAction(Request $request, $id)
-    {
-        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
-
-        $newreview = new Review();
-
-        $form = $this->createFormBuilder($newreview)
-            ->setMethod('POST')
-            ->add('review', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('rating', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('save', SubmitType::class, array(
-                'label' => 'Save Review',
-                'attr' => array('class' => 'btn btn-primary mt-2')))
-            ->getForm();
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $review = $form['review']->getData();
-            $rating = $form['rating']->getData();
-//            $userid = $this->getUser()->getId();
-
-            $newreview->setReview($review);
-            $newreview->setRating($rating);
-            $newreview->setMovie($movie);
-            // Should I add movie to review or add review to movie?
-
-
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($newreview);
-            $em->flush();
-
-            return $this->redirectToRoute('movie_show', array(
-                'id' => $movie->getId()
-            ));
-        }
-
-
-        return $this->render('@MovieMovie/Page/newReview.html.twig', array(
-                'movie' => $movie,
-                'form' => $form->createView())
-        );
-    }
-    /*
-    * End of newReviewAction
-    */
-
-    /**
-     * @param Request $request
-     * @param $id
-     * @return Response|null
-     */
     public function reviewAction(Request $request, $id)
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
@@ -179,8 +125,6 @@ class PageController extends Controller
             $em->persist($newreview);
             $em->flush();
 
-//            $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
-//            return $this->render('@MovieMovie/Page/index.html.twig', array('movies' => $movies));
             return $this->redirectToRoute('movie_show', array(
                 'id' => $movie->getId()
             ));
@@ -193,7 +137,7 @@ class PageController extends Controller
 
     }
     /*
-    * End of showAction
+    * End of reviewAction
     */
 
 
