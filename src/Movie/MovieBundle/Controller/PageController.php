@@ -96,7 +96,7 @@ class PageController extends Controller
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
         $userId = $this->getUser()->getId();
-        $reviewer = $this->getDoctrine()->getRepository('user')->find($userId);
+        $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
 
         $newreview = new Review();
 
