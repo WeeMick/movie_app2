@@ -54,7 +54,7 @@
                             {# if current user is the owner of this record, they can edit the review #}
                             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                                 {% if app.user.id == review.reviewer.id %}
-                                    <button class="btb btn-dark"><a href="{{ path('movie_review_edit',{'id': review.id} ) }}">Edit</button>
+                                    <button class="btb btn-dark"><a href="{{ path('movie_review_edit',{'id': review.id} ) }}">Edit</a></button>
                                 {% endif %}
                             {% endif %}
                         </td>

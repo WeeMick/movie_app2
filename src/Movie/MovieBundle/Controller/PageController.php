@@ -214,6 +214,9 @@ class PageController extends Controller
         $reviewToEdit = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
 
         $form = $this->createFormBuilder($reviewToEdit)
+//            Below give "Could not determine access type for property "id" in class "Movie\MovieBundle\Entity\Review"."
+//            ->add('id', TextType::class, array('attr' =>
+//                array('class' => 'form-control', 'disabled' => 'true')))
             ->add('review', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('rating', TextType::class, array('attr' =>

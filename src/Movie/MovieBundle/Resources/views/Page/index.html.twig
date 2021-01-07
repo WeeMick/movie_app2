@@ -7,7 +7,7 @@
     {% if is_granted('ROLE_ADMIN') %}
         Administrator
     {% elseif is_granted('ROLE_USER') %}
-        User
+        Userb
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <p>Username: {{ app.user.username }}</p>
         {% endif %}
@@ -56,9 +56,10 @@
 
                         <a href="{{ path('movie_edit', {'id': movie.id}) }}" class="btn btn-outline-primary" data-id="{{ movie.id }}">Edit</a>
                     </td>
-                    <td>
-                        <a href="#" class="btn btn-danger delete-movie" data-id="{{ movie.id }}">Delete</a>
-                    </td>
+{#      No delete mentioned in assignment spec                  #}
+{#                    <td>#}
+{#                        <a href="#" class="btn btn-danger delete-movie" data-id="{{ movie.id }}">Delete</a>#}
+{#                    </td>#}
                     {% endif %}
 
                 </tr>
