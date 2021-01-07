@@ -277,7 +277,7 @@ class PageController extends Controller
 
         $reviews = $query->getResult();
 // to get just one result:
-// $product = $query->setMaxResults(1)->getOneOrNullResult();
+// $movie = $query->setMaxResults(1)->getOneOrNullResult();
 
         return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie, 'reviews' => $reviews));
 
@@ -286,6 +286,27 @@ class PageController extends Controller
     * End of showAction
     */
 
+    public function searchAction()
+    {
+        $form = $this->createFormBuilder(null)
+            ->add('query', TextType::class)
+            ->add('search', SubmitType::class,  [
+                'attr' => [
+                    'class' => 'btn btn-primary'
+                ]
+            ])
+            ->getForm();
+
+        return $this->render('@MovieMovie/Page/search.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+    /*
+     * End of searchAction
+     */
+
+
+    // This function is not currently working properly - not required in the assignment spec
     /**
      * @param $id
      * @return Response|null

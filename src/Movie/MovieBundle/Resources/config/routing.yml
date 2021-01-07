@@ -8,6 +8,10 @@ movie_show:
     requirements:
         id: '\d+'
 
+movie_search:
+    path: /search
+    defaults: { _controller: MovieMovieBundle:Page:search }
+
 movie_review:
     path: /review/{id}
     defaults: { _controller: MovieMovieBundle:Page:review, id: id }

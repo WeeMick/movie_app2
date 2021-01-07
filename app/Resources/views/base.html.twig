@@ -50,8 +50,10 @@
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search">
                     </div>
-                    <button class="btn btn-danger">Submit</button>
+                    <button class="btn btn-danger"><a href="{{ path('movie_search') }}">Submit</a></button>
                 </form>
+{#                {{ render(controller(#}
+{#                    'MovieMovieBundle:Page:search')) }}#}
             </div>
         </div>
     </nav>
