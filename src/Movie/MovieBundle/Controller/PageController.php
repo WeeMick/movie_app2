@@ -86,6 +86,21 @@ class PageController extends Controller
     * End of newAction
     */
 
+
+    public function searchAction()
+    {
+        $form = $this->createFormBuilder(null)
+            ->add('search', TextType::class)
+            ->getForm();
+
+        return $this->render('@MovieMovie/Page/search.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+    /*
+     * End of searchAction
+     */
+
     /**
      * @param Request $request
      * @param $id
@@ -286,24 +301,7 @@ class PageController extends Controller
     * End of showAction
     */
 
-    public function searchAction()
-    {
-        $form = $this->createFormBuilder(null)
-            ->add('query', TextType::class)
-            ->add('search', SubmitType::class,  [
-                'attr' => [
-                    'class' => 'btn btn-primary'
-                ]
-            ])
-            ->getForm();
 
-        return $this->render('@MovieMovie/Page/search.html.twig', [
-            'form' => $form->createView()
-        ]);
-    }
-    /*
-     * End of searchAction
-     */
 
 
     // This function is not currently working properly - not required in the assignment spec

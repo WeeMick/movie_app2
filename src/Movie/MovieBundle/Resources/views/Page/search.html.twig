@@ -2,19 +2,19 @@
 {% block title %} Search Results {% endblock %}
 {% block body %}
 
-    <form action="" method="post">
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
-    </form>
+{#    <form action="" method="post">#}
+{#        {{ form_start(form) }}#}
+{#        {{ form_widget(form) }}#}
+{#        {{ form_end(form) }}#}
+{#    </form>#}
 
 {#    <form action="" method="post">#}
-{#        {{ form_start(form, {#}
-{#            'attr': {'class': 'navbar-form navbar-right'}#}
-{#        }) }}#}
+        {{ form_start(form, {
+            'attr': {'class': 'navbar-form navbar-right'}
+        }) }}
 
-{#        {{ form_widget(form.search, {#}
-{#        'attr': {'class': 'form-control search-query'} }) }}#}
+        {{ form_widget(form.search, {
+        'attr': {'class': 'form-control search-query'} }) }}
 
 
 {#        {{ form_end(form) }}#}
