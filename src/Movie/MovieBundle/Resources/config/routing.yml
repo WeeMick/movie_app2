@@ -22,6 +22,10 @@ movie_edit:
     path: /edit/{id}
     defaults: { _controller: MovieMovieBundle:Page:editMovie, id: id }
 
+movie_review_edit:
+    path: /edit/review/{id}
+    defaults: { _controller: MovieMovieBundle:Page:editReview, id: id }
+
 movie_about:
     path: /about
     defaults: { _controller: MovieMovieBundle:Page:about }

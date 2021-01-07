@@ -51,11 +51,10 @@
                             {{ review.rating }}
                         </td>
                         <td>
-                            {# if current user is the owner of this record, they can edit the review
-disable button if not your review #}
+                            {# if current user is the owner of this record, they can edit the review #}
                             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                                 {% if app.user.id == review.reviewer.id %}
-                                    <button class="btb btn-dark">Edit</button>
+                                    <button class="btb btn-dark"><a href="{{ path('movie_review_edit',{'id': review.id} ) }}">Edit</button>
                                 {% endif %}
                             {% endif %}
                         </td>
