@@ -95,6 +95,9 @@ class PageController extends Controller
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
+        $userId = $this->getUser()->getId();
+        $reviewer = $this->getDoctrine()->getRepository('user')->find($userId);
+
         $newreview = new Review();
 
         $form = $this->createFormBuilder($newreview)
@@ -113,11 +116,12 @@ class PageController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
-//            $userid = $this->getUser()->getId();
+
 
             $newreview->setReview($review);
             $newreview->setRating($rating);
             $newreview->setMovie($movie);
+            $newreview->setReviewer($reviewer);
             // Should I add movie to review or add review to movie?
 
 
