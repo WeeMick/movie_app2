@@ -1,17 +1,8 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
 {% block title %}{{ movie.title }} {% endblock %}
 {% block sidebar %}
-    <h2>Director: {{ movie.director }}</h2>
-    <h2>List of actors: Need to add list of actors to DB</h2>
-    <h2>Running Time {{ movie.runningTime }}</h2>
 {% endblock %}
 {% block body %}
-    <h1>ID: {{ movie.id }}</h1>
-    <h1>Title: {{ movie.title }}</h1>
-    <h1>Rating: {{ movie.rating }}</h1>
-    <h2>Storyline</h2>
-    <p>{{ movie.summary }}</p>
-    <hr>
     <div class="container-fluid">
         {% if movie.imageFile %}
             <img src="{{  asset('uploads/images/') ~ movie.imageFile }}" alt="Movie Poster" />
@@ -21,6 +12,15 @@
             {% endimage %}
         {% endif %}
     </div>
+    <h1>ID: {{ movie.id }}</h1>
+    <h1>Title: {{ movie.title }}</h1>
+    <h1>Rating: {{ movie.rating }}</h1>
+    <h2>Storyline</h2>
+    <p>{{ movie.summary }}</p>
+    <h2>Director: {{ movie.director }}</h2>
+    <h2>Actors: {{  movie.actors }}</h2>
+    <h2>Running Time {{ movie.runningTime }}</h2>
+    <hr>
     <hr>
     <div>
         <h1>Reviews</h1>
