@@ -4,6 +4,7 @@ namespace Movie\MovieBundle\Controller;
 
 use Movie\MovieBundle\Entity\Review;
 use Movie\MovieBundle\Form\MovieType;
+use Movie\MovieBundle\Form\ReviewType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -41,7 +42,6 @@ class PageController extends Controller
     public function newAction(Request $request)
     {
         $movie = new Movie();
-
         $form = $this->createForm(MovieType::class, $movie);
 
         $form->handleRequest($request);
@@ -59,7 +59,7 @@ class PageController extends Controller
                 $originalFilename = pathinfo($image_file->getClientOriginalName(), PATHINFO_FILENAME);
                 // this is needed to safely include the file name as part of the URL
                 $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
-                $newFilename = $safeFilename.'-'.uniqid().'.'.$image_file->guessExtension();
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $image_file->guessExtension();
 
                 // Move the file to the directory where images are stored
                 try {
@@ -116,18 +116,6 @@ class PageController extends Controller
      * End of searchAction
      */
 
-    public function newMovieAction()
-    {
-        $movie = new Movie();
-
-        $form = $this->createForm(MovieType::class, $movie);
-
-        return $this->render('@MovieMovie/Page/newMovie.html.twig', array(
-            'form' => $form->createView()
-            )
-        );
-    }
-
     /**
      * @param Request $request
      * @param $id
@@ -142,16 +130,17 @@ class PageController extends Controller
 
         $newreview = new Review();
 
-        $form = $this->createFormBuilder($newreview)
-            ->setMethod('POST')
-            ->add('review', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('rating', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('save', SubmitType::class, array(
-                'label' => 'Save Review',
-                'attr' => array('class' => 'btn btn-primary mt-2')))
-            ->getForm();
+        $form = $this->createForm(ReviewType::class, $newreview);
+//
+//        $form = $this->createFormBuilder($newreview)
+//            ->add('review', TextType::class, array('attr' =>
+//                array('class' => 'form-control')))
+//            ->add('rating', TextType::class, array('attr' =>
+//                array('class' => 'form-control')))
+//            ->add('save', SubmitType::class, array(
+//                'label' => 'Save Review',
+//                'attr' => array('class' => 'btn btn-primary mt-2')))
+//            ->getForm();
 
         $form->handleRequest($request);
 
@@ -196,23 +185,6 @@ class PageController extends Controller
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
         $form = $this->createForm(MovieType::class, $movie);
-//        $form = $this->createFormBuilder($movie)
-//            ->add('title', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('director', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('summary', TextType::class, array(
-//                'attr' => array('class' => 'form-control')))
-//            ->add('actors', TextType::class, array(
-//                'attr' => array('class' => 'form-control')))
-//            ->add('running_time', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('image_file', FileType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('save', SubmitType::class, array(
-//                'label' => 'Save',
-//                'attr' => array('class' => 'btn btn-primary mt-2')))
-//            ->getForm();
 
         $form->handleRequest($request);
 
@@ -331,8 +303,6 @@ class PageController extends Controller
     /*
     * End of showAction
     */
-
-
 
 
     // This function is not currently working properly - not required in the assignment spec
