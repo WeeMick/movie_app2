@@ -2,12 +2,12 @@
 {% block body %}
     <h1>Mickey's Movie Rater Homepage</h1>
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-        <button class="btn btn-success pull-right"><a href="{{ path('movie_new') }}">Add new movie</a></button>
+        <button class="btn btn-info pull-right"><a href="{{ path('movie_new') }}">Add new movie</a></button>
     {% endif %}
     {% if is_granted('ROLE_ADMIN') %}
-        Administrator
+        Logged in as: Administrator
     {% elseif is_granted('ROLE_USER') %}
-        User
+        Logged in as: User
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <p>Username: {{ app.user.username }}</p>
         {% endif %}

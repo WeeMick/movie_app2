@@ -1,14 +1,22 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
-{% block title %}Add Movie{% endblock%}
+{% block title %}Add Movie{% endblock %}
+{% block sidebar %}
+
+{% endblock %}
 {% block body %}
     <header>
         <h1>Add Movie To Database</h1>
     </header>
-    <form action="" method="post" enctype="multipart/form-data">
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
-    </form>
-    {#    TODO add in a confirm #}
-    <button class="btn btn-danger"><a href="{{ path('movie_index') }}">Cancel Adding Movie</a></button>
+    <div class="form-group mt-3">
+        <form action="" method="post" enctype="multipart/form-data">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </form>
+        {# TODO add in a confirm #}
+    </div>
+    <div class="btn-toolbar">
+        <button type="button" class="btn btn-danger"><a href="{{ path('movie_index') }}">Cancel Adding Movie</a>
+        </button>
+    </div>
 {% endblock %}

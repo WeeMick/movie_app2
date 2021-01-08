@@ -1,7 +1,7 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
 {% block title %}{{ movie.title }} {% endblock %}
 {% block sidebar %}
-    <div class="container-fluid">
+    <div class="container-fluid mt-3">
         {% if movie.imageFile %}
             <img src="{{ asset('uploads/images/') ~ movie.imageFile }}" class="img-fluid uploaded-image"
                  alt="Movie Poster"/>
@@ -11,21 +11,28 @@
             {% endimage %}
         {% endif %}
     </div>
+    <div class="mt-3">
+        <h2 class="display-4 text-info">Director:</h2>
+        <h2 class="text-muted"> {{ movie.director }}</h2>
+        <h2 class="display-4 text-info">Actors:</h2>
+        <h2 class="text-muted"> {{ movie.actors }}</h2>
+        <h2 class="display-4 text-info">Running Time:</h2>
+        <h2 class="text-muted"> {{ movie.runningTime }}</h2>
+        <h2 class="display-4 text-info">Storyline:</h2>
+        <p>{{ movie.summary }}</p>
+    </div>
 {% endblock %}
 {% block body %}
-    <h1>ID: {{ movie.id }}</h1>
-    <h1>Title: {{ movie.title }}</h1>
-    <h1>Rating: {{ movie.rating }}</h1>
-    <h2>Storyline</h2>
-    <p>{{ movie.summary }}</p>
-    <h2>Director: {{ movie.director }}</h2>
-    <h2>Actors: {{ movie.actors }}</h2>
-    <h2>Running Time {{ movie.runningTime }}</h2>
+    <div class="mt-3">
+        <h2 class="display-7 text-info">Movie ID: {{ movie.id }}</h2>
+        <h2 class="display-4 text-info">Title: {{ movie.title }}</h2>
+        <h2 class="display-4 text-info">Rating: {{ movie.rating }}</h2>
+    </div>
     <hr>
-    <hr>
+    <br>
     <div>
         <h1>Reviews</h1>
-        <button class="btn btn-success pull-right mb-3"><a href="{{ path('movie_review',{'id': movie.id} ) }}">Add
+        <button class="btn btn-info pull-right mb-3"><a href="{{ path('movie_review',{'id': movie.id} ) }}">Add
                 review</a>
         </button>
         {% if reviews %}
@@ -80,6 +87,8 @@
         {% endif %}
 
     </div>
-    <button class="btn btn-warning"><a href="/">Go back</a>
-    </button>
+    <div class="btn-toolbar">
+        <button class="btn btn-warning"><a href="/">Go back</a>
+        </button>
+    </div>
 {% endblock %}
