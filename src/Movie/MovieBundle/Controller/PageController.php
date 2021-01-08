@@ -124,23 +124,10 @@ class PageController extends Controller
     public function reviewAction(Request $request, $id)
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
-
         $userId = $this->getUser()->getId();
         $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
-
         $newreview = new Review();
-
         $form = $this->createForm(ReviewType::class, $newreview);
-//
-//        $form = $this->createFormBuilder($newreview)
-//            ->add('review', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('rating', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('save', SubmitType::class, array(
-//                'label' => 'Save Review',
-//                'attr' => array('class' => 'btn btn-primary mt-2')))
-//            ->getForm();
 
         $form->handleRequest($request);
 
@@ -148,13 +135,10 @@ class PageController extends Controller
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
 
-
             $newreview->setReview($review);
             $newreview->setRating($rating);
             $newreview->setMovie($movie);
             $newreview->setReviewer($reviewer);
-            // Should I add movie to review or add review to movie?
-
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($newreview);
@@ -227,22 +211,8 @@ class PageController extends Controller
      */
     public function editReviewAction(Request $request, $id)
     {
-//        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
-
         $reviewToEdit = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
-
-        $form = $this->createFormBuilder($reviewToEdit)
-//            Below give "Could not determine access type for property "id" in class "Movie\MovieBundle\Entity\Review"."
-//            ->add('id', TextType::class, array('attr' =>
-//                array('class' => 'form-control', 'disabled' => 'true')))
-            ->add('review', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('rating', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('save', SubmitType::class, array(
-                'label' => 'Save',
-                'attr' => array('class' => 'btn btn-primary mt-2')))
-            ->getForm();
+        $form = $this->createForm(ReviewType::class, $reviewToEdit);
 
         $form->handleRequest($request);
 
@@ -259,7 +229,7 @@ class PageController extends Controller
             $em->flush();
 
             return $this->redirectToRoute('movie_show', array(
-                'id' => $reviewToEdit->getId()
+                'id' => $reviewToEdit->getMovie()->getId()
             ));
         }
 
