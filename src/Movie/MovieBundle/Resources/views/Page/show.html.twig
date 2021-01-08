@@ -1,17 +1,18 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
 {% block title %}{{ movie.title }} {% endblock %}
 {% block sidebar %}
-{% endblock %}
-{% block body %}
     <div class="container-fluid">
         {% if movie.imageFile %}
-            <img src="{{ asset('uploads/images/') ~ movie.imageFile }}" alt="Movie Poster"/>
+            <img src="{{ asset('uploads/images/') ~ movie.imageFile }}" class="img-fluid uploaded-image"
+                 alt="Movie Poster"/>
         {% else %}
             {% image '@MovieMovieBundle/Resources/Images/image_2.jpg' %}
-                <img src="{{ asset_url }}" class="img-fluid" style="width: 100%" alt="Movie image"/>
+                <img src="{{ asset_url }}" style="width: 100%" class="uploaded-image" alt="Stock Movie image"/>
             {% endimage %}
         {% endif %}
     </div>
+{% endblock %}
+{% block body %}
     <h1>ID: {{ movie.id }}</h1>
     <h1>Title: {{ movie.title }}</h1>
     <h1>Rating: {{ movie.rating }}</h1>
@@ -24,10 +25,11 @@
     <hr>
     <div>
         <h1>Reviews</h1>
-        <button class="btn btn-success pull-right mb-3"><a href="{{ path('movie_review',{'id': movie.id} ) }}">Add review</a>
+        <button class="btn btn-success pull-right mb-3"><a href="{{ path('movie_review',{'id': movie.id} ) }}">Add
+                review</a>
         </button>
         {% if reviews %}
-            <table class="table table-striped table-bordered mt-3">
+            <table class="table table-striped table-bordered border-3">
                 <thead>
                 <tr>
                     <th>Review_ID</th>
@@ -78,6 +80,6 @@
         {% endif %}
 
     </div>
-    <a href="/">Go back</a>
-
+    <button class="btn btn-warning"><a href="/">Go back</a>
+    </button>
 {% endblock %}

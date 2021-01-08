@@ -25,8 +25,9 @@
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/about.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/userpage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/userpage.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +189,7 @@
       <workItem from="1609953334649" duration="15354000" />
       <workItem from="1610049783008" duration="46000" />
       <workItem from="1610057285754" duration="19310000" />
-      <workItem from="1610104163756" duration="8218000" />
+      <workItem from="1610104163756" duration="10502000" />
     </task>
     <servers />
   </component>
@@ -322,10 +323,10 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="667" y="179" width="585" height="801" key="find.popup/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1610068222992" />
-    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup" timestamp="1610110281486">
+    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup" timestamp="1610114044825">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/0.0.1920.1160/1920.441.1280.760@0.0.1920.1160" timestamp="1610110281486" />
+    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/0.0.1920.1160/1920.441.1280.760@0.0.1920.1160" timestamp="1610114044825" />
     <state x="-1297" y="359" width="1008" height="680" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@-1920.134.1920.1040" timestamp="1608089310478" />
     <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1610067771967" />
     <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1920.98.1920.1040/-1922.1178.1536.824/0.0.1920.1160/1920.122.1920.1040@0.0.1920.1160" timestamp="1607996246553" />

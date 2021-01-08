@@ -293,19 +293,13 @@ class PageController extends Controller
             ->orderBy('r.id', 'ASC')
             ->getQuery();
 
-//        $reviews = $query->getResult();
-
         /**
          * @var $paginator Paginator
          */
         $paginator = $this->get('knp_paginator');
 
-        $em = $this->getDoctrine()->getManager();
-//        $dql   = "SELECT m FROM MovieMovieBundle:Movie m";
-//        $query1 = $em->createQuery($query);
-
         $reviews = $paginator->paginate(
-            $query, /* query NOT result */
+            $query,
             $request->query->getInt('page', 1), /*page number*/
             $request->query->getInt('limit', 3)
         );
@@ -352,6 +346,7 @@ class PageController extends Controller
 
 
     // This function is not currently working properly - not required in the assignment spec
+    // TODO make admin user the only one capable of deleting records
     /**
      * @param $id
      * @return Response|null
@@ -365,7 +360,7 @@ class PageController extends Controller
         $em->
         $em->flush();
 
-        // Deleting movie will need to delete all reviews for that movie too
+        // TODO Deleting movie will need to delete all reviews for that movie too
         return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie));
 
     }
@@ -374,13 +369,33 @@ class PageController extends Controller
     */
 
     /**
+     * @param Request $request
      * @param $id
      * @return Response|null
      */
-    public function userPageAction($id)
+    public function userPageAction(Request $request, $id)
     {
         $user = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($id);
-        $reviews = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
+
+//        $reviews = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
+
+        $repository = $this->getDoctrine()
+            ->getRepository('MovieMovieBundle:Review');
+
+        $query = $repository->createQueryBuilder('r')
+            ->setParameters(array(
+                'userId' => $user))
+            ->where('r.reviewer = :userId')
+            ->getQuery();
+
+        $paginator = $this->get('knp_paginator');
+
+        $reviews = $paginator->paginate(
+            $query,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit', 3)
+        );
+
 
         return $this->render('@MovieMovie/Page/userpage.html.twig', array('user' => $user, 'reviews' => $reviews));
     }

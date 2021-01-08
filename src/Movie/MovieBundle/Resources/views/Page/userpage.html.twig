@@ -2,7 +2,6 @@
 {% block title %}{{ app.user.username }} {% endblock%}
 {%  block sidebar %}
     <h2>Username: {{  app.user.username }}</h2>
-    <h2>Last login</h2>
     <h2>Number of reviews</h2>
     <h2>Update details</h2>
 {%  endblock %}
@@ -24,7 +23,7 @@
                 {%  for review in reviews %}
                     <tr>
                         <td>
-                            {{ review.movieId }}
+                            {{ review.movie.title }}
                         </td>
 
                         <td>
