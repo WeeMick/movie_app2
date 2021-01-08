@@ -1,12 +1,12 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
-{% block title %}Edit Review{% endblock%}
+{% block title %}Edit Review{% endblock %}
 {% block body %}
     <header>
         <h1>Edit Review for {{ review.movie.title }} with ID of {{ review.id }}</h1>
     </header>
     <div class="container-fluid">
         {% if review.movie.imageFile %}
-            <img src="{{  asset('uploads/images/') ~ movie.imageFile }}" alt="Movie Poster" />
+            <img src="{{ asset('uploads/images/') ~ movie.imageFile }}" alt="Movie Poster"/>
         {% else %}
             {% image '@MovieMovieBundle/Resources/Images/image_2.jpg' %}
                 <img src="{{ asset_url }}" class="img-fluid" style="width: 100%" alt="Movie image"/>
@@ -19,6 +19,6 @@
         {{ form_end(form) }}
     </form>
 
-{#    add in a confirm #}
+    {# add in a confirm #}
     <button class="btn btn-danger"><a href="{{ path('movie_index') }}">Cancel Editing Review</a></button>
 {% endblock %}

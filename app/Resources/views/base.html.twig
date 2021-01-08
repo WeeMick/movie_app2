@@ -56,6 +56,11 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid">
+        {% image '@MovieMovieBundle/Resources/Images/index_banner_cropped.jpg' %}
+            <img src="{{ asset_url }}" style="width: 100%" class="uploaded-image" alt="Cinema banner image"/>
+        {% endimage %}
+    </div>
     <div class="row">
         <section class="col-md-8">
             {% block body %}{% endblock %}

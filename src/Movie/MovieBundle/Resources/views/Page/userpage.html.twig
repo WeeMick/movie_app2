@@ -1,11 +1,11 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
-{% block title %}{{ app.user.username }} {% endblock%}
-{%  block sidebar %}
-    <h2>UserID: {{  app.user.id }}</h2>
-    <h2>Username: {{  app.user.username }}</h2>
-{#   TODO add in link to update details form #}
+{% block title %}{{ app.user.username }} {% endblock %}
+{% block sidebar %}
+    <h2>UserID: {{ app.user.id }}</h2>
+    <h2>Username: {{ app.user.username }}</h2>
+    {# TODO add in link to update details form #}
     <h2><a href="/">Update details</a></h2>
-{%  endblock %}
+{% endblock %}
 {% block body %}
     <div>
         <h1>User Details for {{ app.user.username }}</h1>
@@ -22,7 +22,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {%  for review in reviews %}
+                {% for review in reviews %}
                     <tr>
                         <td>
                             {{ review.id }}
@@ -41,7 +41,7 @@
                             <a href="{{ path('movie_review_edit', {'id': review.id}) }}">Edit</a>
                         </td>
                     </tr>
-                {%  endfor %}
+                {% endfor %}
                 </tbody>
             </table>
         {% else %}
@@ -50,6 +50,7 @@
         {% endif %}
 
     </div>
-    <a href="/">Go back</a>
+    <button class="btn btn-warning"><a href="/">Go back</a>
+    </button>
 
 {% endblock %}
