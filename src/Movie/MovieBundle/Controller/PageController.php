@@ -27,8 +27,21 @@ class PageController extends Controller
     public function indexAction()
     {
         $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
+
+        $repository = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie');
+
+//        Get the last 5 movies added to the database
+        $query = $repository
+            ->createQueryBuilder("m")
+            ->orderBy("m.id", "DESC")
+            ->setMaxResults(5)
+            ->getQuery();
+
+        $releases = $query->getResult();
+
         return $this->render('@MovieMovie/Page/index.html.twig', array(
-            'movies' => $movies
+            'movies' => $movies,
+            'releases' => $releases
         ));
     }
     /*
@@ -75,7 +88,6 @@ class PageController extends Controller
                     echo "Exception: " . $e;
                 }
 
-
             }
 
             $movie->setTitle($title);
@@ -83,7 +95,6 @@ class PageController extends Controller
             $movie->setSummary($summary);
             $movie->setActors($actors);
             $movie->setRunningTime($running_time);
-
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($movie);
@@ -254,8 +265,8 @@ class PageController extends Controller
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
         $movieId = $movie->getId();
 
-//         createQueryBuilder() automatically selects FROM AppBundle:Movie
-//         and aliases it to "r"
+        //         createQueryBuilder() automatically selects FROM AppBundle:Movie
+        //         and aliases it to "r"
         $query = $repository->createQueryBuilder('r')
             ->setParameters(array(
                 'movie' => $movieId))
@@ -264,14 +275,46 @@ class PageController extends Controller
             ->getQuery();
 
         $reviews = $query->getResult();
-// to get just one result:
-// $movie = $query->setMaxResults(1)->getOneOrNullResult();
+        // to get just one result:
+        // $movie = $query->setMaxResults(1)->getOneOrNullResult();
 
         return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie, 'reviews' => $reviews));
 
     }
     /*
     * End of showAction
+    */
+
+    /**
+     * @return Response|null
+     */
+    public function newReleaseAction()
+    {
+//        $em = $this->getDoctrine()->getManager();
+
+//        // Create SQL query which selects the last 5 movies added to database
+//        $RAW_QUERY = 'SELECT TOP 5 FROM movie ORDER BY id DESC;';
+//        $statement = $em->getConnection()->prepare($RAW_QUERY);
+//        $statement->execute();
+//        $movies = $statement->fetchAll();
+
+        $repository = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie');
+
+
+        $query = $repository->createQueryBuilder()
+            ->createQueryBuilder("m")
+            ->orderBy("id", "DESC")
+            ->setMaxResults(5)
+            ->getQuery()
+            ->getOneOrNullResult();
+
+        $movies = $query->getResult();
+
+        return $this->render('@MovieMovie/Page/index.html.twig', array('movies' => $movies));
+
+    }
+    /*
+    * End of newReleaseAction
     */
 
 

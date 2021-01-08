@@ -2,7 +2,7 @@
 {% block body %}
     <h1>Mickey's Movie Rater Homepage</h1>
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-    <button class="btn btn-success pull-right"><a href="{{ path('movie_new') }}">Add new movie</a></button>
+        <button class="btn btn-success pull-right"><a href="{{ path('movie_new') }}">Add new movie</a></button>
     {% endif %}
     {% if is_granted('ROLE_ADMIN') %}
         Administrator
@@ -26,8 +26,8 @@
                 <th class="text-center">Running Time (in minutes)</th>
                 <th class="text-center">Rating</th>
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <th colspan="2" class="text-center">Actions</th>
-                    {% endif %}
+                    <th colspan="2" class="text-center">Actions</th>
+                {% endif %}
             </tr>
             </thead>
             <tbody>
@@ -52,14 +52,15 @@
                         {{ movie.rating }}
                     </td>
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <td>
+                        <td>
 
-                        <a href="{{ path('movie_edit', {'id': movie.id}) }}" class="btn btn-outline-primary" data-id="{{ movie.id }}">Edit</a>
-                    </td>
-{#      No delete mentioned in assignment spec                  #}
-{#                    <td>#}
-{#                        <a href="#" class="btn btn-danger delete-movie" data-id="{{ movie.id }}">Delete</a>#}
-{#                    </td>#}
+                            <a href="{{ path('movie_edit', {'id': movie.id}) }}" class="btn btn-outline-primary"
+                               data-id="{{ movie.id }}">Edit</a>
+                        </td>
+                        {# No delete mentioned in assignment spec #}
+                        {# <td> #}
+                        {# <a href="#" class="btn btn-danger delete-movie" data-id="{{ movie.id }}">Delete</a> #}
+                        {# </td> #}
                     {% endif %}
 
                 </tr>
@@ -72,24 +73,23 @@
 {% endblock %}
 
 {% block sidebar %}
-    <h2>New Releases</h2>
-    <div>Check out the movies below which have recently been added to our database!</div>
-    <div>Accusamus ad at excepturi illo ipsam laboriosam nemo neque nobis, obcaecati odio quas, quidem quo velit
-        voluptas voluptate? Doloremque, esse nemo non odio officiis perferendis quisquam suscipit totam vel voluptas.
-    </div>
-    <div>Ad aliquam, consequuntur deserunt exercitationem molestias odio optio provident reiciendis veniam voluptatum.
-        Aperiam dicta dignissimos eius, enim error eveniet, exercitationem facilis, harum inventore ipsum iure libero
-        quisquam repellendus suscipit voluptatum.
-    </div>
-    <div>Animi culpa error molestiae perferendis quae ratione rerum tempora vitae? Assumenda blanditiis eum excepturi,
-        expedita explicabo, harum illum incidunt numquam placeat rerum saepe sint vero vitae voluptas voluptate.
-        Officiis, provident!
-    </div>
-{% endblock %}
+<h2>New Releases</h2>
+<div>Check out the movies below which have recently been added to our database!</div>
+<br>
+{# <div>{{ render(controller( #}
+{# 'Movie\MovieBundle\Controller\PageController::newReleaseAction' #}
+{# )) }}</div> #}
+<div class="list-group">
+    {% for release in releases %}
+        <a href="{{ path('movie_show', {'id': release.id}) }}" class="list-group-item list-group-item-success text-center">{{ release.title }}</a>
+        <br><br>
+    {% endfor %}
+</div>
+    {% endblock %}
 
-{% block javascripts %}
-    {% javascripts '@MovieMovieBundle/Resources/js/main.js' %}
-        <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
-{% endblock %}
+{#    {% block javascripts %}#}
+{#        {% javascripts '@MovieMovieBundle/Resources/js/main.js' %}#}
+{#            <script src="{{ asset_url }}"></script>#}
+{#        {% endjavascripts %}#}
+{#    {% endblock %}#}
 

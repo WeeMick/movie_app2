@@ -4,6 +4,15 @@
     <header>
         <h1>Edit Review for {{ review.movie.title }} with ID of {{ review.id }}</h1>
     </header>
+    <div class="container-fluid">
+        {% if review.movie.imageFile %}
+            <img src="{{  asset('uploads/images/') ~ movie.imageFile }}" alt="Movie Poster" />
+        {% else %}
+            {% image '@MovieMovieBundle/Resources/Images/image_2.jpg' %}
+                <img src="{{ asset_url }}" class="img-fluid" style="width: 100%" alt="Movie image"/>
+            {% endimage %}
+        {% endif %}
+    </div>
     <form action="" method="post">
         {{ form_start(form) }}
         {{ form_widget(form) }}
