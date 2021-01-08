@@ -5,14 +5,17 @@ namespace Movie\MovieBundle\Controller;
 use Movie\MovieBundle\Entity\Review;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration;
 use Movie\MovieBundle\Entity\Movie;
+use Symfony\Component\Validator\Constraints\File;
 
 class PageController extends Controller
 {
@@ -45,11 +48,29 @@ class PageController extends Controller
             ->add('director', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('summary', TextType::class, array(
-                'attr' => array('class' => 'form-control')))
+                'attr' => array('class' => 'form-contrseol')))
             ->add('actors', TextType::class, array(
                 'attr' => array('class' => 'form-control')))
             ->add('running_time', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
+            ->add('image_file', FileType::class, array(
+                'mapped' => false,
+                'label' => 'Upload image file for movie',
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '1024k',
+                        'mimeTypes' => [
+                            'image/jpeg',
+                            'image/png',
+                        ],
+                        'mimeTypesMessage' => 'Please upload a valid PNG or Jpeg file',
+                    ])
+                ],
+                'attr' =>
+                    array('class' => 'form-control'
+                    )
+            ))
             ->add('save', SubmitType::class, array(
                 'label' => 'Create',
                 'attr' => array('class' => 'btn btn-primary mt-2')))
@@ -58,17 +79,47 @@ class PageController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+//            echo '<pre>';
+//            var_dump($request);
+//            $file = $request->request->get('form');
+//            var_dump($form); die;
+
             $title = $form['title']->getData();
             $director = $form['director']->getData();
             $summary = $form['summary']->getData();
             $actors = $form['actors']->getData();
             $running_time = $form['running_time']->getData();
+            $image_file = $form->get('image_file')->getData();
+
+            if ($image_file) {
+                echo "image got";
+                $originalFilename = pathinfo($image_file->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$image_file->guessExtension();
+
+                // Move the file to the directory where brochures are stored
+                try {
+                    $image_file->move(
+                        $this->getParameter('images_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    echo "Exception: " . $e;
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'image_filename' property to store the file name
+                // instead of its contents
+                $movie->setImageFile($newFilename);
+            }
 
             $movie->setTitle($title);
             $movie->setDirector($director);
             $movie->setSummary($summary);
             $movie->setActors($actors);
             $movie->setRunningTime($running_time);
+
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($movie);
@@ -87,16 +138,16 @@ class PageController extends Controller
     */
 
 
-    public function searchAction()
-    {
-        $form = $this->createFormBuilder(null)
-            ->add('search', TextType::class)
-            ->getForm();
-
-        return $this->render('@MovieMovie/Page/search.html.twig', [
-            'form' => $form->createView()
-        ]);
-    }
+//    public function searchAction()
+//    {
+//        $form = $this->createFormBuilder(null)
+//            ->add('search', TextType::class)
+//            ->getForm();
+//
+//        return $this->render('@MovieMovie/Page/search.html.twig', [
+//            'form' => $form->createView()
+//        ]);
+//    }
     /*
      * End of searchAction
      */
@@ -180,6 +231,8 @@ class PageController extends Controller
                 'attr' => array('class' => 'form-control')))
             ->add('running_time', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
+            ->add('image_file', FileType::class, array('attr' =>
+                array('class' => 'form-control')))
             ->add('save', SubmitType::class, array(
                 'label' => 'Save',
                 'attr' => array('class' => 'btn btn-primary mt-2')))
@@ -193,12 +246,14 @@ class PageController extends Controller
             $summary = $form['summary']->getData();
             $actors = $form['actors']->getData();
             $running_time = $form['running_time']->getData();
+            $image_file = $form['image_file']->getData();
 
             $movie->setTitle($title);
             $movie->setDirector($director);
             $movie->setSummary($summary);
             $movie->setActors($actors);
             $movie->setRunningTime($running_time);
+            $movie->setImageFile($image_file);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($movie);

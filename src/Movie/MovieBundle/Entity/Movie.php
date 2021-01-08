@@ -109,6 +109,27 @@ class Movie
      */
     protected $rating;
 
+    /**
+     * @ORM\Column(type="string", nullable=TRUE)
+     */
+    protected $image_file;
+
+    /**
+     * @return mixed
+     */
+    public function getImageFile()
+    {
+        return $this->image_file;
+    }
+
+    /**
+     * @param mixed $image_file
+     */
+    public function setImageFile($image_file)
+    {
+        $this->image_file = $image_file;
+    }
+
 
     /**
      * @return mixed
@@ -189,6 +210,8 @@ class Movie
     {
         $this->reviews[] = $review;
     }
+
+
 
 
 }
