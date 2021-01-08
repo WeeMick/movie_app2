@@ -44,41 +44,6 @@ class PageController extends Controller
 
         $form = $this->createForm(MovieType::class, $movie);
 
-//        $form = $this->createFormBuilder($movie)
-//            ->setMethod('POST')
-//            ->add('title', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('director', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('summary', TextType::class, array(
-//                'attr' => array('class' => 'form-contrseol')))
-//            ->add('actors', TextType::class, array(
-//                'attr' => array('class' => 'form-control')))
-//            ->add('running_time', TextType::class, array('attr' =>
-//                array('class' => 'form-control')))
-//            ->add('image_file', FileType::class, array(
-//                'mapped' => false,
-//                'label' => 'Upload image file for movie',
-//                'required' => false,
-//                'constraints' => [
-//                    new File([
-//                        'maxSize' => '1024k',
-//                        'mimeTypes' => [
-//                            'image/jpeg',
-//                            'image/png',
-//                        ],
-//                        'mimeTypesMessage' => 'Please upload a valid PNG or Jpeg file',
-//                    ])
-//                ],
-//                'attr' =>
-//                    array('class' => 'form-control'
-//                    )
-//            ))
-//            ->add('save', SubmitType::class, array(
-//                'label' => 'Create',
-//                'attr' => array('class' => 'btn btn-primary mt-2')))
-//            ->getForm();
-
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -96,7 +61,7 @@ class PageController extends Controller
                 $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
                 $newFilename = $safeFilename.'-'.uniqid().'.'.$image_file->guessExtension();
 
-                // Move the file to the directory where brochures are stored
+                // Move the file to the directory where images are stored
                 try {
                     $image_file->move(
                         $this->getParameter('images_directory'),
@@ -230,24 +195,24 @@ class PageController extends Controller
     public function editMovieAction(Request $request, $id)
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
-
-        $form = $this->createFormBuilder($movie)
-            ->add('title', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('director', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('summary', TextType::class, array(
-                'attr' => array('class' => 'form-control')))
-            ->add('actors', TextType::class, array(
-                'attr' => array('class' => 'form-control')))
-            ->add('running_time', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('image_file', FileType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('save', SubmitType::class, array(
-                'label' => 'Save',
-                'attr' => array('class' => 'btn btn-primary mt-2')))
-            ->getForm();
+        $form = $this->createForm(MovieType::class, $movie);
+//        $form = $this->createFormBuilder($movie)
+//            ->add('title', TextType::class, array('attr' =>
+//                array('class' => 'form-control')))
+//            ->add('director', TextType::class, array('attr' =>
+//                array('class' => 'form-control')))
+//            ->add('summary', TextType::class, array(
+//                'attr' => array('class' => 'form-control')))
+//            ->add('actors', TextType::class, array(
+//                'attr' => array('class' => 'form-control')))
+//            ->add('running_time', TextType::class, array('attr' =>
+//                array('class' => 'form-control')))
+//            ->add('image_file', FileType::class, array('attr' =>
+//                array('class' => 'form-control')))
+//            ->add('save', SubmitType::class, array(
+//                'label' => 'Save',
+//                'attr' => array('class' => 'btn btn-primary mt-2')))
+//            ->getForm();
 
         $form->handleRequest($request);
 

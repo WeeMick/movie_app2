@@ -45,11 +45,6 @@ movie_register:
     defaults: { _controller: MovieMovieBundle:Page:register }
     requirements:
 
-movie_new_movie:
-    path: /movie/new_movie
-    defaults: { _controller: MovieMovieBundle:Page:newMovie }
-    requirements:
-
 movie_new:
     path: /movie/new
     defaults: { _controller: MovieMovieBundle:Page:new }
