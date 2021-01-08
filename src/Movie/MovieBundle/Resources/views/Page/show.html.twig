@@ -13,9 +13,13 @@
     <p>{{ movie.summary }}</p>
     <hr>
     <div class="container-fluid">
-        {% image '@MovieMovieBundle/Resources/Images/image_2.jpg' %}
-            <img src="{{ asset_url }}" class="img-fluid" style="width: 100%" alt="Movie image"/>
-        {% endimage %}
+        {% if movie.imageFile %}
+            <img src="{{  asset('uploads/images/') ~ movie.imageFile }}" alt="Movie Poster" />
+        {% else %}
+            {% image '@MovieMovieBundle/Resources/Images/image_2.jpg' %}
+                <img src="{{ asset_url }}" class="img-fluid" style="width: 100%" alt="Movie image"/>
+            {% endimage %}
+        {% endif %}
     </div>
     <hr>
     <div>
@@ -54,7 +58,9 @@
                             {# if current user is the owner of this record, they can edit the review #}
                             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                                 {% if app.user.id == review.reviewer.id %}
-                                    <button class="btb btn-dark"><a href="{{ path('movie_review_edit',{'id': review.id} ) }}">Edit</a></button>
+                                    <button class="btb btn-dark"><a
+                                                href="{{ path('movie_review_edit',{'id': review.id} ) }}">Edit</a>
+                                    </button>
                                 {% endif %}
                             {% endif %}
                         </td>
