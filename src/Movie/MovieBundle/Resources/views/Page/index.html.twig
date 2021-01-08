@@ -7,7 +7,7 @@
     {% if is_granted('ROLE_ADMIN') %}
         Logged in as: Administrator
     {% elseif is_granted('ROLE_USER') %}
-        Logged in as: User
+        Logged in as: Userb
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <p>Username: {{ app.user.username }}</p>
         {% endif %}

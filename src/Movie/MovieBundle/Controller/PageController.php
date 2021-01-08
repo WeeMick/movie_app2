@@ -131,16 +131,47 @@ class PageController extends Controller
     */
 
 
-//    public function searchAction()
-//    {
-//        $form = $this->createFormBuilder(null)
-//            ->add('search', TextType::class)
-//            ->getForm();
-//
-//        return $this->render('@MovieMovie/Page/search.html.twig', [
-//            'form' => $form->createView()
-//        ]);
-//    }
+    public function searchAction(Request $request)
+    {
+        $repository = $this->getDoctrine()
+            ->getRepository('MovieMovieBundle:Movie');
+
+
+        $form = $this->createFormBuilder(null)
+            ->add('search', TextType::class)
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $searchQuery = $form['search']->getData();
+
+            $query = $repository->createQueryBuilder('m')
+                ->setParameters(array(
+                    'searchQuery' => $searchQuery))
+                ->where('m.title LIKE :searchQuery')
+                ->orderBy('r.id', 'ASC')
+                ->getQuery();
+
+            /**
+             * @var $paginator Paginator
+             */
+            $paginator = $this->get('knp_paginator');
+
+            $reviews = $paginator->paginate(
+                $query,
+                $request->query->getInt('page', 1), /*page number*/
+                $request->query->getInt('limit', 3)
+            );
+
+        }
+
+
+
+        return $this->render('@MovieMovie/Page/search.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
     /*
      * End of searchAction
      */
