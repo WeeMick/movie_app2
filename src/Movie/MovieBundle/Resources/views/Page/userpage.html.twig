@@ -1,9 +1,10 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
 {% block title %}{{ app.user.username }} {% endblock%}
 {%  block sidebar %}
+    <h2>UserID: {{  app.user.id }}</h2>
     <h2>Username: {{  app.user.username }}</h2>
-    <h2>Number of reviews</h2>
-    <h2>Update details</h2>
+{#   TODO add in link to update details form #}
+    <h2><a href="/">Update details</a></h2>
 {%  endblock %}
 {% block body %}
     <div>
@@ -13,15 +14,19 @@
             <table id="movies" class="table table-striped table-bordered">
                 <thead>
                 <tr>
+                    <th>Review ID</th>
                     <th>Movie</th>
                     <th>Review</th>
                     <th>Rating</th>
-                    <th colspan="2">Actions</th>
+                    <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                 {%  for review in reviews %}
                     <tr>
+                        <td>
+                            {{ review.id }}
+                        </td>
                         <td>
                             {{ review.movie.title }}
                         </td>
@@ -33,7 +38,7 @@
                             {{ review.rating }}
                         </td>
                         <td>
-                            <button class="btb btn-dark">Delete</button>
+                            <a href="{{ path('movie_review_edit', {'id': review.id}) }}">Edit</a>
                         </td>
                     </tr>
                 {%  endfor %}
