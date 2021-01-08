@@ -2,6 +2,7 @@
 
 namespace Movie\MovieBundle\Controller;
 
+use Knp\Component\Pager\Paginator;
 use Movie\MovieBundle\Entity\Review;
 use Movie\MovieBundle\Form\MovieType;
 use Movie\MovieBundle\Form\ReviewType;
@@ -24,20 +25,35 @@ class PageController extends Controller
     /**
      * @Route("/")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
-        $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
+//        $movies = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->findAll();
 
         $repository = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie');
 
-//        Get the last 5 movies added to the database
-        $query = $repository
+//        Get the last 5 movies added to the database - for sidebar content
+        $sidebarQuery = $repository
             ->createQueryBuilder("m")
             ->orderBy("m.id", "DESC")
             ->setMaxResults(5)
             ->getQuery();
 
-        $releases = $query->getResult();
+        $releases = $sidebarQuery->getResult();
+
+        /**
+         * @var $paginator Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+
+        $em = $this->getDoctrine()->getManager();
+        $dql   = "SELECT m FROM MovieMovieBundle:Movie m";
+        $query = $em->createQuery($dql);
+
+        $movies = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit', 10)
+        );
 
         return $this->render('@MovieMovie/Page/index.html.twig', array(
             'movies' => $movies,

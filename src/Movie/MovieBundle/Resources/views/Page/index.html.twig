@@ -19,10 +19,11 @@
         <table class="table table-striped table-bordered" id="movies">
             <thead>
             <tr>
-                <th class="text-center">Movie</th>
+                <th class="text-center">ID</th>
+                <th class="text-center">Title</th>
                 <th class="text-center">Director</th>
                 <th class="text-center">Actors</th>
-                <th class="text-center">Synopsis</th>
+                <th class="text-center" colspan="3">Synopsis</th>
                 <th class="text-center">Running Time (in minutes)</th>
                 <th class="text-center">Rating</th>
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
@@ -34,6 +35,9 @@
             {% for movie in movies %}
                 <tr>
                     <td>
+                        {{ movie.id }}
+                    </td>
+                    <td>
                         <a href="{{ path('movie_show', {'id': movie.id}) }}">{{ movie.title }}</a>
                     </td>
                     <td>
@@ -42,7 +46,7 @@
                     <td>
                         {{ movie.actors }}
                     </td>
-                    <td>
+                    <td colspan="3">
                         {{ movie.summary }}
                     </td>
                     <td>
@@ -67,6 +71,12 @@
             {% endfor %}
             </tbody>
         </table>
+
+        {# display navigation #}
+        <div class="navigation">
+            {{ knp_pagination_render(movies) }}
+        </div>
+
     {% else %}
         <p>No movies to show</p>
     {% endif %}
