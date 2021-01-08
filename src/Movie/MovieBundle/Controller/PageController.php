@@ -104,14 +104,15 @@ class PageController extends Controller
                         $this->getParameter('images_directory'),
                         $newFilename
                     );
+                    // updates the 'image_filename' property to store the file name
+                    // instead of its contents
+                    $movie->setImageFile($newFilename);
                 } catch (FileException $e) {
-                    echo "Exception: " . $e;
                     // ... handle exception if something happens during file upload
+                    echo "Exception: " . $e;
                 }
 
-                // updates the 'image_filename' property to store the file name
-                // instead of its contents
-                $movie->setImageFile($newFilename);
+
             }
 
             $movie->setTitle($title);
