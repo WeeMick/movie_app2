@@ -73,7 +73,7 @@
         </table>
 
         {# display navigation #}
-        <div class="navigation">
+        <div class="navigation text-center">
             {{ knp_pagination_render(movies) }}
         </div>
 
@@ -83,24 +83,25 @@
 {% endblock %}
 
 {% block sidebar %}
-<h2>New Releases</h2>
-<div>Check out the movies below which have recently been added to our database!</div>
-<br>
+    <h2>New Releases</h2>
+    <div>Check out the movies below which have recently been added to our database!</div>
+    <br>
     {# Rendering controllers i templates is not working #}
-{# <div>{{ render(controller( #}
-{# 'Movie\MovieBundle\Controller\PageController::newReleaseAction' #}
-{# )) }}</div> #}
-<div class="list-group">
-    {% for release in releases %}
-        <a href="{{ path('movie_show', {'id': release.id}) }}" class="list-group-item list-group-item-success text-center">{{ release.title }}</a>
-        <br><br>
-    {% endfor %}
-</div>
-    {% endblock %}
+    {# <div>{{ render(controller( #}
+    {# 'Movie\MovieBundle\Controller\PageController::newReleaseAction' #}
+    {# )) }}</div> #}
+    <div class="list-group">
+        {% for release in releases %}
+            <a href="{{ path('movie_show', {'id': release.id}) }}"
+               class="list-group-item list-group-item-success text-center">{{ release.title }}</a>
+            <br><br>
+        {% endfor %}
+    </div>
+{% endblock %}
 
-{#    {% block javascripts %}#}
-{#        {% javascripts '@MovieMovieBundle/Resources/js/main.js' %}#}
-{#            <script src="{{ asset_url }}"></script>#}
-{#        {% endjavascripts %}#}
-{#    {% endblock %}#}
+{# {% block javascripts %} #}
+{# {% javascripts '@MovieMovieBundle/Resources/js/main.js' %} #}
+{# <script src="{{ asset_url }}"></script> #}
+{# {% endjavascripts %} #}
+{# {% endblock %} #}
 

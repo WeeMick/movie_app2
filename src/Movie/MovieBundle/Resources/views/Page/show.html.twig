@@ -5,7 +5,7 @@
 {% block body %}
     <div class="container-fluid">
         {% if movie.imageFile %}
-            <img src="{{  asset('uploads/images/') ~ movie.imageFile }}" alt="Movie Poster" />
+            <img src="{{ asset('uploads/images/') ~ movie.imageFile }}" alt="Movie Poster"/>
         {% else %}
             {% image '@MovieMovieBundle/Resources/Images/image_2.jpg' %}
                 <img src="{{ asset_url }}" class="img-fluid" style="width: 100%" alt="Movie image"/>
@@ -18,16 +18,16 @@
     <h2>Storyline</h2>
     <p>{{ movie.summary }}</p>
     <h2>Director: {{ movie.director }}</h2>
-    <h2>Actors: {{  movie.actors }}</h2>
+    <h2>Actors: {{ movie.actors }}</h2>
     <h2>Running Time {{ movie.runningTime }}</h2>
     <hr>
     <hr>
     <div>
         <h1>Reviews</h1>
-        <button class="btn btn-success"><a href="{{ path('movie_review',{'id': movie.id} ) }}">Add review</a></button>
-        <h3>Table showing all reviews</h3>
+        <button class="btn btn-success pull-right mb-3"><a href="{{ path('movie_review',{'id': movie.id} ) }}">Add review</a>
+        </button>
         {% if reviews %}
-            <table class="table table-striped table-bordered">
+            <table class="table table-striped table-bordered mt-3">
                 <thead>
                 <tr>
                     <th>Review_ID</th>
@@ -68,6 +68,11 @@
                 {% endfor %}
                 </tbody>
             </table>
+
+            {# display navigation #}
+            <div class="navigation text-center">
+                {{ knp_pagination_render(reviews) }}
+            </div>
         {% else %}
             <p>No reviews to show</p>
         {% endif %}

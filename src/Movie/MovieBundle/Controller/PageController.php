@@ -24,6 +24,8 @@ class PageController extends Controller
 {
     /**
      * @Route("/")
+     * @param Request $request
+     * @return Response|null
      */
     public function indexAction(Request $request)
     {
@@ -271,10 +273,11 @@ class PageController extends Controller
     */
 
     /**
+     * @param Request $request
      * @param $id
      * @return Response|null
      */
-    public function showAction($id)
+    public function showAction(Request $request, $id)
     {
         $repository = $this->getDoctrine()
             ->getRepository('MovieMovieBundle:Review');
@@ -290,11 +293,25 @@ class PageController extends Controller
             ->orderBy('r.id', 'ASC')
             ->getQuery();
 
-        $reviews = $query->getResult();
-        // to get just one result:
-        // $movie = $query->setMaxResults(1)->getOneOrNullResult();
+//        $reviews = $query->getResult();
+
+        /**
+         * @var $paginator Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+
+        $em = $this->getDoctrine()->getManager();
+//        $dql   = "SELECT m FROM MovieMovieBundle:Movie m";
+//        $query1 = $em->createQuery($query);
+
+        $reviews = $paginator->paginate(
+            $query, /* query NOT result */
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit', 3)
+        );
 
         return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie, 'reviews' => $reviews));
+
 
     }
     /*
