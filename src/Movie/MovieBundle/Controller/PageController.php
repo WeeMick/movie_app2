@@ -142,42 +142,27 @@ class PageController extends Controller
         $searchQuery = $request->query->get('search');
         echo "search query: " . $searchQuery;
 
-        $form = $this->createFormBuilder(null)
-            ->add('search', TextType::class)
-            ->getForm();
+        $query = $repository->createQueryBuilder('m')
+            ->setParameters(array(
+                'searchQuery' => '%'.$searchQuery.'%'))
+            ->where('m.title LIKE :searchQuery')
+            ->orderBy('m.id', 'ASC')
+            ->getQuery();
 
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-//            $searchQuery = $form['search']->getData();
+        /**
+         * @var $paginator Paginator
+         */
+        $paginator = $this->get('knp_paginator');
 
-
-            $query = $repository->createQueryBuilder('m')
-                ->setParameters(array(
-                    'searchQuery' => $searchQuery))
-                ->where('m.title LIKE :searchQuery')
-                ->orderBy('m.id', 'ASC')
-                ->getQuery();
-
-            /**
-             * @var $paginator Paginator
-             */
-            $paginator = $this->get('knp_paginator');
-
-            echo "Search Query: " . $query;
-
-            $movies = $paginator->paginate(
-                $query,
-                $request->query->getInt('page', 1), /*page number*/
-                $request->query->getInt('limit', 3)
-            );
-
-            return $this->render('@MovieMovie/Page/search.html.twig', array('movies' => $movies));
-        }
+        $movies = $paginator->paginate(
+            $query,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit', 3)
+        );
 
         return $this->render('@MovieMovie/Page/search.html.twig', array(
-            'form' => $form->createView(),
-            'movies' => $movies
-        ));
+            'query' => $searchQuery,
+            'movies' => $movies));
     }
     /*
      * End of searchAction
