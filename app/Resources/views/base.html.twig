@@ -48,9 +48,9 @@
                 </ul>
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
                     </div>
-                    <button class="btn btn-danger"><a href="{{ path('movie_search') }}">Submit</a></button>
+                    <button class="btn btn-danger" type="submit"><a href="{{ path('movie_search') }}">Submit</a></button>
                 </form>
 {#                {{ render(controller('MovieMovieBundle:Page:search')) }}#}
             </div>

@@ -1,24 +1,31 @@
 {% extends 'MovieMovieBundle::layout.html.twig' %}
 {% block title %} Search Results {% endblock %}
+{% block sidebar %}
+{% endblock %}
 {% block body %}
 
-    <form action="" method="post">
-        {{ form_start(form) }}
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
-    </form>
+    {%  if movies %}
+    Reviews for search Query
+    {%  else %}
+    No movies matching search criteria
+    {% endif %}
+    {# <form action="" method="post"> #}
+    {# {{ form_start(form) }} #}
+    {# {{ form_widget(form) }} #}
+    {# {{ form_end(form) }} #}
+    {# </form> #}
 
-{#    <form action="" method="post">#}
-{#        {{ form_start(form, {#}
-{#            'attr': {'class': 'navbar-form navbar-right'}#}
-{#        }) }}#}
+    {# <form action="" method="post"> #}
+    {# {{ form_start(form, { #}
+    {# 'attr': {'class': 'navbar-form navbar-right'} #}
+    {# }) }} #}
 
-{#        {{ form_widget(form.search, {#}
-{#        'attr': {'class': 'form-control search-query'} }) }}#}
+    {# {{ form_widget(form.search, { #}
+    {# 'attr': {'class': 'form-control search-query'} }) }} #}
 
 
-{#        {{ form_end(form) }}#}
-{#    </form>#}
+    {# {{ form_end(form) }} #}
+    {# </form> #}
     {# <h1>ID: {{ movie.id }}</h1> #}
     {# <h1>Title: {{ movie.title }}</h1> #}
     {# <h1>Rating: {{ movie.rating }}</h1> #}

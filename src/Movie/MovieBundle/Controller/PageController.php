@@ -136,21 +136,26 @@ class PageController extends Controller
         $repository = $this->getDoctrine()
             ->getRepository('MovieMovieBundle:Movie');
 
+        // need to create a query for the movies?
+        $movies = null;
+
+        $searchQuery = $request->query->get('search');
+        echo "search query: " . $searchQuery;
 
         $form = $this->createFormBuilder(null)
             ->add('search', TextType::class)
             ->getForm();
 
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
-            $searchQuery = $form['search']->getData();
+//            $searchQuery = $form['search']->getData();
+
 
             $query = $repository->createQueryBuilder('m')
                 ->setParameters(array(
                     'searchQuery' => $searchQuery))
                 ->where('m.title LIKE :searchQuery')
-                ->orderBy('r.id', 'ASC')
+                ->orderBy('m.id', 'ASC')
                 ->getQuery();
 
             /**
@@ -158,19 +163,21 @@ class PageController extends Controller
              */
             $paginator = $this->get('knp_paginator');
 
-            $reviews = $paginator->paginate(
+            echo "Search Query: " . $query;
+
+            $movies = $paginator->paginate(
                 $query,
                 $request->query->getInt('page', 1), /*page number*/
                 $request->query->getInt('limit', 3)
             );
 
+            return $this->render('@MovieMovie/Page/search.html.twig', array('movies' => $movies));
         }
 
-
-
-        return $this->render('@MovieMovie/Page/search.html.twig', [
-            'form' => $form->createView()
-        ]);
+        return $this->render('@MovieMovie/Page/search.html.twig', array(
+            'form' => $form->createView(),
+            'movies' => $movies
+        ));
     }
     /*
      * End of searchAction
@@ -377,7 +384,6 @@ class PageController extends Controller
 
 
     // This function is not currently working properly - not required in the assignment spec
-    // TODO make admin user the only one capable of deleting records
     /**
      * @param $id
      * @return Response|null
