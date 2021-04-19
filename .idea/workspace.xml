@@ -23,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/search.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/search.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +108,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1k4aQ0FVatmVX5PYJ8bySUqxQHl" />
@@ -125,7 +131,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/Images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -190,7 +196,12 @@
       <workItem from="1610104163756" duration="14889000" />
       <workItem from="1610119966323" duration="1164000" />
       <workItem from="1611080395122" duration="595000" />
-      <workItem from="1611539769644" duration="7019000" />
+      <workItem from="1611539769644" duration="12557000" />
+      <workItem from="1613383270025" duration="800000" />
+      <workItem from="1613984839820" duration="619000" />
+      <workItem from="1614100978594" duration="784000" />
+      <workItem from="1614168374827" duration="1224000" />
+      <workItem from="1614247257318" duration="2792000" />
     </task>
     <servers />
   </component>
@@ -239,18 +250,14 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="690" y="335" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1610074087395" />
-    <state x="736" y="-678" width="447" height="265" key="ComposerInitDialogKey" timestamp="1604962403867">
-      <screen x="0" y="-1080" width="1920" height="1040" />
-    </state>
-    <state x="736" y="-678" width="447" height="265" key="ComposerInitDialogKey/0.0.1536.824/1920.-781.1920.1040/0.-1080.1920.1040/-1680.-776.1680.1010@0.-1080.1920.1040" timestamp="1604962403867" />
-    <state x="741" y="307" key="FileChooserDialogImpl" timestamp="1610077929859">
-      <screen x="0" y="0" width="1920" height="1160" />
+    <state x="593" y="218" key="FileChooserDialogImpl" timestamp="1613987401420">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="741" y="307" key="FileChooserDialogImpl/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1610077929859" />
     <state x="741" y="-805" key="FileChooserDialogImpl/0.0.1536.824/-1680.-776.1680.1010/1920.-781.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1606762835365" />
     <state x="741" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1605738391195" />
     <state x="-1032" y="-509" key="FileChooserDialogImpl/0.0.1536.824/1920.-781.1920.1040/0.-1080.1920.1040/-1680.-776.1680.1010@-1680.-776.1680.1010" timestamp="1605518960817" />
-    <state x="740" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-781.1920.1040/0.-1080.1920.1040/-1680.-776.1680.1010@0.-1080.1920.1040" timestamp="1604970115623" />
+    <state x="593" y="218" key="FileChooserDialogImpl/0.0.1536.824/5.-1080.1280.680@0.0.1536.824" timestamp="1613987401420" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1607008605210">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -324,7 +331,7 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="667" y="179" width="585" height="801" key="find.popup/-1570.1214.1536.832/-1920.134.1920.1040/1920.441.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1610068222992" />
-    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup" timestamp="1610120461774">
+    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup" timestamp="1611573866146">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/-1570.1214.1536.832/-1920.134.1920.1040/0.0.1920.1160/1920.441.1280.760@0.0.1920.1160" timestamp="1610120461774" />
@@ -337,5 +344,6 @@
     <state x="623" y="-855" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.-781.1920.1040/-1920.-776.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1607022938782" />
     <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607444301989" />
     <state x="-865" y="435" width="672" height="601" key="search.everywhere.popup/1477.1201.1536.832/1920.121.1920.1040/-1280.236.1280.920/0.0.1920.1160@-1280.236.1280.920" timestamp="1607556020154" />
+    <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/1920.558.1536.832/-1920.134.1920.1040/1920.-260.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1611573866146" />
   </component>
 </project>

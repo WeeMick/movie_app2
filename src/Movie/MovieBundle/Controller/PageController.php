@@ -140,7 +140,6 @@ class PageController extends Controller
         $movies = null;
 
         $searchQuery = $request->query->get('search');
-        echo "search query: " . $searchQuery;
 
         $query = $repository->createQueryBuilder('m')
             ->setParameters(array(
