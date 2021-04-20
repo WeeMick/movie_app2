@@ -25,16 +25,16 @@
         "ext-intl": "*",
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
+        "friendsofsymfony/rest-bundle": "^2.0.0",
         "friendsofsymfony/user-bundle": "~2.0",
         "incenteev/composer-parameter-handler": "^2.0",
         "jms/serializer-bundle": "^3.9",
-        "knplabs/knp-paginator-bundle": "2.5.4",
-        "sensio/distribution-bundle": "^5.0.19",
+        "knplabs/knp-paginator-bundle": "2.5.*",
         "sensio/framework-extra-bundle": "^5.0.0",
         "symfony/assetic-bundle": "^2.8",
+        "symfony/config": "^3.4",
         "symfony/monolog-bundle": "^3.1.0",
         "symfony/polyfill-apcu": "^1.0",
-        "symfony/swiftmailer-bundle": "^2.6.4",
         "symfony/symfony": "3.4.*",
         "twig/twig": "^1.0||^2.0"
     },
@@ -77,5 +77,6 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": null
-    }
+    },
+    "description": ""
 }
