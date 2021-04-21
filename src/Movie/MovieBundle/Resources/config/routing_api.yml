@@ -1,0 +1,6 @@
+api_movie:
+    type: rest
+    resource: Movie\MovieBundle\Controller\MovieAPIController
+    name_prefix: api_movie_
+    prefix: /
+

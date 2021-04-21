@@ -5,9 +5,15 @@ movie_movie:
     resource: "@MovieMovieBundle/Resources/config/routing.yml"
     prefix:   /
 
+movie_api:
+    type: rest
+    resource: "@MovieMovieBundle/Resources/config/routing_api.yml"
+    prefix: /api/v1
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
 logout:
     path: /logout
+

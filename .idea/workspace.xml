@@ -23,10 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/MovieAPIController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing_api.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/movie_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movie_app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
@@ -104,6 +107,19 @@
       <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
       <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="ProjectId" id="1k4aQ0FVatmVX5PYJ8bySUqxQHl" />
@@ -197,7 +213,7 @@
       <workItem from="1618847935818" duration="2307000" />
       <workItem from="1618872150012" duration="692000" />
       <workItem from="1618911564317" duration="1693000" />
-      <workItem from="1618918890363" duration="6568000" />
+      <workItem from="1618918890363" duration="17600000" />
     </task>
     <servers />
   </component>
@@ -222,6 +238,10 @@
     </state>
     <state x="741" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-751.1360.728/0.-1080.1920.1040/-800.-589.800.560@0.-1080.1920.1040" timestamp="1618912073716" />
     <state x="593" y="218" key="FileChooserDialogImpl/0.0.1536.824/5.-1080.1280.680@0.0.1536.824" timestamp="1613987401420" />
+    <state x="794" y="-637" key="NewPhpFileDialog" timestamp="1618946072421">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="794" y="-637" key="NewPhpFileDialog/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1618946072421" />
     <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup" timestamp="1618922897824">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
