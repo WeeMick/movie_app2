@@ -4,3 +4,9 @@ api_movie:
     name_prefix: api_movie_
     prefix: /
 
+api_review:
+    type: rest
+    resource: Movie\MovieBundle\Controller\ReviewAPIController
+    name_prefix: api_review_
+    prefix: /
+

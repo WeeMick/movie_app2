@@ -10,6 +10,11 @@ movie_api:
     resource: "@MovieMovieBundle/Resources/config/routing_api.yml"
     prefix: /api/v1
 
+review_api:
+    type: rest
+    resource: "@MovieMovieBundle/Resources/config/routing_api.yml"
+    prefix: /api/v1
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
