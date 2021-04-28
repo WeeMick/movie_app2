@@ -1,3 +1,294 @@
+POST http://localhost:8000/api/v1/reviews/310
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4}
+
+<> 2021-04-27T050149.400.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/310
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4}
+
+<> 2021-04-27T050127.400.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/310
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4, "reviewer": { "id": 3}}
+
+<> 2021-04-27T050033.400.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/310
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4, "reviewer": { "id": 3}}
+
+<> 2021-04-27T032943.500.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/310
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4, "reviewer": { "id": 3}}
+
+<> 2021-04-27T032650.500.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/310
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4, "reviewer": { "id": 3}}
+
+<> 2021-04-27T032608.500.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14?id=310
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T030418.500.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14?id=310
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T025719.500.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T025628.500.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T022827.400.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T022657.400.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T022631.500.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T022548.500.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T022328.500.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T022146.400.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T022120.400.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews/14
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T022008.400.json
+
+###
+
+POST http://localhost:8000/api/v1/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T015530.405.html
+
+###
+
+POST http://localhost:8000/api/v1/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ "id": 312, "reviewer": { "id": 4 },"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T015201.405.html
+
+###
+
+POST http://localhost:8000/api/v1/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ "id": 312, "reviewer": { "id": 4 },"review": "post API review test", "rating": 6.4 }
+
+<> 2021-04-27T015055.405.html
+
+###
+
+POST http://localhost:8000/api/v1/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{ "id": 312, "reviewer": { "id": 4, "username": "user_3", },"review": "post API review test", "rating": 6.4 },
+
+<> 2021-04-27T014943.405.html
+
+###
+
+GET http://localhost:8000/api/v1/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2021-04-27T012311.200.json
+
+###
+
+GET http://localhost:8000/api/v1/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"title":"Hello World", "director":"Brad Pitt","summary":"created from API","actors":"Jim James Jonny","running_time":24}
+
+<> 2021-04-27T012256.200.json
+
+###
+
+GET http://localhost:8000/api/v1/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"title":"Hello World", "director":"Brad Pitt","summary":"created from API","actors":"Jim James Jonny","running_time":24}
+
+<> 2021-04-27T012240.200.json
+
+###
+
+POST http://localhost:8000/api/v1/movies
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"title":"Hello World", "director":"Brad Pitt","summary":"created from API","actors":"Jim James Jonny","running_time":24}
+
+###
+
+POST http://localhost:8000/api/v1/movies
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"title":"Hello World", "director":"Brad Pitt","summary":"created from API","actors":"Jim James Jonny","running_time":24}
+
+###
+
+GET http://localhost:8000/api/v1/movies/1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"title":"Hello World", "director":"Brad Pitt","summary":"created from API","actors":"Jim James Jonny","running_time":24}
+
+<> 2021-04-27T011944.200.json
+
+###
+
 GET http://localhost:8000/api/v1/movies/1
 Accept: */*
 Cache-Control: no-cache

@@ -56,3 +56,19 @@ movie_user:
     requirements:
 
 
+
+review_view:
+    path:     /view
+    defaults: { _controller: MovieMovieBundle:Review:view }
+
+review_create:
+    path:     /create
+    defaults: { _controller: MovieMovieBundle:Review:create }
+
+review_edit:
+    path:     /edit
+    defaults: { _controller: MovieMovieBundle:Review:edit }
+
+review_delete:
+    path:     /delete
+    defaults: { _controller: MovieMovieBundle:Review:delete }

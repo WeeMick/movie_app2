@@ -23,11 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewAPIController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Form/UserType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing_api.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing_api.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewAPIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewAPIController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Form/ReviewType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Form/ReviewType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +52,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response13.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -138,7 +138,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Movie/MovieBundle/Controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -162,6 +162,468 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews/310" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;review&quot;: &quot;post API review test&quot;, &quot;rating&quot;: 6.4}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews/310" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;review&quot;: &quot;post API review test&quot;, &quot;rating&quot;: 6.4, &quot;reviewer&quot;: { &quot;id&quot;: 3}}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/v1/reviews/14" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="id" />
+                <option name="value" value="310" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;review&quot;: &quot;post API review test&quot;, &quot;rating&quot;: 6.4 }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews/14" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="id" />
+                <option name="value" value="310" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;review&quot;: &quot;post API review test&quot;, &quot;rating&quot;: 6.4 }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews/14" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;review&quot;: &quot;post API review test&quot;, &quot;rating&quot;: 6.4 }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews/14" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{ review&quot;: &quot;post API review test&quot;, &quot;rating&quot;: 6.4 }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{ review&quot;: &quot;post API review test&quot;, &quot;rating&quot;: 6.4 }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{ &quot;id&quot;: 312, &quot;reviewer&quot;: { &quot;id&quot;: 4 },&quot;review&quot;: &quot;post API review test&quot;, &quot;rating&quot;: 6.4 }" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{ &quot;id&quot;: 312, &quot;reviewer&quot;: { &quot;id&quot;: 4, &quot;username&quot;: &quot;user_3&quot;, },&quot;review&quot;: &quot;post API review test&quot;, &quot;rating&quot;: 6.4 }," />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%229527db%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/reviews" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;title&quot;:&quot;Hello World&quot;, &quot;director&quot;:&quot;Brad Pitt&quot;,&quot;summary&quot;:&quot;created from API&quot;,&quot;actors&quot;:&quot;Jim James Jonny&quot;,&quot;running_time&quot;:24}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="sf_redirect" />
+                <option name="path" value="/" />
+                <option name="value" value="%7B%22token%22%3A%22a719dd%22%2C%22route%22%3A%22api_movie_post_movie%22%2C%22method%22%3A%22POST%22%2C%22controller%22%3A%7B%22class%22%3A%22Movie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController%22%2C%22method%22%3A%22postMovieAction%22%2C%22file%22%3A%22C%3A%5C%5CUsers%5C%5Ckrazy%5C%5COneDrive%20-%20University%20of%20Salford%5C%5CFinal%20Year%5C%5CModules%5C%5CAWD%5C%5CAssignment_2%5C%5Cmovie_app2%5C%5Csrc%5C%5CMovie%5C%5CMovieBundle%5C%5CController%5C%5CMovieAPIController.php%22%2C%22line%22%3A40%7D%2C%22status_code%22%3A201%2C%22status_text%22%3A%22Created%22%7D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/movies" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;title&quot;:&quot;Hello World&quot;, &quot;director&quot;:&quot;Brad Pitt&quot;,&quot;summary&quot;:&quot;created from API&quot;,&quot;actors&quot;:&quot;Jim James Jonny&quot;,&quot;running_time&quot;:24}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/v1/movies" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&quot;title&quot;:&quot;Hello World&quot;, &quot;director&quot;:&quot;Brad Pitt&quot;,&quot;summary&quot;:&quot;created from API&quot;,&quot;actors&quot;:&quot;Jim James Jonny&quot;,&quot;running_time&quot;:24}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="biscuits">
             <list>
@@ -211,31 +673,6 @@
             </list>
           </option>
           <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:8000" />
-          <option name="urlPath" value="/api/v1/movies" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{&quot;title&quot;:&quot;Hello World&quot;, &quot;director&quot;:&quot;Brad Pitt&quot;,&quot;summary&quot;:&quot;created from API&quot;,&quot;actors&quot;:&quot;Jim James Jonny&quot;,&quot;running_time&quot;:24}" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
           <option name="urlBase" value="http://localhost:8000" />
           <option name="urlPath" value="/api/v1/movies" />
           <option name="headers">
@@ -341,10 +778,18 @@
     <configuration name="LiveEditPossibly" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229">
       <method v="2" />
     </configuration>
+    <configuration name="All in rest-api" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.All in rest-api" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -390,7 +835,11 @@
       <workItem from="1618847935818" duration="2307000" />
       <workItem from="1618872150012" duration="692000" />
       <workItem from="1618911564317" duration="1693000" />
-      <workItem from="1618918890363" duration="29366000" />
+      <workItem from="1618918890363" duration="32313000" />
+      <workItem from="1619519299893" duration="13437000" />
+      <workItem from="1619558070640" duration="2145000" />
+      <workItem from="1619601389625" duration="617000" />
+      <workItem from="1619617420864" duration="2236000" />
     </task>
     <servers />
   </component>
@@ -410,24 +859,60 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="-813" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1619618744624">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="690" y="-813" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.-751.1360.728/0.-1080.1920.1040/-800.-589.800.560@0.-1080.1920.1040" timestamp="1619618744624" />
     <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619003771321">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619003771321" />
-    <state x="741" y="-805" key="FileChooserDialogImpl" timestamp="1619010652093">
+    <state x="741" y="-805" key="FileChooserDialogImpl" timestamp="1619542264733">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="741" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619010652093" />
+    <state x="741" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619542264733" />
     <state x="741" y="-805" key="FileChooserDialogImpl/0.0.1536.824/1920.-751.1360.728/0.-1080.1920.1040/-800.-589.800.560@0.-1080.1920.1040" timestamp="1618912073716" />
     <state x="593" y="218" key="FileChooserDialogImpl/0.0.1536.824/5.-1080.1280.680@0.0.1536.824" timestamp="1613987401420" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1619532291112">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619532291112" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1619532291111">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619532291111" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1619532291111">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619532291111" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1619532291111">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619532291111" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1619527937111">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619527937111" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1619527937111">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619527937111" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1619527937111">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619527937111" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1619527937111">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619527937111" />
     <state x="794" y="-637" key="NewPhpFileDialog" timestamp="1618946072421">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="794" y="-637" key="NewPhpFileDialog/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1618946072421" />
-    <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup" timestamp="1618922897824">
+    <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup" timestamp="1619542789996">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
-    <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1618922897824" />
+    <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619542789996" />
     <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/1920.558.1536.832/-1920.134.1920.1040/1920.-260.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1611573866146" />
   </component>
 </project>

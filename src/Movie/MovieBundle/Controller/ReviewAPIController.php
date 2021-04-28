@@ -22,9 +22,9 @@ class ReviewAPIController extends AbstractFOSRestController
     public function getReviewAction($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $review = $em->getRepository('MovieMovieBundle:Movie')
+        $review = $em->getRepository('MovieMovieBundle:Review')
             ->find($id);
-
+//        dump($review); die();
         if (!$review) {
             // no review entry is found, so we set the view
             // to no content and set the status code to 404
@@ -40,8 +40,8 @@ class ReviewAPIController extends AbstractFOSRestController
     public function postReviewAction(Request $request, $id)
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
-        $userId = $this->getUser()->getId();
-        $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
+//        $userId = $this->getUser()->getId();
+//        $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
         $new_review = new Review();
 
         $form = $this->createForm(ReviewType::class, $new_review);
@@ -60,7 +60,7 @@ class ReviewAPIController extends AbstractFOSRestController
             $new_review->setReview($review);
             $new_review->setRating($rating);
             $new_review->setMovie($movie);
-            $new_review->setReviewer($reviewer);
+//            $new_review->setReviewer($reviewer);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($movie);
@@ -81,6 +81,11 @@ class ReviewAPIController extends AbstractFOSRestController
             return $this->handleView($this->view($form, 400));
         }
 
+
+    }
+
+    public function putReviewAction()
+    {
 
     }
 
