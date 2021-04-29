@@ -87,7 +87,7 @@ class Review
     protected $id;
 
     /**
-     * @ORM\ManyToOne( targetEntity="Movie\MovieBundle\Entity\Movie", inversedBy="reviews")
+     * @ORM\ManyToOne( targetEntity="Movie\MovieBundle\Entity\Movie", inversedBy="movies")
      * @ORM\JoinColumn (name="movie_id", referencedColumnName="id", nullable=false)
      */
     protected $movie;

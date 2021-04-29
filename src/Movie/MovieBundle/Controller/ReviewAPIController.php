@@ -42,9 +42,10 @@ class ReviewAPIController extends AbstractFOSRestController
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 //        $userId = $this->getUser()->getId();
 //        $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
+        $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find(7);
         $new_review = new Review();
 
-        $form = $this->createForm(ReviewType::class, $new_review);
+        $form = $this->createForm(ReviewType::class, $new_review, array('csrf_protection' => false));
 
         // Point 1 of list above
         if ($request->getContentType() != 'json') {
@@ -60,10 +61,10 @@ class ReviewAPIController extends AbstractFOSRestController
             $new_review->setReview($review);
             $new_review->setRating($rating);
             $new_review->setMovie($movie);
-//            $new_review->setReviewer($reviewer);
+            $new_review->setReviewer($reviewer);
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($movie);
+            $em->persist($new_review);
             $em->flush();
 
             // set status code to 201 and set the Location header
@@ -86,6 +87,19 @@ class ReviewAPIController extends AbstractFOSRestController
 
     public function putReviewAction()
     {
+
+    }
+
+    public function deleteReviewAction($id)
+    {
+        $review = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($review);
+        $em->flush();
+
+        return $this->redirect(
+            $this->generateUrl('movie_index'));
 
     }
 

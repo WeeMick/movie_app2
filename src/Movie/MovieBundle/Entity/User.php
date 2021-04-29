@@ -38,8 +38,7 @@ class User extends BaseUser
 
     /**
      * @var ArrayCollection
-     * @ORM\OneToMany(targetEntity="Movie\MovieBundle\Entity\Review",
-    mappedBy="reviewer")
+     * @ORM\OneToMany(targetEntity="Movie\MovieBundle\Entity\Review", mappedBy="reviewer")
      */
     protected $reviews;
 

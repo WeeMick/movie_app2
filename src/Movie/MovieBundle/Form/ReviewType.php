@@ -16,10 +16,10 @@ class ReviewType extends AbstractType
                 array('class' => 'form-control')))
             ->add('rating', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
-            ->add('reviewer', TextType::class, array('attr' =>
-                array('class' => 'form-control',
-                    'mapped' => false,
-                    3 => 'Default value')))
+//            ->add('reviewer', TextType::class, array('attr' =>
+//                array('class' => 'form-control',
+//                    'mapped' => false,
+//                    3 => 'Default value')))
             ->add('save', SubmitType::class, array(
                 'label' => 'Save Review',
                 'attr' => array('class' => 'btn btn-primary mt-2')));
