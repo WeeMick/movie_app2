@@ -3,32 +3,22 @@ movie_index:
     defaults: { _controller: MovieMovieBundle:Page:index }
 
 movie_show:
-    path: /show/{id}
+    path: /movie/show/{id}
     defaults: { _controller: MovieMovieBundle:Page:show, id: id }
     requirements:
         id: '\d+'
 
 movie_search:
-    path: /search
+    path: /movie/search
     defaults: { _controller: MovieMovieBundle:Page:search }
 
-movie_review:
-    path: /review/{id}
-    defaults: { _controller: MovieMovieBundle:Page:review, id: id }
-    requirements:
-        id: '\d+'
-
 movie_delete:
-    path: /delete/{id}
+    path: /movie/delete/{id}
     defaults: { _controller: MovieMovieBundle:Page:delete, id: id }
 
 movie_edit:
-    path: /edit/{id}
+    path: /movie/edit/{id}
     defaults: { _controller: MovieMovieBundle:Page:editMovie, id: id }
-
-movie_review_edit:
-    path: /edit/review/{id}
-    defaults: { _controller: MovieMovieBundle:Page:editReview, id: id }
 
 movie_about:
     path: /about
@@ -56,19 +46,20 @@ movie_user:
     requirements:
 
 
-
 review_view:
-    path:     /view
+    path:     /review/{id}
     defaults: { _controller: MovieMovieBundle:Review:view }
 
 review_create:
-    path:     /create
-    defaults: { _controller: MovieMovieBundle:Review:create }
+    path:     review/create/{id}
+    defaults: { _controller: MovieMovieBundle:Review:create, id: id }
+    requirements:
+        id: '\d+'
 
 review_edit:
-    path:     /edit
-    defaults: { _controller: MovieMovieBundle:Review:edit }
+    path:     /review/edit/{id}
+    defaults: { _controller: MovieMovieBundle:Review:edit, id: id }
 
 review_delete:
-    path:     /delete
+    path:     /review/delete
     defaults: { _controller: MovieMovieBundle:Review:delete }

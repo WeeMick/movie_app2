@@ -1,7 +1,16 @@
 {% extends "::base.html.twig" %}
-
-{% block title %}MovieMovieBundle:Review:create{% endblock %}
-
+{% block title %}Review{% endblock %}
 {% block body %}
-<h1>Welcome to the Review:create page</h1>
+    <header>
+        <h1>Review</h1>
+        <h2>Movie ID: {{ movie.id }}</h2>
+    </header>
+    <p>Reviews for {{ movie.title }}</p>
+    <form action="" method="post">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </form>
+    <button class="btn btn-danger"><a href="{{ path('movie_show', {'id': movie.id}) }}">Cancel Reviewing Movie</a>
+    </button>
 {% endblock %}

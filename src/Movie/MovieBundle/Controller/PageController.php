@@ -167,49 +167,6 @@ class PageController extends Controller
      * End of searchAction
      */
 
-    /**
-     * @param Request $request
-     * @param $id
-     * @return Response|null
-     */
-    public function reviewAction(Request $request, $id)
-    {
-        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
-        $userId = $this->getUser()->getId();
-        $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
-        $newreview = new Review();
-        $form = $this->createForm(ReviewType::class, $newreview);
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $review = $form['review']->getData();
-            $rating = $form['rating']->getData();
-
-            $newreview->setReview($review);
-            $newreview->setRating($rating);
-            $newreview->setMovie($movie);
-            $newreview->setReviewer($reviewer);
-
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($newreview);
-            $em->flush();
-
-            return $this->redirectToRoute('movie_show', array(
-                'id' => $movie->getId()
-            ));
-        }
-
-        return $this->render('@MovieMovie/Page/review.html.twig', array(
-            'form' => $form->createView(),
-            'movie' => $movie
-        ));
-
-    }
-    /*
-    * End of reviewAction
-    */
-
 
     /**
      * @param Request $request
@@ -255,44 +212,6 @@ class PageController extends Controller
     * End of editMovieAction
     */
 
-    /**
-     * @param Request $request
-     * @param $id
-     * @return RedirectResponse|Response|null
-     */
-    public function editReviewAction(Request $request, $id)
-    {
-        $reviewToEdit = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
-        $form = $this->createForm(ReviewType::class, $reviewToEdit);
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $review = $form['review']->getData();
-            $rating = $form['rating']->getData();
-
-            $reviewToEdit->setReview($review);
-            $reviewToEdit->setRating($rating);
-
-
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($reviewToEdit);
-            $em->flush();
-
-            return $this->redirectToRoute('movie_show', array(
-                'id' => $reviewToEdit->getMovie()->getId()
-            ));
-        }
-
-        return $this->render('@MovieMovie/Page/editReview.html.twig', [
-            'form' => $form->createView(),
-            'review' => $reviewToEdit
-        ]);
-
-    }
-    /*
-    * End of editReviewAction
-    */
 
     /**
      * @param Request $request

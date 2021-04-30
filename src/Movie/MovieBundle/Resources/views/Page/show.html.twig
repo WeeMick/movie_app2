@@ -32,7 +32,7 @@
     <br>
     <div>
         <h1>Reviews</h1>
-        <button class="btn btn-info pull-right mb-3"><a href="{{ path('movie_review',{'id': movie.id} ) }}">Add
+        <button class="btn btn-info pull-right mb-3"><a href="{{ path('review_create',{'id': movie.id} ) }}">Add
                 review</a>
         </button>
         {% if reviews %}
@@ -68,7 +68,7 @@
                             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                                 {% if app.user.id == review.reviewer.id %}
                                     <button class="btb btn-dark"><a
-                                                href="{{ path('movie_review_edit',{'id': review.id} ) }}">Edit</a>
+                                                href="{{ path('review_edit',{'id': review.id} ) }}">Edit</a>
                                     </button>
                                 {% endif %}
                             {% endif %}
