@@ -116,7 +116,7 @@ class ReviewAPIController extends AbstractFOSRestController
         // TODO If review->reviewer != logged in user,
         // error - not authorised to code 401
 
-        $form = $this->createForm(ReviewType::class, $reviewToEdit, array('csrf_protection' => false));
+        $form = $this->createForm(ReviewType::class, $reviewToEdit);
 
         if ($request->getContentType() != 'json') {
             return $this->handleView($this->view(null, 400));
