@@ -40,14 +40,22 @@ class ReviewAPIController extends AbstractFOSRestController
     public function postReviewAction(Request $request, $id)
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
-//        $userId = $this->getUser()->getId();
-//        $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
-        $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find(7);
+
+        $user = $this->getUser();
+
+        if ($user) {
+            $userId = $this->getUser()->getId();
+            $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
+        } else {
+            $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find(7);
+
+        }
+
+
         $new_review = new Review();
 
         $form = $this->createForm(ReviewType::class, $new_review, array('csrf_protection' => false));
 
-        // Point 1 of list above
         if ($request->getContentType() != 'json') {
             return $this->handleView($this->view(null, 400));
         }
@@ -72,7 +80,7 @@ class ReviewAPIController extends AbstractFOSRestController
             return $this->handleView($this->view(null, 201)
                 ->setLocation($this->generateUrl('api_review_get_reviews',
                     ['id' => $new_review->getId()]
-                    )
+                )
                 )
             );
 
@@ -85,10 +93,71 @@ class ReviewAPIController extends AbstractFOSRestController
 
     }
 
-    public function putReviewAction()
-    {
 
+
+// PUT - If an existing resource is modified, either the 200 (OK) or 204 (No Content) response
+// codes SHOULD be sent to indicate successful completion of the request.
+    public function putReviewAction(Request $request, $id)
+    {
+        $reviewToEdit = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
+
+//        if (!$reviewToEdit) {
+//            // no review entry is found, so we set the view
+//            // to no content and set the status code to 404
+//            $view = $this->view(null, 404);
+//        } else {
+//            // the review exists, so we pass it to the view
+//            // and the status code defaults to 200 "OK"
+//            $view = $this->view($reviewToEdit);
+//        }
+
+        // TODO check if I need to use $this->>handle($view)
+
+        // TODO If review->reviewer != logged in user,
+        // error - not authorised to code 401
+
+        $form = $this->createForm(ReviewType::class, $reviewToEdit, array('csrf_protection' => false));
+
+        if ($request->getContentType() != 'json') {
+            return $this->handleView($this->view(null, 400));
+        }
+        // json_decode the request content and pass it to the form
+        $form->submit(json_decode($request->getContent(), true));
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $review = $form['review']->getData();
+            $rating = $form['rating']->getData();
+
+            $reviewToEdit->setReview($review);
+            $reviewToEdit->setRating($rating);
+
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($reviewToEdit);
+            $em->flush();
+
+            // set status code to 201 and set the Location header
+            // to the URL to retrieve the review entry - Point 5
+            return $this->handleView($this->view(null, 201)
+                ->setLocation($this->generateUrl('api_review_get_reviews',
+                    ['id' => $reviewToEdit->getId()]
+                )
+                )
+            );
+        }
+        else{
+            // the form isn't valid so return the form
+            // along with a 400 status code
+            return $this->handleView($this->view($form, 400));
+        }
     }
+
+
+//DELETE - A successful response SHOULD be 200 (OK) if the response includes an entity describing
+// the status, 202 (Accepted) if the action has not yet been enacted, or 204 (No Content) if the
+// action has been enacted but the response does not include an entity.
 
     public function deleteReviewAction($id)
     {
@@ -105,3 +174,8 @@ class ReviewAPIController extends AbstractFOSRestController
 
 }
 
+// HTTP 200 OK: Standard response for successful HTTP requests. The actual response will
+// depend on the request method used.
+//
+//HTTP 204 No Content: The server successfully processed the request, but is not returning
+// any content
