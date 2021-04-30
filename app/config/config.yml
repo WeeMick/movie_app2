@@ -108,3 +108,11 @@ knp_paginator:
 fos_rest:
     routing_loader:
         default_format: json
+
+# JMS Serializer
+jms_serializer:
+    metadata:
+        directories:
+            FOSUB:
+                namespace_prefix: "FOS\\UserBundle"
+                path: "%kernel.root_dir%/serializer/FOSUserBundle"

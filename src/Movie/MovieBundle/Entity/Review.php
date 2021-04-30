@@ -3,6 +3,8 @@
 namespace Movie\MovieBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation\ExclusionPolicy;
+use JMS\Serializer\Annotation\Expose;
 
 /**
  * Class Movie
@@ -10,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Entity
  * @ORM\Table(name="review")
+ * @ExclusionPolicy("all")
  */
 
 class Review
@@ -79,10 +82,12 @@ class Review
     {
         $this->review = $review;
     }
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
+     * @Expose
      */
     protected $id;
 

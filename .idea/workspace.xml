@@ -23,17 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/serializer/FOSUserBundle/Model.User.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Form/ReviewType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Form/ReviewType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/editReview.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/review.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Review/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Review/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Review/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Review/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Review/view.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Review/view.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1064,7 +1057,7 @@
       <workItem from="1619519299893" duration="13437000" />
       <workItem from="1619558070640" duration="2145000" />
       <workItem from="1619601389625" duration="617000" />
-      <workItem from="1619617420864" duration="26401000" />
+      <workItem from="1619617420864" duration="28588000" />
     </task>
     <servers />
   </component>
@@ -1139,9 +1132,10 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="794" y="-637" key="NewPhpFileDialog/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1618946072421" />
-    <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup" timestamp="1619703783304">
-      <screen x="0" y="-1080" width="1920" height="1040" />
+    <state x="-1297" y="-84" width="1008" height="680" key="search.everywhere.popup" timestamp="1619815494881">
+      <screen x="-1920" y="-309" width="1920" height="1040" />
     </state>
+    <state x="-1297" y="-84" width="1008" height="680" key="search.everywhere.popup/-3840.-60.1920.1040/-1920.771.1536.824/0.0.1400.1010/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619815494881" />
     <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619703783304" />
     <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/1920.558.1536.832/-1920.134.1920.1040/1920.-260.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1611573866146" />
   </component>
