@@ -2,6 +2,7 @@
 
 namespace Movie\MovieBundle\Controller;
 
+use Knp\Component\Pager\Paginator;
 use Movie\MovieBundle\Entity\Review;
 use Movie\MovieBundle\Form\ReviewType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -11,10 +12,39 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ReviewController extends Controller
 {
-
-    public function viewAction()
+    /**
+     * @param Request $request
+     * @param $id
+     * @return Response|null
+     */
+    public function viewAction(Request $request, $id)
     {
+        $repository = $this->getDoctrine()
+            ->getRepository('MovieMovieBundle:Review');
+        $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
+        $movieId = $movie->getId();
 
+        //         createQueryBuilder() automatically selects FROM AppBundle:Movie
+        //         and aliases it to "r"
+        $query = $repository->createQueryBuilder('r')
+            ->setParameters(array(
+                'movie' => $movieId))
+            ->where('r.movie = :movie')
+            ->orderBy('r.id', 'ASC')
+            ->getQuery();
+
+        /**
+         * @var $paginator Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+
+        $reviews = $paginator->paginate(
+            $query,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit', 3)
+        );
+
+        return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie, 'reviews' => $reviews));
 
     }
     /*
@@ -103,7 +133,7 @@ class ReviewController extends Controller
    * End of editAction
    */
 
-    public function deleteAction()
+    public function deleteAction($id)
     {
         $review = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
 

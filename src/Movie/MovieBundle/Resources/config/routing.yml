@@ -2,11 +2,11 @@ movie_index:
     path:     /
     defaults: { _controller: MovieMovieBundle:Page:index }
 
-movie_show:
-    path: /movie/show/{id}
-    defaults: { _controller: MovieMovieBundle:Page:show, id: id }
-    requirements:
-        id: '\d+'
+#movie_show:
+#    path: /movie/show/{id}
+#    defaults: { _controller: MovieMovieBundle:Page:show, id: id }
+#    requirements:
+#        id: '\d+'
 
 movie_search:
     path: /movie/search
@@ -48,7 +48,9 @@ movie_user:
 
 review_view:
     path:     /review/{id}
-    defaults: { _controller: MovieMovieBundle:Review:view }
+    defaults: { _controller: MovieMovieBundle:Review:view, id: id }
+    requirements:
+        id: '\d+'
 
 review_create:
     path:     review/create/{id}
@@ -61,5 +63,7 @@ review_edit:
     defaults: { _controller: MovieMovieBundle:Review:edit, id: id }
 
 review_delete:
-    path:     /review/delete
+    path:     /review/delete/{id}
     defaults: { _controller: MovieMovieBundle:Review:delete }
+    requirements:
+        id: '\d+'

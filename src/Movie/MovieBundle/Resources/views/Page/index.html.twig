@@ -38,7 +38,7 @@
                         {{ movie.id }}
                     </td>
                     <td>
-                        <a href="{{ path('movie_show', {'id': movie.id}) }}">{{ movie.title }}</a>
+                        <a href="{{ path('review_view', {'id': movie.id}) }}">{{ movie.title }}</a>
                     </td>
                     <td>
                         {{ movie.director }}
@@ -92,7 +92,7 @@
     {# )) }}</div> #}
     <div class="list-group">
         {% for release in releases %}
-            <a href="{{ path('movie_show', {'id': release.id}) }}"
+            <a href="{{ path('review_view', {'id': release.id}) }}"
                class="list-group-item list-group-item-success text-center">{{ release.title }}</a>
             <br><br>
         {% endfor %}

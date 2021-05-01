@@ -23,10 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/serializer/FOSUserBundle/Model.User.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Review/view.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Review/view.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response43.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response45.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="PhpDebugGeneral" xdebug_show_addresses="true" hide_empty_superglobals="false" show_user_defined_constants="false" />
   <component name="PhpWorkspaceProjectConfiguration">
@@ -119,6 +121,13 @@
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/exsyst/swagger" />
+      <path value="$PROJECT_DIR$/vendor/zircote/swagger-php" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/api-doc-bundle" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
     </include_path>
   </component>
   <component name="ProjectId" id="1k4aQ0FVatmVX5PYJ8bySUqxQHl" />
@@ -146,19 +155,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\Assignment_2\movie_app2\src\Movie\MovieBundle\Controller" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\Images" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\views\Page" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public" />
-      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\Images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Form" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\AppBundle" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src" />
       <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\Assignment_2\movie_app2\src\Movie\MovieBundle\Controller" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\Images" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\src\Movie\MovieBundle\Resources\views\Page" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\public" />
+      <recent name="C:\Users\krazy\OneDrive - University of Salford\Final Year\Modules\AWD\movie_app\app\Resources\Images" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -1085,9 +1094,10 @@
     </state>
     <state x="-1230" y="-42" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3840.-60.1920.1040/-1920.771.1536.824/0.0.1400.1010/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619814633950" />
     <state x="690" y="-813" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.-751.1360.728/0.-1080.1920.1040/-800.-589.800.560@0.-1080.1920.1040" timestamp="1619618744624" />
-    <state x="-1230" y="-34" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619812682350">
+    <state x="-1230" y="-34" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619883962388">
       <screen x="-1920" y="-309" width="1920" height="1040" />
     </state>
+    <state x="-1230" y="-34" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.771.1536.832/0.0.1400.1010/-3840.-60.1920.1040/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619883962388" />
     <state x="-1230" y="-34" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-3840.-60.1920.1040/-1920.771.1536.824/0.0.1400.1010/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619812682350" />
     <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619003771321" />
     <state x="741" y="-805" key="FileChooserDialogImpl" timestamp="1619542264733">
@@ -1132,9 +1142,14 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="794" y="-637" key="NewPhpFileDialog/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1618946072421" />
-    <state x="-1297" y="-84" width="1008" height="680" key="search.everywhere.popup" timestamp="1619815494881">
+    <state x="-1304" y="86" key="run.anything.popup" timestamp="1619884136435">
       <screen x="-1920" y="-309" width="1920" height="1040" />
     </state>
+    <state x="-1304" y="86" key="run.anything.popup/-1920.771.1536.832/0.0.1400.1010/-3840.-60.1920.1040/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619884136435" />
+    <state x="-1297" y="-84" width="1008" height="680" key="search.everywhere.popup" timestamp="1619884130458">
+      <screen x="-1920" y="-309" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="-84" width="1008" height="680" key="search.everywhere.popup/-1920.771.1536.832/0.0.1400.1010/-3840.-60.1920.1040/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619884130458" />
     <state x="-1297" y="-84" width="1008" height="680" key="search.everywhere.popup/-3840.-60.1920.1040/-1920.771.1536.824/0.0.1400.1010/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619815494881" />
     <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619703783304" />
     <state x="623" y="251" width="1008" height="758" key="search.everywhere.popup/1920.558.1536.832/-1920.134.1920.1040/1920.-260.1280.760/0.0.1920.1160@0.0.1920.1160" timestamp="1611573866146" />
