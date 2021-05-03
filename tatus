@@ -1,0 +1,497 @@
+[33mcommit 24161fafc01ebdb12b9a272f47569fdb3d5aa6e0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sat May 1 16:58:37 2021 +0100
+
+    movie_show chnaged to review_view
+
+[33mcommit 963afcd4039a5b4231ac3bfd8deb9b70f272afe8[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Apr 30 23:23:54 2021 +0100
+
+    able to exclude all properties except id
+
+[33mcommit 1bd58e909cc1616ebca5668ecad7c257d52c2fe0[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Apr 30 21:37:50 2021 +0100
+
+    refactor of assignment one - moved methods from page controller to review controller
+
+[33mcommit c6b8fa1281cf6e910024230c620da4b861578193[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Apr 30 20:10:43 2021 +0100
+
+    updated csrf as per worksheets
+
+[33mcommit cf775da6dae28b85cd222d3b60b61c991fb4be59[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Apr 30 15:10:04 2021 +0100
+
+    bypassed csrf protection for put request
+
+[33mcommit 52e1e5f820c0c9c6d0c42f1102f84ff54ceef577[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Apr 29 13:50:53 2021 +0100
+
+    post request working
+
+[33mcommit 32ce72b712a0ea3bb93e6d35fe76437583b9adb7[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Apr 28 15:35:46 2021 +0100
+
+    added some security from security pdf but not the index page limit stuff
+
+[33mcommit 10365048bbd73c4a130cac7498ae4038a8c772b5[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Apr 28 15:22:00 2021 +0100
+
+    added some stuff from forms worksheet
+
+[33mcommit c4d0bcdebd0c12bfb25c9975d8624d030a902659[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Apr 22 11:32:26 2021 +0100
+
+    review api nearly working
+
+[33mcommit 7c90f0e7a51e2bebccc84bc41e9c8be18a4d93e9[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Apr 21 14:49:21 2021 +0100
+
+    creating  web-service 2 completed except additional questions
+
+[33mcommit 18eaa04505709c8be51d3cdc3140db5e144c85dc[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Apr 21 01:37:05 2021 +0100
+
+    creating a web service part 1 complete - but many records showing with ids
+
+[33mcommit 68a2a8140850224507e651a2798ee431910a2de4[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Tue Apr 20 15:39:02 2021 +0100
+
+    got rest bundle working by using a earlier version
+
+[33mcommit db6df52782a75d09b761726db638dbc44274819b[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Tue Apr 20 13:40:33 2021 +0100
+
+    successfully added serializer bundle
+
+[33mcommit 2abb4fb6ede4acd4cd688bd8dbcf69628dac2b35[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Apr 19 17:12:02 2021 +0100
+
+    moved files to assignment 2 folder
+
+[33mcommit c7eecd76dd7ee482508dbb9ad8dccaffdb5335bb[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Jan 25 03:59:29 2021 +0000
+
+    search query now working - added '%' before and after search query
+
+[33mcommit 28918198e57c865afca1949139c046ab59604d5e[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Jan 25 03:00:54 2021 +0000
+
+    search query displaying - just need to fix query so it works
+
+[33mcommit 80ebfe35b3e2b6557b2e638feee250249de371a6[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 15:50:18 2021 +0000
+
+    truied to add search in, still not working. Leaving it there
+
+[33mcommit 2cd1ffe418e41c9a5e5a6e963fcee9bbc45885d1[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 15:27:21 2021 +0000
+
+    styling changes. Commit before zipping
+
+[33mcommit bc6affd2ff56b6cf81a7ff86e021b5914e9676d1[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 14:40:52 2021 +0000
+
+    banner image added
+
+[33mcommit 349ba65e44fed9928d551e79d2a385c055d3c742[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 14:22:39 2021 +0000
+
+    updated user details page
+
+[33mcommit 0c6aaee5587915aea97fe3eacda09b0172405e32[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 14:13:51 2021 +0000
+
+    user page showing reviews belonging to user
+
+[33mcommit c8d5182256a764bb3bd38c4bc30484a4f34bb485[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 13:35:34 2021 +0000
+
+    pagination working for reviews ion show page
+
+[33mcommit d2c3d4ddf6ede255c38aa344cab7dcc427355079[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 13:18:39 2021 +0000
+
+    knp paginator added and pagination working on index page
+
+[33mcommit 878244d53365e103bc46171df16af33ceda1cfa5[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 12:35:37 2021 +0000
+
+    commit before adding paginator
+
+[33mcommit 0760967f62eef7e331dc424d8cf3468342b01ff7[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 12:10:23 2021 +0000
+
+    new release section working
+
+[33mcommit 075542217d44b1a671fefd0c37e222fdb8918cd0[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 03:30:25 2021 +0000
+
+    edit review working with form builder and redirecting to the correct show page
+
+[33mcommit b11bd5e9f6a085247f6c643516fbc64107332bc9[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 03:23:52 2021 +0000
+
+    new review working using form builder
+
+[33mcommit b6a7360cd8fff638eede6bf02172731247ff41f9[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 03:12:05 2021 +0000
+
+    edit movie working with form builder
+
+[33mcommit 217d1757a514eb8cfda39c1256a3b9dab75dd276[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 03:05:07 2021 +0000
+
+    new movie created using form builder
+
+[33mcommit aedc064b183923c780e2fda323dcc15e051b4c1a[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 02:36:07 2021 +0000
+
+     removed sidebar from show
+
+[33mcommit d317311eed3e48d104b9684f344ad1c4673771c9[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 02:31:23 2021 +0000
+
+    image uploader working for all files
+
+[33mcommit 203e40a4f9da0f6d28009de9ee337cf61bcc0ce5[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 02:19:27 2021 +0000
+
+    images saving to uploads and filename to DB
+
+[33mcommit 07d2d6aa1fb98b115384971f776487ba86334da7[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Jan 8 01:50:31 2021 +0000
+
+    image file upload worked after uncommenting lines in php.ini
+
+[33mcommit 9fa4c11ff8e59d7b2cfbc811a82e28ab599d89bb[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Jan 7 23:11:57 2021 +0000
+
+    commit before image upload attempt. Search not working
+
+[33mcommit 52556836b6f8d4d1ed62445a052ea50047fb1204[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Jan 7 22:24:02 2021 +0000
+
+    bootstarp search navigating to search page
+
+[33mcommit 1e5b9805256ce78bd311185962bb0907c70ff4f3[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Jan 7 18:12:46 2021 +0000
+
+    added searchbar and template for search results
+
+[33mcommit e696b759ce3673a8691f005dd979969ae836c45b[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Jan 7 13:29:24 2021 +0000
+
+    edit review page added and working
+
+[33mcommit 697edfde0ffc2d0be21540ee9aa2197cc786410d[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Jan 7 13:06:54 2021 +0000
+
+    user linked to reviewer and edit button only showing if user = reviewer
+
+[33mcommit a0afd9f515a919146e0906ef75cfc5b794177ce4[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Jan 7 12:59:13 2021 +0000
+
+    reviewer id working in reviews table (just needed to be populated)
+
+[33mcommit 189327c725235ce30722572bfcad0886822824b4[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Jan 6 01:00:27 2021 +0000
+
+    remove newReview function and template as was not working
+
+[33mcommit 03981da74c8f3ec5871cbfc15f784b0405d01069[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Jan 6 00:53:01 2021 +0000
+
+    commit before deleteing newReview not-working code
+
+[33mcommit 396c1f523b84ee7d3dd4f404995ac5de9efa2cad[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Jan 6 00:25:30 2021 +0000
+
+    review page and controller working
+
+[33mcommit cb44f16cf3a20ca24da25a3bedf9433dbfed5bea[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Jan 6 00:08:34 2021 +0000
+
+    added new review page to test
+
+[33mcommit 9f19a41ce296f4e696afde0ea1f83a8238b042ae[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Tue Jan 5 17:44:02 2021 +0000
+
+    added annotations to contoller. Still not finding movie from id in addReview Controller
+
+[33mcommit 858a2a29488fb8e442c4f40cd759ad43f0af5ffc[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Tue Jan 5 11:54:28 2021 +0000
+
+    adding new reviews working with movie
+
+[33mcommit aca3ef0c5328e7030d0a0997e57fa5e1b70262ac[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sat Jan 2 02:56:52 2021 +0000
+
+    updated relationships on database
+
+[33mcommit 19abc116e00b600cb97e7d0f97e1817ec15d7e7b[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Dec 28 15:06:05 2020 +0000
+
+    commit before trying to update the review DB as movieid not working
+
+[33mcommit 5b19996ed0552ce3e2b6d2ae954196880945dc65[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Dec 28 14:20:10 2020 +0000
+
+    reviews showing on show page
+
+[33mcommit 35d66757dd9448f128d218f5cb458af4d203d2b7[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sun Dec 27 19:22:39 2020 +0000
+
+    non authenticated users cannot see edit / delete buttons. Centered thead text
+
+[33mcommit 43e61b208dfda0a96499923ca0c9fde74dde0072[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sun Dec 27 18:28:45 2020 +0000
+
+    edit movie route working
+
+[33mcommit 02a66cbcf468699bbc9f121ad15e80835b137966[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Tue Dec 22 03:40:04 2020 +0000
+
+    started on delete function. Javascript file not working yet
+
+[33mcommit d19914907971bc8459d614f842cb88ab899c6c7a[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sat Dec 19 19:33:12 2020 +0000
+
+    added a user details page
+
+[33mcommit 8059b0439c62f49409435f6a314458e8cf969211[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sat Dec 19 19:02:40 2020 +0000
+
+    new movie page works
+
+[33mcommit a09f8d183d0619313daf7f465dc1613da63bfb35[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sat Dec 19 15:31:27 2020 +0000
+
+    commit before deleting database
+
+[33mcommit 9081c11c834933134fa3b8ef231e3d5b78b9ca2f[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Dec 16 03:36:14 2020 +0000
+
+    add review route added and form showing
+
+[33mcommit 51f8a3b424d33d6a817f98e8e24579e3a23495b9[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Dec 16 03:00:54 2020 +0000
+
+    reverted back from new_movie to new. Form fields showing on new route
+
+[33mcommit 6741a411ed6d71860c90268a29f39b6079f5ac82[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Dec 16 02:20:33 2020 +0000
+
+    new route updated
+
+[33mcommit ef4ccc5451e788919bead43dd880216c9f575cb1[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Dec 16 01:01:43 2020 +0000
+
+    Login working and displaying logged in user
+
+[33mcommit 9c71c2cccc843ecd2278b376e0eed07a428f0a15[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Tue Dec 15 02:22:00 2020 +0000
+
+    added a user fixture which has added 20 users to DB
+
+[33mcommit ee2943be5746f89fdb8d76f72c8575bf1aec2b3d[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sun Dec 13 23:53:14 2020 +0000
+
+    commit before attempting fixtures
+
+[33mcommit 864e18838c64da82d836768f7c6f771751247533[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Dec 3 21:41:30 2020 +0000
+
+    review data in db, show page not displaying reviews
+
+[33mcommit c27f717edc255062ec8a304b45734b347868327c[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Dec 3 20:00:35 2020 +0000
+
+    image showing and resized
+
+[33mcommit 5f1dda303bbd0a27c5e88763b8e3260b8a605509[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Dec 3 18:05:24 2020 +0000
+
+    show page now showing whichever movie you click on
+
+[33mcommit 4371478f68d6b39c715e4f6047892469e8fb5824[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Dec 3 17:17:04 2020 +0000
+
+    added show route for individual movies, working for showing 1 movie
+
+[33mcommit b9bd2dac67ea01d668f451c635b2bfb8f2b3ec83[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Tue Dec 1 13:31:50 2020 +0000
+
+    added button to redirect to registration from login screen
+
+[33mcommit ca101a5768f97a1cf52a56dd1fd32092d4bceb81[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Tue Dec 1 11:36:10 2020 +0000
+
+    began styling FOS user bundle pages
+
+[33mcommit 1d62c6e3d69582d48ecdb23c787c348f435389f0[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Nov 30 19:17:14 2020 +0000
+
+    added fos user functionality, login route working
+
+[33mcommit 5b09ec60e7328946e1d392814ba640e63d342e30[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Nov 30 19:16:44 2020 +0000
+
+    added fos user functionality, login route working
+
+[33mcommit e5b4ab2c61cc94f7ad4d21fc82a66b36fdb22b3a[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Nov 30 19:00:10 2020 +0000
+
+    review entity added
+
+[33mcommit ee58e22fc80b28b281958dd2e8eb2553055b9619[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Nov 30 18:45:00 2020 +0000
+
+    movie db updated and data added. Data showing on page
+
+[33mcommit c37f5e4d97f7cc80d649ebac0243da2e7f79df3e[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Nov 30 17:41:00 2020 +0000
+
+    updated movie table, about to create a review entity
+
+[33mcommit ce87e0e8eea9cb66c7c92244949f1dd562871fe4[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Nov 23 19:56:13 2020 +0000
+
+    new route adding to database
+
+[33mcommit 13fb2c5a0f3c45769b685773face293760ae37ca[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Nov 23 15:32:16 2020 +0000
+
+    detailed_description and date_added columns added to database - working
+
+[33mcommit 070b25eb5279c47164cb3d6db686ad32e279cc28[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Thu Nov 19 22:44:00 2020 +0000
+
+    Displaying all 1000 movies on page
+
+[33mcommit e0210e96a6b02460e739b7f169fd8b1cbd1ecf92[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Nov 18 23:51:45 2020 +0000
+
+    additional movie DB fields added
+
+[33mcommit 601d9a0852524fc2c34d7558aca1afb470dec2d7[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Wed Nov 18 23:40:15 2020 +0000
+
+    movie DB added
+
+[33mcommit 15ff07d1903f5ba93e0bab94a032eed141ab8b7e[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sat Nov 14 00:34:21 2020 +0000
+
+    reverted styling, used pull-right instead of float right as using bootstrap 3
+
+[33mcommit 4768b5a398f616b6ff4e8bbbc5d1743fa8445470[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Sat Nov 14 00:23:12 2020 +0000
+
+    bootswatch theme styling added
+
+[33mcommit 62135bfc61928404d4a8b15b32451057dcec2bef[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Nov 13 23:43:42 2020 +0000
+
+    basic movie rating table created
+
+[33mcommit 40be966dc0c63bf5aaf25d1ce863cf5a471fa06c[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Fri Nov 13 23:01:21 2020 +0000
+
+    displaying name and email in a table
+
+[33mcommit 44543a5a9b96a8ac3cb24d4ed0f2c0ccff9a5d38[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Tue Nov 10 01:28:41 2020 +0000
+
+    templating worksheet finished
+
+[33mcommit 399ef22578a68ea98dbeeae9c9e9b5b4800682f9[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Nov 9 23:56:36 2020 +0000
+
+    first worksheet finished
+
+[33mcommit d1ecd41bb9c54aea94830b222908a5e6f76e5895[m
+Author: WeeMick <michaelblr5@gmail.com>
+Date:   Mon Nov 9 23:22:27 2020 +0000
+
+    first commit - movie namespace added

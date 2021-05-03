@@ -5,6 +5,7 @@ namespace Movie\MovieBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation\ExclusionPolicy;
 use JMS\Serializer\Annotation\Expose;
+use JMS\Serializer\Annotation\MaxDepth;
 
 /**
  * Class Movie
@@ -94,6 +95,8 @@ class Review
     /**
      * @ORM\ManyToOne( targetEntity="Movie\MovieBundle\Entity\Movie", inversedBy="movies")
      * @ORM\JoinColumn (name="movie_id", referencedColumnName="id", nullable=false)
+     * @Expose
+     *
      */
     protected $movie;
 
@@ -106,11 +109,13 @@ class Review
 
     /**
      * @ORM\Column(type="string", length=700)
+     * @Expose
      */
     protected $review;
 
     /**
      * @ORM\Column(type="decimal", scale=1, precision=3)
+     * @Expose
      */
     protected $rating;
 

@@ -24,27 +24,29 @@ class ReviewController extends Controller
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
         $movieId = $movie->getId();
 
-        //         createQueryBuilder() automatically selects FROM AppBundle:Movie
+        //         createQueryBuilder() automatically selects FROM AppBundle:Review
         //         and aliases it to "r"
-        $query = $repository->createQueryBuilder('r')
-            ->setParameters(array(
-                'movie' => $movieId))
-            ->where('r.movie = :movie')
-            ->orderBy('r.id', 'ASC')
-            ->getQuery();
+//        $query = $repository->createQueryBuilder('r')
+//            ->setParameters(array(
+//                'movie' => $movieId))
+//            ->where('r.movie = :movie')
+//            ->orderBy('r.id', 'ASC')
+//            ->getQuery();
 
         /**
          * @var $paginator Paginator
          */
-        $paginator = $this->get('knp_paginator');
+//        $paginator = $this->get('knp_paginator');
 
-        $reviews = $paginator->paginate(
-            $query,
-            $request->query->getInt('page', 1), /*page number*/
-            $request->query->getInt('limit', 3)
-        );
+//        $reviews = $paginator->paginate(
+//            $query,
+//            $request->query->getInt('page', 1), /*page number*/
+//            $request->query->getInt('limit', 3)
+//        );
 
-        return $this->render('@MovieMovie/Page/show.html.twig', array('movie' => $movie, 'reviews' => $reviews));
+        $review = $repository->find($id);
+
+        return $this->render('@MovieMovie/Review/view.html.twig', array('review' => $review));
 
     }
     /*
@@ -79,8 +81,9 @@ class ReviewController extends Controller
             $em->persist($newreview);
             $em->flush();
 
-            return $this->redirectToRoute('movie_show', array(
-                'id' => $movie->getId()
+            return $this->redirectToRoute('review_view', array(
+                'id' => $newreview->getId(),
+                'movie' => $movie
             ));
 
         }

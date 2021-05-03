@@ -3,10 +3,14 @@
 namespace Movie\MovieBundle\Controller;
 
 use FOS\RestBundle\Controller\AbstractFOSRestController;
+use FOS\RestBundle\Controller\Annotations\View;
 use Movie\MovieBundle\Entity\Review;
-use Movie\MovieBundle\Form\ReviewType;
+use Movie\MovieBundle\Form\ReviewAPIType;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * @View(serializerEnableMaxDepthChecks=true)
+ */
 class ReviewAPIController extends AbstractFOSRestController
 {
 
@@ -54,7 +58,7 @@ class ReviewAPIController extends AbstractFOSRestController
 
         $new_review = new Review();
 
-        $form = $this->createForm(ReviewType::class, $new_review, array('csrf_protection' => false));
+        $form = $this->createForm(ReviewAPIType::class, $new_review);
 
         if ($request->getContentType() != 'json') {
             return $this->handleView($this->view(null, 400));
@@ -116,7 +120,7 @@ class ReviewAPIController extends AbstractFOSRestController
         // TODO If review->reviewer != logged in user,
         // error - not authorised to code 401
 
-        $form = $this->createForm(ReviewType::class, $reviewToEdit);
+        $form = $this->createForm(ReviewAPIType::class, $reviewToEdit);
 
         if ($request->getContentType() != 'json') {
             return $this->handleView($this->view(null, 400));

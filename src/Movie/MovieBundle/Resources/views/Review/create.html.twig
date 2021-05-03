@@ -11,6 +11,6 @@
         {{ form_widget(form) }}
         {{ form_end(form) }}
     </form>
-    <button class="btn btn-danger"><a href="{{ path('movie_show', {'id': movie.id}) }}">Cancel Reviewing Movie</a>
+    <button class="btn btn-danger"><a href="{{ path('movie_view', {'id': movie.id}) }}">Cancel Reviewing Movie</a>
     </button>
 {% endblock %}
