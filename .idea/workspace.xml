@@ -23,7 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/JoindInController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/JoindIn/event.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/JoindIn/events.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/JoindIn/talks.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Tests/Controller/JoindInControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/movie_app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/movie_app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Entity/Review.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing_api.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing_api.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,13 +127,12 @@
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
-      <path value="$PROJECT_DIR$/vendor/exsyst/swagger" />
-      <path value="$PROJECT_DIR$/vendor/zircote/swagger-php" />
-      <path value="$PROJECT_DIR$/vendor/nelmio/api-doc-bundle" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="ProjectId" id="1k4aQ0FVatmVX5PYJ8bySUqxQHl" />
@@ -1137,18 +1147,20 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="794" y="-637" key="NewPhpFileDialog/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1618946072421" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1620061821001">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1620094319460">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state width="498" height="446" key="SwitcherDM/-1920.-831.1920.1030/1920.-771.1280.920/0.-1080.1920.1040/0.0.1536.824@0.-1080.1920.1040" timestamp="1620094319460" />
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/1920.-771.1280.920/-1920.-831.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1620061821001" />
     <state x="616" y="-685" key="run.anything.popup" timestamp="1620080650770">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="616" y="-685" key="run.anything.popup/-1920.-831.1920.1030/1920.-771.1280.920/0.-1080.1920.1040/0.0.1536.824@0.-1080.1920.1040" timestamp="1620080650770" />
     <state x="-1304" y="86" key="run.anything.popup/-1920.771.1536.832/0.0.1400.1010/-3840.-60.1920.1040/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619884136435" />
-    <state x="-1297" y="-84" width="1008" height="680" key="search.everywhere.popup" timestamp="1619885677677">
-      <screen x="-1920" y="-309" width="1920" height="1040" />
+    <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup" timestamp="1620094726472">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
+    <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup/-1920.-831.1920.1030/1920.-771.1280.920/0.-1080.1920.1040/0.0.1536.824@0.-1080.1920.1040" timestamp="1620094726472" />
     <state x="-1297" y="-84" width="1008" height="680" key="search.everywhere.popup/-1920.771.1536.832/0.0.1400.1010/-3840.-60.1920.1040/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619885677677" />
     <state x="-1297" y="-84" width="1008" height="680" key="search.everywhere.popup/-3840.-60.1920.1040/-1920.771.1536.824/0.0.1400.1010/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619815494881" />
     <state x="623" y="-855" width="1008" height="680" key="search.everywhere.popup/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619703783304" />

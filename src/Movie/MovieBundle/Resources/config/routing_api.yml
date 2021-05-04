@@ -10,3 +10,9 @@ api_review:
     name_prefix: api_review_
     prefix: /
 
+api_joind:
+    type: rest
+    resource: Movie\MovieBundle\Controller\JoindInController
+    name_prefix: joind_
+    prefix: /
+

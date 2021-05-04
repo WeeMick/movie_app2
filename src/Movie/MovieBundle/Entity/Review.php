@@ -7,6 +7,7 @@ use JMS\Serializer\Annotation\ExclusionPolicy;
 use JMS\Serializer\Annotation\Expose;
 use JMS\Serializer\Annotation\MaxDepth;
 
+
 /**
  * Class Movie
  * @package Movie\MovieBundle\Entity
