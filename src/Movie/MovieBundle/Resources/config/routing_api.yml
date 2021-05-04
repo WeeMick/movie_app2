@@ -13,6 +13,12 @@ api_review:
 api_joind:
     type: rest
     resource: Movie\MovieBundle\Controller\JoindInController
-    name_prefix: joind_
+    name_prefix: api_joind_
+    prefix: /
+
+api_omdb:
+    type: rest
+    resource: Movie\MovieBundle\Controller\OMDBController
+    name_prefix: api_omdb_
     prefix: /
 

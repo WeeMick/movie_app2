@@ -23,8 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e3afeb-94f5-4e6d-929d-dc8de26f9022" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/OMDBController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/JoindInController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/JoindInController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing_api.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/config/routing_api.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1089,12 +1093,13 @@
     </state>
     <state x="-1230" y="-42" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3840.-60.1920.1040/-1920.771.1536.824/0.0.1400.1010/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619814633950" />
     <state x="690" y="-813" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.-751.1360.728/0.-1080.1920.1040/-800.-589.800.560@0.-1080.1920.1040" timestamp="1619618744624" />
-    <state x="-1230" y="-34" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619883962388">
-      <screen x="-1920" y="-309" width="1920" height="1040" />
+    <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1620165004738">
+      <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state x="-1230" y="-34" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.771.1536.832/0.0.1400.1010/-3840.-60.1920.1040/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619883962388" />
     <state x="-1230" y="-34" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-3840.-60.1920.1040/-1920.771.1536.824/0.0.1400.1010/-1920.-309.1920.1040@-1920.-309.1920.1040" timestamp="1619812682350" />
     <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619003771321" />
+    <state x="690" y="-805" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.-771.1280.920/-1920.-831.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1620165004738" />
     <state x="741" y="-805" key="FileChooserDialogImpl" timestamp="1619542264733">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
@@ -1133,6 +1138,10 @@
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1536.824/1920.-751.1360.728/-800.-589.800.560/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1619699050968" />
+    <state x="490" y="-837" key="NewPhpClassDialog" timestamp="1620164401153">
+      <screen x="0" y="-1080" width="1920" height="1040" />
+    </state>
+    <state x="490" y="-837" key="NewPhpClassDialog/0.0.1536.824/1920.-771.1280.920/-1920.-831.1920.1040/0.-1080.1920.1040@0.-1080.1920.1040" timestamp="1620164401153" />
     <state x="794" y="-637" key="NewPhpFileDialog" timestamp="1618946072421">
       <screen x="0" y="-1080" width="1920" height="1040" />
     </state>

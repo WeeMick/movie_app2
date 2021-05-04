@@ -8,12 +8,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use GuzzleHttp\Client;
 use Symfony\Component\HttpFoundation\Request;
 use FOS\RestBundle\Controller\AbstractFOSRestController;
+use Symfony\Component\HttpFoundation\Response;
 
 class JoindInController extends AbstractFOSRestController
 {
     /**
      * @Route("/events")
-     * @param Request $request
      * @return mixed
      * @throws GuzzleException
      */
@@ -29,7 +29,7 @@ class JoindInController extends AbstractFOSRestController
     /**
      * @Route("/event")
      * @param $id
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      * @throws GuzzleException
      */
     public function getEventAction($id)

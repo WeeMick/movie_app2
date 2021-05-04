@@ -20,6 +20,11 @@ joind_api:
     resource: "@MovieMovieBundle/Resources/config/routing_api.yml"
     prefix: /api/v2.1
 
+omdb_api:
+    type: rest
+    resource: "@MovieMovieBundle/Resources/config/routing_api.yml"
+    prefix: /api/v3
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
