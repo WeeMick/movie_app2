@@ -27,7 +27,6 @@
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/OMDBController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/OMDBController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewAPIController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Controller/ReviewAPIController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Form/ReviewAPIType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Form/ReviewAPIType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/movie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie/MovieBundle/Resources/views/Page/movie.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

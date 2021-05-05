@@ -12,12 +12,12 @@ use GuzzleHttp\Exception\GuzzleException;
 class OMDBController extends AbstractFOSRestController
 {
     /**
-     * @Route("/movie")
+     * @Route("/film")
      * @return mixed
      * @throws GuzzleException
      *
      */
-    public function getMovieAction()
+    public function getFilmByIdAction()
     {
         $client = new Client(['base_uri' => 'http://www.omdbapi.com/']);
         $api_key = '&apikey=61444435';
@@ -35,7 +35,26 @@ class OMDBController extends AbstractFOSRestController
      * @throws GuzzleException
      *
      */
-    public function getYearAction()
+    public function getYearOfMovieAction()
+    {
+        $client = new Client(['base_uri' => 'http://www.omdbapi.com/']);
+        $api_key = '&apikey=61444435';
+
+        $title = "Aladdin";
+        $request = $client->request('GET', '?s=' . $title . $api_key);
+        $year = json_decode($request->getBody(), true);
+
+
+        return $this->handleView($this->view($year));
+    }
+
+    /**
+     * @Route("/actors")
+     * @return mixed
+     * @throws GuzzleException
+     *
+     */
+    public function getActorsAction()
     {
         $client = new Client(['base_uri' => 'http://www.omdbapi.com/']);
         $api_key = '&apikey=61444435';

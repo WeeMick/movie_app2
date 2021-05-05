@@ -49,13 +49,14 @@ class ReviewAPIController extends AbstractFOSRestController
 
         $user = $this->getUser();
 
-        if ($user) {
-            $userId = $this->getUser()->getId();
-            $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
-        } else {
-            $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find(7);
-
-        }
+//        if ($user) {
+//            $userId = $this->getUser()->getId();
+//            $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
+//        }
+//        else {
+//            $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find(7);
+//
+//        }
 
 
         $new_review = new Review();
@@ -71,6 +72,8 @@ class ReviewAPIController extends AbstractFOSRestController
         if ($form->isSubmitted() && $form->isValid()) {
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
+            $userId = $form['reviewer']->getData();
+            $reviewer = $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
 
             $new_review->setReview($review);
             $new_review->setRating($rating);
@@ -116,8 +119,6 @@ class ReviewAPIController extends AbstractFOSRestController
 //            // and the status code defaults to 200 "OK"
 //            $view = $this->view($reviewToEdit);
 //        }
-
-        // TODO check if I need to use $this->>handle($view)
 
         // TODO If review->reviewer != logged in user,
         // error - not authorised to code 401

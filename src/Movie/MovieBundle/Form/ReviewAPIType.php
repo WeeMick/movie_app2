@@ -21,6 +21,8 @@ class ReviewAPIType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('reviewer', TextType::class, array('attr' =>
+                array('class' => 'form-control')))
             ->add('review', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('rating', TextType::class, array('attr' =>
