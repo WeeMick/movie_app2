@@ -18,12 +18,12 @@ review_api:
 joind_api:
     type: rest
     resource: "@MovieMovieBundle/Resources/config/routing_api.yml"
-    prefix: /api/v2.1
+    prefix: /api/v1
 
 omdb_api:
     type: rest
     resource: "@MovieMovieBundle/Resources/config/routing_api.yml"
-    prefix: /api/v3
+    prefix: /api/v1
 
 app:
     resource: '@AppBundle/Controller/'

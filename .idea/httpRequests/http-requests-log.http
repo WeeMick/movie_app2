@@ -1,3 +1,21 @@
+GET http://localhost:8000/api/v1/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2021-05-05T125539.404.html
+
+###
+
+GET http://localhost:8000/api/v1/reviews
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2021-05-05T125000.404.html
+
+###
+
 PUT http://localhost:8000/api/v1/reviews/41
 Accept: */*
 Cache-Control: no-cache
@@ -503,28 +521,6 @@ Cache-Control: no-cache
 Content-Type: application/json
 
 {"title":"Hello World", "director":"Brad Pitt","summary":"created from API","actors":"Jim James Jonny","running_time":24}
-
-###
-
-GET http://localhost:8000/api/v1/movies/1
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"title":"Hello World", "director":"Brad Pitt","summary":"created from API","actors":"Jim James Jonny","running_time":24}
-
-<> 2021-04-27T011944.200.json
-
-###
-
-GET http://localhost:8000/api/v1/movies/1
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"title":"Hello World", "director":"Brad Pitt","summary":"created from API","actors":"Jim James Jonny","running_time":24}
-
-<> 2021-04-21T031103.200.json
 
 ###
 

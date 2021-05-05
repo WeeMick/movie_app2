@@ -3,17 +3,19 @@
 namespace Movie\MovieBundle\Controller;
 
 use FOS\RestBundle\Controller\AbstractFOSRestController;
+use FOS\RestBundle\Controller\Annotations\Route;
 use FOS\RestBundle\Controller\Annotations\View;
 use Movie\MovieBundle\Entity\Review;
 use Movie\MovieBundle\Form\ReviewAPIType;
 use Symfony\Component\HttpFoundation\Request;
 
-/**
- * @View(serializerEnableMaxDepthChecks=true)
- */
+
 class ReviewAPIController extends AbstractFOSRestController
 {
 
+    /**
+     * @Route("/reviews")
+     */
     public function getReviewsAction()
     {
         $em = $this->getDoctrine()->getManager();
@@ -28,7 +30,6 @@ class ReviewAPIController extends AbstractFOSRestController
         $em = $this->getDoctrine()->getManager();
         $review = $em->getRepository('MovieMovieBundle:Review')
             ->find($id);
-//        dump($review); die();
         if (!$review) {
             // no review entry is found, so we set the view
             // to no content and set the status code to 404
@@ -150,8 +151,7 @@ class ReviewAPIController extends AbstractFOSRestController
                 )
                 )
             );
-        }
-        else{
+        } else {
             // the form isn't valid so return the form
             // along with a 400 status code
             return $this->handleView($this->view($form, 400));
