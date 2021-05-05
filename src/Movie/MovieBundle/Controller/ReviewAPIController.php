@@ -17,7 +17,10 @@ class ReviewAPIController extends AbstractFOSRestController
     /**
      * @Route("/reviews")
      *
+     * This is some test documentation
+     *
      * @ApiDoc(
+     *     description="Returns an array of all reviews in database",
      *     output="Movie\MovieBundle\Entity\Review",
      *     statusCodes={
      *         200 = "Returned when successful",
@@ -38,6 +41,7 @@ class ReviewAPIController extends AbstractFOSRestController
      * @param $id
      * @return Response
      * @ApiDoc(
+     *     description="Returns a single review from database based on its id",
      *     output="Movie\MovieBundle\Entity\Review",
      *     statusCodes={
      *         200 = "Returned when successful",
@@ -68,6 +72,7 @@ class ReviewAPIController extends AbstractFOSRestController
      * @param $id
      * @return Response
      * @ApiDoc(
+     *     description="Creates a new review entity and persists it to the database",
      *     output="Movie\MovieBundle\Entity\Review",
      *     statusCodes={
      *         201 = "Returned when successful and resource is created",
@@ -132,6 +137,7 @@ class ReviewAPIController extends AbstractFOSRestController
      * @param $id
      * @return Response
      * @ApiDoc(
+     *     description="Updates a review already stored in the database based on the id",
      *     output="Movie\MovieBundle\Entity\Review",
      *     statusCodes={
      *         204 = "Returned when resource is updated successfully",
@@ -198,6 +204,7 @@ class ReviewAPIController extends AbstractFOSRestController
      * @param $id
      * @return Response
      * @ApiDoc(
+     *     description="Deletes a review from the database based on the id",
      *     output="Movie\MovieBundle\Entity\Review",
      *     statusCodes={
      *         204 = "Returned when resource is deleted successfully",
