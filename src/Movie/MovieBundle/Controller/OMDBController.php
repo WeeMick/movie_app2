@@ -28,4 +28,22 @@ class OMDBController extends AbstractFOSRestController
 
         return $this->handleView($this->view($movie));
     }
+
+    /**
+     * @Route("/year")
+     * @return mixed
+     * @throws GuzzleException
+     *
+     */
+    public function getYearAction()
+    {
+        $client = new Client(['base_uri' => 'http://www.omdbapi.com/']);
+        $api_key = '&apikey=61444435';
+
+        $title = "Pirates of the Caribbean";
+        $request = $client->request('GET', '?s=' . $title . $api_key);
+        $movie = json_decode($request->getBody(), true);
+
+        return $this->handleView($this->view($movie));
+    }
 }

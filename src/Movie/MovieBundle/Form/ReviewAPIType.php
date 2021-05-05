@@ -24,10 +24,7 @@ class ReviewAPIType extends AbstractType
             ->add('review', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('rating', TextType::class, array('attr' =>
-                array('class' => 'form-control')))
-            ->add('save', SubmitType::class, array(
-                'label' => 'Save Review',
-                'attr' => array('class' => 'btn btn-primary mt-2')));
+                array('class' => 'form-control')));
     }
 
 
