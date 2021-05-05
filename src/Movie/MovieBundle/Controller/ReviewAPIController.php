@@ -8,6 +8,8 @@ use FOS\RestBundle\Controller\Annotations\View;
 use Movie\MovieBundle\Entity\Review;
 use Movie\MovieBundle\Form\ReviewAPIType;
 use Symfony\Component\HttpFoundation\Request;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class ReviewAPIController extends AbstractFOSRestController
@@ -15,6 +17,14 @@ class ReviewAPIController extends AbstractFOSRestController
 
     /**
      * @Route("/reviews")
+     *
+     * @ApiDoc(
+     *     output="Movie\MovieBundle\Entity\Review",
+     *     statusCodes={
+     *         200 = "Returned when successful",
+     *         404 = "Return when not found"
+     *     }
+     * )
      */
     public function getReviewsAction()
     {
@@ -25,6 +35,17 @@ class ReviewAPIController extends AbstractFOSRestController
         return $this->handleView($this->view($reviews));
     }
 
+    /**
+     * @param $id
+     * @return Response
+     * @ApiDoc(
+     *     output="Movie\MovieBundle\Entity\Review",
+     *     statusCodes={
+     *         200 = "Returned when successful",
+     *         404 = "Return when not found"
+     *     }
+     * )
+     */
     public function getReviewAction($id)
     {
         $em = $this->getDoctrine()->getManager();
