@@ -4,7 +4,6 @@ namespace Movie\MovieBundle\Controller;
 
 use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations\Route;
-use FOS\RestBundle\Controller\Annotations\View;
 use Movie\MovieBundle\Entity\Review;
 use Movie\MovieBundle\Form\ReviewAPIType;
 use Symfony\Component\HttpFoundation\Request;
@@ -64,6 +63,18 @@ class ReviewAPIController extends AbstractFOSRestController
         return $this->handleView($view);
     }
 
+    /**
+     * @param Request $request
+     * @param $id
+     * @return Response
+     * @ApiDoc(
+     *     output="Movie\MovieBundle\Entity\Review",
+     *     statusCodes={
+     *         201 = "Returned when successful and resource is created",
+     *         400 = "Return when not successful"
+     *     }
+     * )
+     */
     public function postReviewAction(Request $request, $id)
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
@@ -116,6 +127,18 @@ class ReviewAPIController extends AbstractFOSRestController
 
 // PUT - If an existing resource is modified, either the 200 (OK) or 204 (No Content) response
 // codes SHOULD be sent to indicate successful completion of the request.
+    /**
+     * @param Request $request
+     * @param $id
+     * @return Response
+     * @ApiDoc(
+     *     output="Movie\MovieBundle\Entity\Review",
+     *     statusCodes={
+     *         204 = "Returned when resource is updated successfully",
+     *         400 = "Return when not successful / bad request"
+     *     }
+     * )
+     */
     public function putReviewAction(Request $request, $id)
     {
         $reviewToEdit = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
@@ -171,11 +194,17 @@ class ReviewAPIController extends AbstractFOSRestController
         }
     }
 
-
-//DELETE - A successful response SHOULD be 200 (OK) if the response includes an entity describing
-// the status, 202 (Accepted) if the action has not yet been enacted, or 204 (No Content) if the
-// action has been enacted but the response does not include an entity.
-
+    /**
+     * @param $id
+     * @return Response
+     * @ApiDoc(
+     *     output="Movie\MovieBundle\Entity\Review",
+     *     statusCodes={
+     *         204 = "Returned when resource is deleted successfully",
+     *         404 = "Return when there is nothing to delete"
+     *     }
+     * )
+     */
     public function deleteReviewAction($id)
     {
         $review = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
@@ -187,15 +216,7 @@ class ReviewAPIController extends AbstractFOSRestController
         // Status code 204 shows that The server successfully processed the request, but is not returning
         // any content
         return $this->handleView($this->view(null, 204));
-//        return $this->redirect(
-//            $this->generateUrl('movie_index'));
 
     }
 
 }
-
-// HTTP 200 OK: Standard response for successful HTTP requests. The actual response will
-// depend on the request method used.
-//
-//HTTP 204 No Content: The server successfully processed the request, but is not returning
-// any content
