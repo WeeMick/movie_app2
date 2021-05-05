@@ -2,6 +2,7 @@
 
 namespace Movie\MovieBundle\Form;
 
+use Movie\MovieBundle\Entity\Movie;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -23,10 +24,14 @@ class ReviewAPIType extends AbstractType
         $builder
             ->add('reviewer', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
+//            ->add('movie', TextType::class, array('attr' =>
+//                array('class' => 'form-control',
+//                    'mapped' => false)))
             ->add('review', TextType::class, array('attr' =>
                 array('class' => 'form-control')))
             ->add('rating', TextType::class, array('attr' =>
                 array('class' => 'form-control')));
+
     }
 
 

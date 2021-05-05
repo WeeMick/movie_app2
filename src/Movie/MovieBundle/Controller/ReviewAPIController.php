@@ -47,18 +47,6 @@ class ReviewAPIController extends AbstractFOSRestController
     {
         $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($id);
 
-        $user = $this->getUser();
-
-//        if ($user) {
-//            $userId = $this->getUser()->getId();
-//            $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
-//        }
-//        else {
-//            $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find(7);
-//
-//        }
-
-
         $new_review = new Review();
 
         $form = $this->createForm(ReviewAPIType::class, $new_review);
@@ -73,8 +61,9 @@ class ReviewAPIController extends AbstractFOSRestController
             $review = $form['review']->getData();
             $rating = $form['rating']->getData();
             $userId = $form['reviewer']->getData();
-            $reviewer = $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
-
+            $reviewer = $this->getDoctrine()->getRepository('MovieMovieBundle:User')->find($userId);
+//            $movieId = $form['movie']->getData();
+//            $movie = $this->getDoctrine()->getRepository('MovieMovieBundle:Movie')->find($movieId);
             $new_review->setReview($review);
             $new_review->setRating($rating);
             $new_review->setMovie($movie);
@@ -174,8 +163,11 @@ class ReviewAPIController extends AbstractFOSRestController
         $em->remove($review);
         $em->flush();
 
-        return $this->redirect(
-            $this->generateUrl('movie_index'));
+        // Status code 204 shows that The server successfully processed the request, but is not returning
+        // any content
+        return $this->handleView($this->view(null, 204));
+//        return $this->redirect(
+//            $this->generateUrl('movie_index'));
 
     }
 
