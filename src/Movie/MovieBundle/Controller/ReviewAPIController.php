@@ -21,6 +21,7 @@ class ReviewAPIController extends AbstractFOSRestController
      *
      * @ApiDoc(
      *     description="Returns an array of all reviews in database",
+     *     input="Movie\MovieBundle\Form\ReviewAPIType",
      *     output="Movie\MovieBundle\Entity\Review",
      *     statusCodes={
      *         200 = "Returned when successful",
@@ -42,7 +43,15 @@ class ReviewAPIController extends AbstractFOSRestController
      * @return Response
      * @ApiDoc(
      *     description="Returns a single review from database based on its id",
+     *     input="Movie\MovieBundle\Form\ReviewAPIType",
      *     output="Movie\MovieBundle\Entity\Review",
+     *     requirements={
+     *          {
+     *              "name"="id",
+     *              "requirement"="\d+",
+     *              "description"="Id of the review"
+     *          }
+     *     },
      *     statusCodes={
      *         200 = "Returned when successful",
      *         404 = "Return when not found"
@@ -73,7 +82,15 @@ class ReviewAPIController extends AbstractFOSRestController
      * @return Response
      * @ApiDoc(
      *     description="Creates a new review entity and persists it to the database",
+     *     input="Movie\MovieBundle\Form\ReviewAPIType",
      *     output="Movie\MovieBundle\Entity\Review",
+     *     requirements={
+     *          {
+     *              "name"="id",
+     *              "requirement"="\d+",
+     *              "description"="Id of the movie to post the review under"
+     *          }
+     *     },
      *     statusCodes={
      *         201 = "Returned when successful and resource is created",
      *         400 = "Return when not successful"
@@ -138,10 +155,19 @@ class ReviewAPIController extends AbstractFOSRestController
      * @return Response
      * @ApiDoc(
      *     description="Updates a review already stored in the database based on the id",
+     *     input="Movie\MovieBundle\Form\ReviewAPIType",
      *     output="Movie\MovieBundle\Entity\Review",
+     *     requirements={
+     *          {
+     *              "name"="id",
+     *              "requirement"="\d+",
+     *              "description"="Id of the review to edit"
+     *          }
+     *     },
      *     statusCodes={
-     *         204 = "Returned when resource is updated successfully",
-     *         400 = "Return when not successful / bad request"
+     *         204 = "Returned when review is updated successfully",
+     *         400 = "Return when not successful / bad request",
+     *         404 = "Returned when review is not found"
      *     }
      * )
      */
@@ -149,18 +175,12 @@ class ReviewAPIController extends AbstractFOSRestController
     {
         $reviewToEdit = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
 
-//        if (!$reviewToEdit) {
-//            // no review entry is found, so we set the view
-//            // to no content and set the status code to 404
-//            $view = $this->view(null, 404);
-//        } else {
-//            // the review exists, so we pass it to the view
-//            // and the status code defaults to 200 "OK"
-//            $view = $this->view($reviewToEdit);
-//        }
-
-        // TODO If review->reviewer != logged in user,
-        // error - not authorised to code 401
+        if (!$reviewToEdit) {
+            // no review entry is found, so we set the view
+            // to no content and set the status code to 404
+            $view = $this->view(null, 404);
+            return $this->handleView($view);
+        }
 
         $form = $this->createForm(ReviewAPIType::class, $reviewToEdit);
 
@@ -186,14 +206,13 @@ class ReviewAPIController extends AbstractFOSRestController
 
             // set status code to 201 and set the Location header
             // to the URL to retrieve the review entry - Point 5
-            return $this->handleView($this->view(null, 201)
+            return $this->handleView($this->view(null, 200)
                 ->setLocation($this->generateUrl('api_review_get_reviews',
                     ['id' => $reviewToEdit->getId()]
                 )
                 )
             );
-        }
-        else{
+        } else {
             // the form isn't valid so return the form
             // along with a 400 status code
             return $this->handleView($this->view($form, 400));
@@ -206,9 +225,16 @@ class ReviewAPIController extends AbstractFOSRestController
      * @ApiDoc(
      *     description="Deletes a review from the database based on the id",
      *     output="Movie\MovieBundle\Entity\Review",
+     *     requirements={
+     *          {
+     *              "name"="id",
+     *              "requirement"="\d+",
+     *              "description"="Id of the review to edit"
+     *          }
+     *     },
      *     statusCodes={
      *         204 = "Returned when resource is deleted successfully",
-     *         404 = "Return when there is nothing to delete"
+     *         404 = "Return when there is no review to delete"
      *     }
      * )
      */
@@ -216,13 +242,23 @@ class ReviewAPIController extends AbstractFOSRestController
     {
         $review = $this->getDoctrine()->getRepository('MovieMovieBundle:Review')->find($id);
 
-        $em = $this->getDoctrine()->getManager();
-        $em->remove($review);
-        $em->flush();
+        if (!$review) {
+            // no review entry is found, so we set the view
+            // to no content and set the status code to 404
+            $view = $this->view(null, 404);
+            return $this->handleView($view);
+        } else {
+            // the review exists, so we pass it to the view
+            // and the status code defaults to 200 "OK"
 
-        // Status code 204 shows that The server successfully processed the request, but is not returning
-        // any content
-        return $this->handleView($this->view(null, 204));
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($review);
+            $em->flush();
+
+            // Status code 204 shows that The server successfully processed the request, but is not returning
+            // any content
+            return $this->handleView($this->view(null, 204));
+        }
 
     }
 
