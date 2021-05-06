@@ -95,15 +95,20 @@ class OMDBController extends AbstractFOSRestController
         $client = new Client(['base_uri' => 'http://www.omdbapi.com/']);
         $request = $client->request('GET', '?i=' . $this->movie_id . $this->api_key);
         $movie_array = json_decode($request->getBody(), true);
-
+        $title = "";
+        $actors = "";
         foreach ($movie_array as $key => $value) {
+            if($key === "Title")
+            {
+                $title = $title . $value;
+            }
             if($key === "Actors")
             {
-                $output = $value;
-                echo $value;
+                $actors =  $actors .$value;
             }
         }
-//        die();
+
+        $output = "Movie: " . $title . " -  Actors: " . $actors;
         return $this->handleView($this->view($output));
     }
 }
